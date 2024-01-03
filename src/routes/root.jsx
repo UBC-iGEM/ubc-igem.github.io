@@ -5,6 +5,7 @@ import Header from "../components/header";
 import { Padding } from "../constants";
 import LandingBackground from "../images/landing/landing_background.svg";
 import LandingPhoto from "../images/landing/landing_photo.svg";
+import { ScrollRestoration } from "react-router-dom";
 
 const Background = styled.div`
   background-image: url(${LandingBackground});
@@ -73,8 +74,9 @@ export default function Root() {
             <Button text={"Learn More"} link={"/team"} />
           </div>
         </Padding>
-      </Background>{" "}
+      </Background>
       <Footer />
+      <ScrollRestoration />
     </>
   );
 }

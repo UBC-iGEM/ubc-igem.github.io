@@ -1,6 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 import "./index.scss";
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
@@ -9,7 +12,6 @@ import Team from "./routes/team";
 import Sponsors from "./routes/sponsors";
 import Join from "./routes/join";
 import Contact from "./routes/contact";
-import styled from "styled-components";
 import Past from "./routes/past";
 
 const router = createBrowserRouter([
@@ -43,10 +45,6 @@ const router = createBrowserRouter([
     element: <Contact />,
   },
 ]);
-
-const Padding = styled.div`
-  width: 70vw;
-`;
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

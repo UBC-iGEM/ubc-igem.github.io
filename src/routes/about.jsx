@@ -10,6 +10,7 @@ import Blank from "../images/about/blank.svg";
 import Pilot from "../images/past/2023.svg";
 import { Padding } from "../constants";
 import Button from "../components/button";
+import { ScrollRestoration } from "react-router-dom";
 
 const Background = styled.div`
   background-image: url(${AboutBackground});
@@ -74,7 +75,7 @@ export default function About() {
           <div
             style={{ width: "38vw", paddingTop: "8vw", paddingBottom: "22vw" }}
           >
-            <h1>iGEM at UBC</h1>
+            <h1 id="_top">iGEM at UBC</h1>
             <Text>
               we are an eager team of undergraduates, supported by multiple
               professors and graduate students who act as mentors.
