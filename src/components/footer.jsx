@@ -59,7 +59,7 @@ export default function Footer() {
     <Background>
       <RowSpaced>
         <LeftSide className="row">
-        <Logo src={Logo_Transparent} />
+          <Logo src={Logo_Transparent} />
           <Links className="col">
             {[
               { link: "/about", name: "about" },

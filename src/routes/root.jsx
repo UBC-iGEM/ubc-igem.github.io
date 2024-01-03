@@ -14,18 +14,6 @@ const Background = styled.div`
   background-size: contain;
 `;
 
-const Title = styled.h1`
-  font-size: 90px;
-  margin: 0;
-  padding: 5px;
-`;
-
-const Subtitle = styled.h2`
-  font-size: 50px;
-  margin: 0;
-  padding: 5px;
-`;
-
 const LandingDiv = styled.div`
   padding-top: 20vh;
 `;
@@ -50,10 +38,8 @@ export default function Root() {
       <Header />
       <Padding>
         <LandingDiv>
-          <Title>UBC iGEM</Title>
-          <Subtitle>
-            building a better future through synthetic biology
-          </Subtitle>
+          <h1>UBC iGEM</h1>
+          <h2>building a better future through synthetic biology</h2>
         </LandingDiv>
       </Padding>
 
@@ -63,9 +49,7 @@ export default function Root() {
 
       <Padding>
         <PadBottom>
-          <Subtitle>
-            International Genetically Engineered Machine (iGEM)
-          </Subtitle>
+          <h2>International Genetically Engineered Machine (iGEM)</h2>
           <p>
             is an MIT-based non profit organization that hosts the annual iGEM
             synthetic biology competition. They are founded with the goal of
@@ -78,7 +62,7 @@ export default function Root() {
         </PadBottom>
 
         <div>
-          <Subtitle>Our Team</Subtitle>
+          <h2>Our Team</h2>
           <p>
             the UBC iGEM team is an undergraduate student design team that has
             competed in this competition since 2009. Our current team consists

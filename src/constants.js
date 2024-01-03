@@ -10,5 +10,5 @@ export const links = [
 ];
 
 export const Padding = styled.div`
-  padding: 5px 20vw;
+  padding: 5px 15vw;
 `;
