@@ -16,7 +16,6 @@ const Background = styled.div`
   background-repeat: no-repeat;
   min-height: fit-content;
   background-size: contain;
-  background-position-y: 16%;
 `;
 
 const Text = styled.p`
@@ -68,68 +67,77 @@ export default function About() {
   ];
 
   return (
-    <Background>
+    <>
       <Header />
+      <Background>
+        <Padding>
+          <div
+            style={{ width: "38vw", paddingTop: "8vw", paddingBottom: "22vw" }}
+          >
+            <h1>iGEM at UBC</h1>
+            <Text>
+              we are an eager team of undergraduates, supported by multiple
+              professors and graduate students who act as mentors.
+            </Text>
+          </div>
+        </Padding>
 
-      <Padding>
-        <div
-          style={{ width: "38vw", paddingTop: "8vw", paddingBottom: "22vw" }}
-        >
-          <h1>iGEM at UBC</h1>
-          <Text>
-            we are an eager team of undergraduates, supported by multiple
-            professors and graduate students who act as mentors.
-          </Text>
-        </div>
-      </Padding>
+        <LeftImage src={LeftAbout} style={{ float: "left" }} />
 
-      <LeftImage src={LeftAbout} style={{ float: "left" }} />
+        <Padding>
+          <RowSpaced style={{ paddingBottom: "25vw" }}>
+            <Text>
+              UBC iGEM strives to create a space for budding scientists to
+              expand their skills in research, science communication, and
+              teamwork. We work towards not only the goal of competing in the
+              iGEM Jamboree, but also to promote interdisciplinary learning and
+              introduce our community to synthetic biology and the impacts it
+              will have on our near future.
+            </Text>
+          </RowSpaced>
+        </Padding>
 
-      <Padding>
-        <RowSpaced style={{ paddingBottom: "25vw" }}>
-          <Text>
-            UBC iGEM strives to create a space for budding scientists to expand
-            their skills in research, science communication, and teamwork. We
-            work towards not only the goal of competing in the iGEM Jamboree,
-            but also to promote interdisciplinary learning and introduce our
-            community to synthetic biology and the impacts it will have on our
-            near future.
-          </Text>
-        </RowSpaced>
-      </Padding>
+        <RightImage src={RightAbout} />
 
-      <RightImage src={RightAbout} />
+        <Padding>
+          <div style={{ paddingBottom: "35vw" }}>
+            <h2>The iGEM Jamboree</h2>
+            <p>
+              is an international synthetic biology competition where student
+              teams build their own genetic circuits and express them in
+              biological systems. At this competition, students present their
+              work and get judged by a scientific jury to win the Grand Prize.
+            </p>
+          </div>
+        </Padding>
 
-      <Padding>
-        <div style={{ paddingBottom: "35vw" }}>
-          <h2>The iGEM Jamboree</h2>
-          <p>
-            is an international synthetic biology competition where student
-            teams build their own genetic circuits and express them in
-            biological systems. At this competition, students present their work
-            and get judged by a scientific jury to win the Grand Prize.
-          </p>
-        </div>
-      </Padding>
+        <Padding>
+          <h2 style={{ textAlign: "center", paddingBottom: "1vw" }}>
+            Our Initiatives
+          </h2>
+          <FlexRow>
+            {initiatives.map((i) => (
+              <Initiative>
+                <div>
+                  <InitImg src={i.image} />
+                </div>
+                <p>{i.name}</p>
+              </Initiative>
+            ))}
+          </FlexRow>
 
-      <Padding>
-        <h2 style={{ textAlign: "center", paddingBottom: "1vw" }}>
-          Our Initiatives
-        </h2>
-        <FlexRow>
-          {initiatives.map((i) => (
-            <Initiative>
-              <div>
-                <InitImg src={i.image} />
-              </div>
-              <p>{i.name}</p>
-            </Initiative>
-          ))}
-        </FlexRow>
-        <Button text="Learn More" link="/past" />
-      </Padding>
-
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "right",
+              paddingTop: "1vw",
+            }}
+          >
+            <Button text="Learn More" link="/past" />
+          </div>
+        </Padding>
+      </Background>
       <Footer />
-    </Background>
+    </>
   );
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import { Members, Padding } from "../constants";
+import { Center, Members, Padding } from "../constants";
 import TeamBackground from "../images/team/team_background.png";
 import Button from "../components/button";
 
@@ -10,7 +10,6 @@ const Background = styled.div`
   background-repeat: no-repeat;
   min-height: fit-content;
   background-size: cover;
-  background-position-y: -35%;
 `;
 
 const Col = styled.div`
@@ -41,75 +40,73 @@ const Text = styled.p`
 
 export default function Team() {
   return (
-    <Background>
+    <>
       <Header />
-      <Padding>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "col",
-            justifyContent: "right",
-            paddingTop: "16vw",
-          }}
-        >
-          <div style={{ width: "45vw", paddingBottom: "10vw" }}>
-            <h1>Meet our Team</h1>
-            <p>
-              UBC iGEM is made up of passionate undergraduate scientists from
-              different departments and faculties
-            </p>
-          </div>
-        </div>
-
-        <div style={{ paddingBottom: "10vw" }}>
-          {Members.map((members) => (
-            <>
-              <h2>{members.header}</h2>
-              <FlexRow style={{ paddingBottom: "5vw" }}>
-                {members.people.map(({ name, position, major }) => (
-                  <Col>
-                    <Text>{name}</Text>
-                    <div style={{ paddingTop: "15px" }}>
-                      <Text>{position}</Text>
-                      <Text>
-                        <i>{major}</i>
-                      </Text>
-                    </div>
-                  </Col>
-                ))}
-              </FlexRow>
-            </>
-          ))}
-        </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            textAlign: "center",
-          }}
-        >
+      <Background>
+        <Padding>
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
-              paddingTop: "10vw",
-              paddingBottom: "10vw",
+              flexDirection: "col",
+              justifyContent: "right",
+              paddingTop: "8vw",
             }}
           >
-            <h2>Want to join us?</h2>
+            <div style={{ width: "45vw", paddingBottom: "10vw" }}>
+              <h1>Meet our Team</h1>
+              <p>
+                UBC iGEM is made up of passionate undergraduate scientists from
+                different departments and faculties
+              </p>
+            </div>
+          </div>
+
+          <div style={{ paddingBottom: "10vw" }}>
+            {Members.map((members) => (
+              <>
+                <h2>{members.header}</h2>
+                <FlexRow style={{ paddingBottom: "5vw" }}>
+                  {members.people.map(({ name, position, major }) => (
+                    <Col>
+                      <Text>{name}</Text>
+                      <div style={{ paddingTop: "15px" }}>
+                        <Text>{position}</Text>
+                        <Text>
+                          <i>{major}</i>
+                        </Text>
+                      </div>
+                    </Col>
+                  ))}
+                </FlexRow>
+              </>
+            ))}
+          </div>
+          <Center
+            style={{
+              textAlign: "center",
+            }}
+          >
             <div
               style={{
                 display: "flex",
-                justifyContent: "center",
-                textAlign: "center",
+                flexDirection: "column",
+                paddingTop: "10vw",
+                paddingBottom: "80vw",
               }}
             >
-              <Button text="Learn More" link="/join" />
+              <h2>Want to join us?</h2>
+              <Center
+                style={{
+                  textAlign: "center",
+                }}
+              >
+                <Button text="Learn More" link="/join" />
+              </Center>
             </div>
-          </div>
-        </div>
-      </Padding>
+          </Center>
+        </Padding>
+      </Background>
       <Footer />
-    </Background>
+    </>
   );
 }

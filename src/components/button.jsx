@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const ButtonStyle = styled.div`
@@ -16,9 +17,14 @@ const Link = styled.p`
 export default function Button({ text, link }) {
   return (
     <ButtonStyle>
-      <a href={link} target="_blank">
+      <NavLink
+        to={link}
+        className={({ isActive, isPending }) =>
+          isPending ? "pending" : isActive ? "active" : ""
+        }
+      >
         <Link>{text}</Link>
-      </a>
+      </NavLink>
     </ButtonStyle>
   );
 }

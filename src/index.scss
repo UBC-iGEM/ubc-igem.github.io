@@ -26,6 +26,12 @@ h2 {
   padding: 0px;
 }
 
+h3 {
+  font-size: 40px;
+  margin: 0;
+  padding: 0px;
+}
+
 p,
 a {
   color: #373F57;
@@ -47,4 +53,22 @@ a {
 .col {
   display: flex;
   flex-direction: column;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #b1cbc0;
+  border-radius: 25px;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #b1cbc0;
+  border-radius: 25px;
 }
