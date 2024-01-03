@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import SponsorBackground from "../images/sponsor/sponsor_background.svg";
-import { Padding } from "../constants";
+import { Padding, TopPadding } from "../constants";
 import AMS from "../images/sponsor/ams.png";
 import BMB from "../images/sponsor/bmb.png";
 import MBIM from "../images/sponsor/mbim.png";
@@ -37,7 +37,7 @@ export default function Sponsors() {
     <div>
       <Header />
       <Background>
-        <Padding style={{ paddingTop: "8vw", paddingBottom: "8vw" }}>
+        <Padding style={{ paddingTop: TopPadding, paddingBottom: "8vw" }}>
           <h1>We rely on your support to succeed</h1>
           <p>Thank you to our generous sponsors who make our science happen.</p>
         </Padding>
@@ -54,7 +54,7 @@ export default function Sponsors() {
           <h2>Want to sponsor us?</h2>
           <p>
             Check out our sponsorship package for more information.
-            <i>coming soon.</i>
+            <i> Coming soon.</i>
           </p>
         </Padding>
       </Background>

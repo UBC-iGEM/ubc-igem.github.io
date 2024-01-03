@@ -8,11 +8,11 @@ const RowSpaced = styled.div`
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
-  padding: 10px 5vw;
+  padding: 3vw 5vw;
 `;
 
 const Logo = styled.img`
-  height: 12vh;
+  height: 5vw;
   padding-right: 2vw;
 `;
 

@@ -1,13 +1,8 @@
 import styled from "styled-components";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import { FAQs, Majors, Padding } from "../constants";
+import { FAQs, Majors, Padding, TopPadding } from "../constants";
 import JoinBackground from "../images/join/join_background.svg";
-
-const Text = styled.p`
-  margin: 0;
-  padding: 0px;
-`;
 
 const Green = styled.div`
   background-color: #b1cbc0;
@@ -21,7 +16,7 @@ const Background = styled.div`
 `;
 
 const LandingDiv = styled.div`
-  padding-top: 8vw;
+  padding-top: ${TopPadding};
   padding-bottom: 15vw;
 `;
 
@@ -38,17 +33,17 @@ export default function Join() {
         <Padding>
           <LandingDiv>
             <h1>Join the Team</h1>
-            <Text>
+            <p>
               Want to meet like-minded students to design something amazing?
-            </Text>
+            </p>
           </LandingDiv>
         </Padding>
         <Padding style={{ paddingBottom: "8vw" }}>
           <h2>Our applications are currently closed.</h2>
-          <Text>
+          <p>
             Consider joining us for our next competition season. Come visit our
             website in the fall or follow us on Instagram for updates!
-          </Text>
+          </p>
         </Padding>
         <Green>
           <Padding style={{ paddingTop: "8vw", paddingBottom: "6vw" }}>
@@ -56,7 +51,7 @@ export default function Join() {
             {Majors.map((info) => (
               <SmallPadding>
                 <h3>{info.major}</h3>
-                <Text>{info.description}</Text>
+                <p>{info.description}</p>
               </SmallPadding>
             ))}
           </Padding>
@@ -67,7 +62,7 @@ export default function Join() {
           {FAQs.map((qa) => (
             <SmallPadding>
               <h3>{qa.q}</h3>
-              <Text>{qa.a}</Text>
+              <p>{qa.a}</p>
             </SmallPadding>
           ))}
         </Padding>

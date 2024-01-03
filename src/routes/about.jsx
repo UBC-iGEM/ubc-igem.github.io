@@ -8,20 +8,14 @@ import SimplySynbio from "../images/about/simply_synbio.svg";
 import Sustain from "../images/about/sustainability_in_synbio.svg";
 import Blank from "../images/about/blank.svg";
 import Pilot from "../images/past/2023.svg";
-import { Padding } from "../constants";
+import { Padding, TopPadding } from "../constants";
 import Button from "../components/button";
-import { ScrollRestoration } from "react-router-dom";
 
 const Background = styled.div`
   background-image: url(${AboutBackground});
   background-repeat: no-repeat;
   min-height: fit-content;
-  background-size: contain;
-`;
-
-const Text = styled.p`
-  margin: 0;
-  padding: 0px;
+  background-size: cover;
 `;
 
 const RowSpaced = styled.div`
@@ -30,7 +24,7 @@ const RowSpaced = styled.div`
 `;
 
 const LeftImage = styled.img`
-  width: 35vw;
+  width: 30vw;
   padding: 0 5vw;
 `;
 
@@ -45,6 +39,7 @@ const Initiative = styled.div`
   justify-content: center;
   width: 20vw;
   text-align: center;
+  padding: 10px;
 `;
 
 const InitImg = styled.img`
@@ -73,28 +68,35 @@ export default function About() {
       <Background>
         <Padding>
           <div
-            style={{ width: "38vw", paddingTop: "8vw", paddingBottom: "22vw" }}
+            style={{
+              width: "38vw",
+              paddingTop: TopPadding,
+              paddingBottom: "22vw",
+            }}
           >
-            <h1 id="_top">iGEM at UBC</h1>
-            <Text>
+            <h1>iGEM at UBC</h1>
+            <p>
               we are an eager team of undergraduates, supported by multiple
               professors and graduate students who act as mentors.
-            </Text>
+            </p>
           </div>
         </Padding>
 
         <LeftImage src={LeftAbout} style={{ float: "left" }} />
 
         <Padding>
-          <RowSpaced style={{ paddingBottom: "25vw" }}>
-            <Text>
-              UBC iGEM strives to create a space for budding scientists to
-              expand their skills in research, science communication, and
-              teamwork. We work towards not only the goal of competing in the
-              iGEM Jamboree, but also to promote interdisciplinary learning and
-              introduce our community to synthetic biology and the impacts it
-              will have on our near future.
-            </Text>
+          <RowSpaced style={{ paddingBottom: "15vw" }}>
+            <div>
+              <h2 style={{ textAlign: "right" }}>What we do</h2>
+              <p>
+                UBC iGEM strives to create a space for budding scientists to
+                expand their skills in research, science communication, and
+                teamwork. We work towards not only the goal of competing in the
+                iGEM Jamboree, but also to promote interdisciplinary learning
+                and introduce our community to synthetic biology and the impacts
+                it will have on our near future.
+              </p>
+            </div>
           </RowSpaced>
         </Padding>
 
@@ -132,6 +134,7 @@ export default function About() {
               display: "flex",
               justifyContent: "right",
               paddingTop: "1vw",
+              paddingRight: "11vw"
             }}
           >
             <Button text="Learn More" link="/past" />

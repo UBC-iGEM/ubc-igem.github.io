@@ -5,7 +5,7 @@ import ContactRight from "../images/contact/contact_right.svg";
 import Email from "../images/social-media/email.svg";
 import IG from "../images/social-media/instagram.svg";
 import Linkedin from "../images/social-media/linkedin.svg";
-import { Padding } from "../constants";
+import { Padding, TopPadding } from "../constants";
 import Form from "../components/form";
 
 const RightImage = styled.img`
@@ -25,8 +25,6 @@ const Icon = styled.img`
 `;
 
 const Text = styled.p`
-  margin: 0;
-  padding: 0px;
   text-align: center;
 `;
 
@@ -41,7 +39,7 @@ export default function Contact() {
       <Header />
 
       <Padding>
-        <div style={{ paddingTop: "10vw", paddingBottom: "5vw" }}>
+        <div style={{ paddingTop: TopPadding, paddingBottom: "5vw" }}>
           <h1>Contact us</h1>
           <p>Interested in collaborating with or sponsoring us?</p>
         </div>

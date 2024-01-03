@@ -2,15 +2,11 @@ import styled from "styled-components";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import PastMolecule from "../images/past/past_molecule.svg";
-import { Center, Padding, Projects } from "../constants";
+import { Center, Padding, Projects, TopPadding } from "../constants";
 
 const RightImage = styled.img`
   width: 20vw;
   float: right;
-`;
-
-const Text = styled.p`
-  font-size: 20px;
 `;
 
 const Project = styled.div`
@@ -36,12 +32,12 @@ export default function Past() {
     <>
       <Header />
       <RightImage src={PastMolecule} />
-      <Padding>
+      <Padding style={{ paddingTop: TopPadding, paddingBottom: "8vw" }}>
         <h1>Explore our past projects</h1>
-        <Text>
+        <p>
           Sine 2009, when our team was formed, UBC iGEM has been working hard to
           push the boundaries of synthetic biology
-        </Text>
+        </p>
       </Padding>
       <Padding>
         <Row>
@@ -51,10 +47,10 @@ export default function Past() {
                 <ProgImg src={svg} />
               </Center>
               <h3>{title}</h3>
-              <Text>{description}</Text>
-              <Text>
+              <p>{description}</p>
+              <p>
                 <i>{achievements}</i>
-              </Text>
+              </p>
             </Project>
           ))}
         </Row>

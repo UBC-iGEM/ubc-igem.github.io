@@ -6,6 +6,7 @@ const ButtonStyle = styled.div`
   background-color: #b1cbc0;
   max-width: fit-content;
   padding: 3px 15px;
+  margin-top: 3vw;
 `;
 
 const Link = styled.p`

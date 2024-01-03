@@ -23,6 +23,8 @@ export const Padding = styled.div`
   padding: 5px 15vw;
 `;
 
+export const TopPadding = "8vw";
+
 export const Center = styled.div`
   display: flex;
   justify-content: center;

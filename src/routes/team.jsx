@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import { Center, Members, Padding } from "../constants";
+import { Center, Members, Padding, TopPadding } from "../constants";
 import TeamBackground from "../images/team/team_background.png";
 import Button from "../components/button";
 
@@ -28,14 +28,11 @@ const FlexRow = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* justify-content: space-around; */
 `;
 
 const Text = styled.p`
-  margin: 0;
-  padding: 0px;
-  font-size: 20px;
   text-align: center;
+  font-size: 20px;
 `;
 
 export default function Team() {
@@ -49,10 +46,10 @@ export default function Team() {
               display: "flex",
               flexDirection: "col",
               justifyContent: "right",
-              paddingTop: "8vw",
+              paddingTop: TopPadding,
             }}
           >
-            <div style={{ width: "45vw", paddingBottom: "10vw" }}>
+            <div style={{ width: "40vw", paddingBottom: "10vw" }}>
               <h1>Meet our Team</h1>
               <p>
                 UBC iGEM is made up of passionate undergraduate scientists from

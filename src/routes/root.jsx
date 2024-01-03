@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Button from "../components/button";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import { Padding } from "../constants";
+import { Padding, TopPadding } from "../constants";
 import LandingBackground from "../images/landing/landing_background.svg";
 import LandingPhoto from "../images/landing/landing_photo.svg";
 import { ScrollRestoration } from "react-router-dom";
@@ -15,7 +15,8 @@ const Background = styled.div`
 `;
 
 const LandingDiv = styled.div`
-  padding-top: 20vh;
+  padding-top: ${TopPadding};
+  width: 60vw;
 `;
 
 const ImgRight = styled.img`
