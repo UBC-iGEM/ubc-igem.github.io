@@ -10,7 +10,7 @@ const Background = styled.div`
   background-repeat: no-repeat;
   min-height: fit-content;
   background-size: cover;
-  background-position-y: -7%;
+  background-position-y: -35%;
 `;
 
 const Col = styled.div`
@@ -49,7 +49,7 @@ export default function Team() {
             display: "flex",
             flexDirection: "col",
             justifyContent: "right",
-            paddingTop: "12vw",
+            paddingTop: "16vw",
           }}
         >
           <div style={{ width: "45vw", paddingBottom: "10vw" }}>
