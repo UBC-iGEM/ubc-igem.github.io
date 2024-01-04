@@ -9,6 +9,9 @@ import GRO from "../images/past/2017.svg";
 import CRES from "../images/past/2016.svg";
 import PROB from "../images/past/2015.svg";
 import DAR from "../images/past/2014.svg";
+import favicon from "../../static/icons/icon-512x512.png";
+
+export const Favicon = favicon;
 
 export const links = [
   { link: "/", name: "home" },

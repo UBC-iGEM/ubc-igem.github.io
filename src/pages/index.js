@@ -1,9 +1,9 @@
-import React  from 'react';
+import React from "react";
 import styled from "styled-components";
 import Button from "../components/button";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import { Background, Padding, TopPadding } from "../components/constants";
+import { Background, Favicon, Padding, TopPadding } from "../components/constants";
 import LandingBackgroundImage from "../images/landing/landing_background.webp";
 import LandingPhoto from "../images/landing/landing_photo.svg";
 import "../components/index.css";
@@ -89,17 +89,14 @@ export default Root;
 export const Head = () => (
   <>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/android-chrome-512x512.png" />
+    <link rel="icon" href={Favicon} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#b1cbc0" />
     <meta
       name="description"
       content="building a better future through synthetic biology"
     />
-    <link
-      rel="apple-touch-icon"
-      href="%PUBLIC_URL%/android-chrome-192x192.png"
-    />
+    <link rel="apple-touch-icon" href={Favicon} />
 
     <title>UBC iGEM</title>
   </>
