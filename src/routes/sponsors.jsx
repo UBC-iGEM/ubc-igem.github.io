@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import SponsorBackground from "../images/sponsor/sponsor_background.webp";
-import { Padding, TopPadding } from "../constants";
+import SponsorBackgroundImage from "../images/sponsor/sponsor_background.webp";
+import { Background, Center, Padding, Row, TopPadding } from "../constants";
 import AMS from "../images/sponsor/ams.png";
 import BMB from "../images/sponsor/bmb.png";
 import MBIM from "../images/sponsor/mbim.png";
@@ -14,20 +14,20 @@ import STEM from "../images/sponsor/stemcell.png";
 import SUS from "../images/sponsor/sus.png";
 import ZOO from "../images/sponsor/zoology.png";
 
-const Background = styled.div`
-  background-image: url(${SponsorBackground});
-  background-repeat: no-repeat;
-  min-height: fit-content;
-  background-size: cover;
+const SponsorBackground = styled(Background)`
+  background-image: url(${SponsorBackgroundImage});
 `;
+
 const Img = styled.img`
   height: 10vw;
   padding: 2vw;
+  @media only screen and (max-width: 600px) {
+    width: 70vw;
+    height: auto;
+  }
 `;
 
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
+const FlexRow = styled(Row)`
   flex-wrap: wrap;
   justify-content: space-evenly;
 `;
@@ -36,19 +36,21 @@ export default function Sponsors() {
   return (
     <div>
       <Header />
-      <Background>
+      <SponsorBackground>
         <Padding style={{ paddingTop: TopPadding, paddingBottom: "8vw" }}>
           <h1>We rely on your support to succeed</h1>
           <p>Thank you to our generous sponsors who make our science happen.</p>
         </Padding>
         <Padding style={{ paddingBottom: "8vw" }}>
-          <Row>
+          <FlexRow>
             {[STEM, PRO, MBIM, BMB, MSL, ZOO, SBME, SUS, PAF, AMS].map(
               (svg) => (
-                <Img src={svg} />
+                <Center>
+                  <Img src={svg} />
+                </Center>
               )
             )}
-          </Row>
+          </FlexRow>
         </Padding>
         <Padding style={{ paddingBottom: "10vw" }}>
           <h2>Want to sponsor us?</h2>
@@ -57,7 +59,7 @@ export default function Sponsors() {
             <i> Coming soon.</i>
           </p>
         </Padding>
-      </Background>
+      </SponsorBackground>
       <Footer />
     </div>
   );

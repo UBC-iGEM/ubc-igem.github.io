@@ -1,15 +1,16 @@
 import styled from "styled-components";
 import Button from "./button";
+import { Col, Row } from "../constants";
 
-const Col = styled.div`
-  display: flex;
-  flex-direction: column;
+const FieldRow = styled(Row)`
+  justify-content: space-between;
 `;
 
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+const FieldWidth = styled(Col)`
+  @media only screen and (min-width: 600px) {
+    width: 30vw;
+  }
+  padding: 1vw;
 `;
 
 const Text = styled.p`
@@ -23,21 +24,21 @@ export default function Form() {
   return (
     <form>
       <Col>
-        <Row>
-          <Col style={{ width: "30vw", padding: "1vw" }}>
+        <FieldRow>
+          <FieldWidth>
             <label for="fname">
               <Text>Name</Text>
             </label>
             <input type="text" id="fname" name="fname" />
-          </Col>
-          <Col style={{ width: "30vw", padding: "1vw" }}>
+          </FieldWidth>
+          <FieldWidth>
             <label for="email">
               <Text>Your email</Text>
             </label>
             <input type="text" id="email" name="email" />
-          </Col>
-        </Row>
-        <Col style={{ height: "20vw", padding: "1vw" }}>
+          </FieldWidth>
+        </FieldRow>
+        <FieldWidth>
           <label for="message">
             <Text>Your message</Text>
           </label>
@@ -49,7 +50,7 @@ export default function Form() {
             cols="40"
             rows="5"
           />
-        </Col>
+        </FieldWidth>
         <div
           style={{
             display: "flex",

@@ -21,10 +21,36 @@ export const links = [
 
 export const Padding = styled.div`
   padding: 5px 15vw;
+  @media only screen and (max-width: 600px) {
+    padding: 10vw;
+  }
+`;
+
+export const Background = styled.div`
+  background-repeat: no-repeat;
+  min-height: fit-content;
+  background-size: cover;
+
+  @media only screen and (max-width: 600px) {
+    background-size: contain;
+  }
 `;
 
 export const TopPadding = "8vw";
 
+export const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+`;
+
+export const Col = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 export const Center = styled.div`
   display: flex;
   justify-content: center;

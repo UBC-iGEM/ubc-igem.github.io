@@ -12,8 +12,11 @@ const RightImage = styled.img`
 const Project = styled.div`
   display: flex;
   flex-direction: column;
-  width: 25vw;
   text-align: center;
+  padding: 2vw;
+  @media only screen and (min-width: 600px) {
+    width: 25vw;
+  }
 `;
 
 const Row = styled.div`
@@ -25,6 +28,9 @@ const Row = styled.div`
 
 const ProgImg = styled.img`
   width: 15vw;
+  @media only screen and (max-width: 600px) {
+    width: 70vw;
+  }
 `;
 
 export default function Past() {
@@ -48,7 +54,7 @@ export default function Past() {
               </Center>
               <h3>{title}</h3>
               <p>{description}</p>
-              <p>
+              <p style={{ paddingTop: "20px" }}>
                 <i>{achievements}</i>
               </p>
             </Project>

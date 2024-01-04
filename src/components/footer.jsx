@@ -33,6 +33,9 @@ const ColSpaced = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 0 10vw 0 0;
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const Link = styled.p`

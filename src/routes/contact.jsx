@@ -5,7 +5,7 @@ import ContactRight from "../images/contact/contact_right.svg";
 import Email from "../images/social-media/email.svg";
 import IG from "../images/social-media/instagram.svg";
 import Linkedin from "../images/social-media/linkedin.svg";
-import { Padding, TopPadding } from "../constants";
+import { Col, Padding, Row, TopPadding } from "../constants";
 import Form from "../components/form";
 
 const RightImage = styled.img`
@@ -13,26 +13,30 @@ const RightImage = styled.img`
   float: right;
 `;
 
-const Col = styled.div`
-  display: flex;
-  flex-direction: column;
+const PaddedCol = styled(Col)`
   padding-bottom: 20vw;
 `;
 
 const Icon = styled.img`
   width: 3vw;
   padding-right: 20px;
+  @media only screen and (max-width: 600px) {
+    width: 15vw;
+    height: auto;
+  }
 `;
 
 const Text = styled.p`
   text-align: center;
 `;
 
-const Row = styled.div`
-  display: flex;
+const PaddedRow = styled(Row)`
   padding-top: 2vw;
-  flex-direction: row;
+  @media only screen and (max-width: 600px) {
+    flex-direction: row;
+  }
 `;
+
 export default function Contact() {
   return (
     <>
@@ -47,7 +51,7 @@ export default function Contact() {
 
       <RightImage src={ContactRight} />
       <Padding>
-        <Col>
+        <PaddedCol>
           <h2>You can find us here</h2>
           {[
             {
@@ -66,14 +70,14 @@ export default function Contact() {
               name: "UBC iGEM",
             },
           ].map((sm) => (
-            <Row>
+            <PaddedRow>
               <a href={sm.href}>
                 <Icon src={sm.svg} />
               </a>
               <Text>{sm.name}</Text>
-            </Row>
+            </PaddedRow>
           ))}
-        </Col>
+        </PaddedCol>
       </Padding>
 
       <Padding>

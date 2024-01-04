@@ -1,32 +1,46 @@
 import styled from "styled-components";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import { Center, Members, Padding, TopPadding } from "../constants";
-import TeamBackground from "../images/team/team_background.png";
+import {
+  Background,
+  Center,
+  Col,
+  Members,
+  Padding,
+  Row,
+  TopPadding,
+} from "../constants";
+import TeamBackgroundImage from "../images/team/team_background.png";
 import Button from "../components/button";
 
-const Background = styled.div`
-  background-image: url(${TeamBackground});
-  background-repeat: no-repeat;
-  min-height: fit-content;
-  background-size: cover;
+const TeamBackground = styled(Background)`
+  @media only screen and (min-width: 600px) {
+    background-image: url(${TeamBackgroundImage});
+  }
 `;
 
-const Col = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 12vw;
-  height: 12vw;
+const TeamDiv = styled.div`
+  @media only screen and (min-width: 600px) {
+    width: 40vw;
+  }
+  padding-bottom: 10vw;
+`;
+
+const MemberBlock = styled(Col)`
+  width: 55vw;
+  height: 55vw;
   margin: 1vw;
   padding: 1vw;
   border-radius: 60px;
   background-color: #b1cbc0;
   justify-content: center;
+  @media only screen and (min-width: 600px) {
+    width: 12vw;
+    height: 12vw;
+  }
 `;
 
-const FlexRow = styled.div`
-  display: flex;
-  flex-direction: row;
+const FlexRow = styled(Row)`
   flex-wrap: wrap;
 `;
 
@@ -39,7 +53,7 @@ export default function Team() {
   return (
     <>
       <Header />
-      <Background>
+      <TeamBackground>
         <Padding>
           <div
             style={{
@@ -49,13 +63,13 @@ export default function Team() {
               paddingTop: TopPadding,
             }}
           >
-            <div style={{ width: "40vw", paddingBottom: "10vw" }}>
+            <TeamDiv>
               <h1>Meet our Team</h1>
               <p>
                 UBC iGEM is made up of passionate undergraduate scientists from
                 different departments and faculties
               </p>
-            </div>
+            </TeamDiv>
           </div>
 
           <div style={{ paddingBottom: "10vw" }}>
@@ -64,15 +78,17 @@ export default function Team() {
                 <h2>{members.header}</h2>
                 <FlexRow style={{ paddingBottom: "5vw" }}>
                   {members.people.map(({ name, position, major }) => (
-                    <Col>
-                      <Text>{name}</Text>
-                      <div style={{ paddingTop: "15px" }}>
-                        <Text>{position}</Text>
-                        <Text>
-                          <i>{major}</i>
-                        </Text>
-                      </div>
-                    </Col>
+                    <Center>
+                      <MemberBlock>
+                        <Text>{name}</Text>
+                        <div style={{ paddingTop: "15px" }}>
+                          <Text>{position}</Text>
+                          <Text>
+                            <i>{major}</i>
+                          </Text>
+                        </div>
+                      </MemberBlock>
+                    </Center>
                   ))}
                 </FlexRow>
               </>
@@ -102,7 +118,7 @@ export default function Team() {
             </div>
           </Center>
         </Padding>
-      </Background>
+      </TeamBackground>
       <Footer />
     </>
   );

@@ -1,18 +1,15 @@
 import styled from "styled-components";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import { FAQs, Majors, Padding, TopPadding } from "../constants";
-import JoinBackground from "../images/join/join_background.png";
+import { Background, FAQs, Majors, Padding, TopPadding } from "../constants";
+import JoinBackgroundImage from "../images/join/join_background.png";
 
 const Green = styled.div`
   background-color: #b1cbc0;
 `;
 
-const Background = styled.div`
-  background-image: url(${JoinBackground});
-  background-repeat: no-repeat;
-  min-height: fit-content;
-  background-size: cover;
+const JoinBackground = styled(Background)`
+  background-image: url(${JoinBackgroundImage});
 `;
 
 const LandingDiv = styled.div`
@@ -29,7 +26,7 @@ export default function Join() {
   return (
     <div>
       <Header />
-      <Background>
+      <JoinBackground>
         <Padding>
           <LandingDiv>
             <h1>Join the Team</h1>
@@ -66,7 +63,7 @@ export default function Join() {
             </SmallPadding>
           ))}
         </Padding>
-      </Background>
+      </JoinBackground>
       <Footer />
     </div>
   );

@@ -1,56 +1,88 @@
 import styled from "styled-components";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import AboutBackground from "../images/about/about_background.webp";
+import AboutBackgroundImage from "../images/about/about_background.webp";
 import LeftAbout from "../images/about/left_about.svg";
 import RightAbout from "../images/about/about_right.svg";
 import SimplySynbio from "../images/about/simply_synbio.svg";
 import Sustain from "../images/about/sustainability_in_synbio.svg";
 import Blank from "../images/about/blank.svg";
 import Pilot from "../images/past/2023.svg";
-import { Padding, TopPadding } from "../constants";
+import {
+  Background,
+  Center,
+  Col,
+  Padding,
+  Row,
+  TopPadding,
+} from "../constants";
 import Button from "../components/button";
 
-const Background = styled.div`
-  background-image: url(${AboutBackground});
-  background-repeat: no-repeat;
-  min-height: fit-content;
-  background-size: cover;
+const AboutBackground = styled(Background)`
+  background-image: url(${AboutBackgroundImage});
 `;
 
-const RowSpaced = styled.div`
-  display: flex;
-  flex-direction: row;
+const AboutDiv = styled.div`
+  padding-top: ${TopPadding};
+  padding-bottom: 10vw;
+  @media only screen and (min-width: 600px) {
+    width: 38vw;
+    padding-bottom: 22vw;
+  }
 `;
 
 const LeftImage = styled.img`
   width: 30vw;
   padding: 0 5vw;
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+`;
+
+const LeftImageMobile = styled.img`
+  width: 80vw;
+  @media only screen and (min-width: 600px) {
+    display: none;
+  }
+  padding-bottom: 5vw;
 `;
 
 const RightImage = styled.img`
   width: 40vw;
   float: right;
+  @media only screen and (max-width: 600px) {
+    width: 70vw;
+  }
 `;
 
-const Initiative = styled.div`
-  display: flex;
-  flex-direction: column;
+const Initiative = styled(Col)`
   justify-content: center;
-  width: 20vw;
   text-align: center;
   padding: 10px;
+  @media only screen and (min-width: 600px) {
+    width: 20vw;
+  }
 `;
 
 const InitImg = styled.img`
   width: 12vw;
+  @media only screen and (max-width: 600px) {
+    width: 70vw;
+  }
 `;
 
-const FlexRow = styled.div`
-  display: flex;
-  flex-direction: row;
+const FlexRow = styled(Row)`
   flex-wrap: wrap;
   justify-content: space-around;
+`;
+
+const ButtonDiv = styled.div`
+  @media only screen and (min-width: 600px) {
+    display: flex;
+    justify-content: right;
+    padding-top: 1vw;
+    padding-right: 11vw;
+  }
 `;
 
 export default function About() {
@@ -65,27 +97,22 @@ export default function About() {
   return (
     <>
       <Header />
-      <Background>
+      <AboutBackground>
         <Padding>
-          <div
-            style={{
-              width: "38vw",
-              paddingTop: TopPadding,
-              paddingBottom: "22vw",
-            }}
-          >
+          <AboutDiv>
             <h1>iGEM at UBC</h1>
             <p>
               we are an eager team of undergraduates, supported by multiple
               professors and graduate students who act as mentors.
             </p>
-          </div>
+          </AboutDiv>
         </Padding>
 
         <LeftImage src={LeftAbout} style={{ float: "left" }} />
 
         <Padding>
-          <RowSpaced style={{ paddingBottom: "15vw" }}>
+          <Row style={{ paddingBottom: "15vw" }}>
+            <LeftImageMobile src={LeftAbout} />
             <div>
               <h2 style={{ textAlign: "right" }}>What we do</h2>
               <p>
@@ -97,7 +124,7 @@ export default function About() {
                 it will have on our near future.
               </p>
             </div>
-          </RowSpaced>
+          </Row>
         </Padding>
 
         <RightImage src={RightAbout} />
@@ -129,18 +156,13 @@ export default function About() {
             ))}
           </FlexRow>
 
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "right",
-              paddingTop: "1vw",
-              paddingRight: "11vw"
-            }}
-          >
-            <Button text="Learn More" link="/past" />
-          </div>
+          <ButtonDiv>
+            <Center>
+              <Button text="Learn More" link="/past" />
+            </Center>
+          </ButtonDiv>
         </Padding>
-      </Background>
+      </AboutBackground>
       <Footer />
     </>
   );

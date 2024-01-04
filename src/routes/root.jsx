@@ -2,25 +2,27 @@ import styled from "styled-components";
 import Button from "../components/button";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import { Padding, TopPadding } from "../constants";
-import LandingBackground from "../images/landing/landing_background.webp";
+import { Background, Padding, TopPadding } from "../constants";
+import LandingBackgroundImage from "../images/landing/landing_background.webp";
 import LandingPhoto from "../images/landing/landing_photo.svg";
 import { ScrollRestoration } from "react-router-dom";
 
-const Background = styled.div`
-  background-image: url(${LandingBackground});
-  background-repeat: no-repeat;
-  min-height: fit-content;
-  background-size: cover;
+const LandingBackground = styled(Background)`
+  background-image: url(${LandingBackgroundImage});
 `;
 
 const LandingDiv = styled.div`
   padding-top: ${TopPadding};
-  width: 60vw;
+  @media only screen and (min-width: 600px) {
+    width: 60vw;
+  }
 `;
 
 const ImgRight = styled.img`
   width: 50vw;
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const JustifyRight = styled.div`
@@ -37,7 +39,7 @@ export default function Root() {
   return (
     <>
       <Header />
-      <Background>
+      <LandingBackground>
         <Padding>
           <LandingDiv>
             <h1>UBC iGEM</h1>
@@ -75,7 +77,7 @@ export default function Root() {
             <Button text={"Learn More"} link={"/team"} />
           </div>
         </Padding>
-      </Background>
+      </LandingBackground>
       <Footer />
       <ScrollRestoration />
     </>

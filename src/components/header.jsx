@@ -1,19 +1,25 @@
 import { NavLink } from "react-router-dom";
-import { links } from "../constants";
+import { Row, links } from "../constants";
 import styled from "styled-components";
 import Logo_Transparent from "../images/logo/iGEMLogo_Transparent.svg";
 
-const RowSpaced = styled.div`
-  display: flex;
-  flex-direction: row;
+const RowSpaced = styled(Row)`
   justify-content: space-between;
   margin: auto;
   padding: 3vw 5vw;
+  @media only screen and (max-width: 600px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const Logo = styled.img`
-  height: 5vw;
-  padding-right: 2vw;
+  @media only screen and (min-width: 600px) {
+    height: 5vw;
+    padding-right: 2vw;
+  }
+  @media only screen and (max-width: 600px) {
+    height: 25vw;
+  }
 `;
 
 const Link = styled.p`
