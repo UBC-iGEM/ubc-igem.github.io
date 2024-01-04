@@ -41,7 +41,6 @@ export default function Contact() {
   return (
     <>
       <Header />
-
       <Padding>
         <div style={{ paddingTop: TopPadding, paddingBottom: "5vw" }}>
           <h1>Contact us</h1>
