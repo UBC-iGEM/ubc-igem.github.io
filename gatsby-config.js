@@ -4,19 +4,16 @@
 module.exports = {
   siteMetadata: {
     title: `ubcigem`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://ubc-igem.github.io`,
   },
-  plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-sitemap", {
-    resolve: 'gatsby-plugin-manifest',
-    options: {
-      "icon": "src/images/icon.png"
-    }
-  }, "gatsby-plugin-mdx", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
+  plugins: [
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "static/icons/icon-512x512.png",
+      },
     },
-    __key: "pages"
-  }]
+  ],
 };
