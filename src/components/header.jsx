@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
-import { links } from "../constants";
+import { Center, links } from "../constants";
 import styled from "styled-components";
 import Logo_Transparent from "../images/logo/iGEMLogo_Transparent.svg";
 import { useEffect, useRef, useState } from "react";
+import CancelImage from "../images/social-media/close.png";
 
 // https://jfelix.info/blog/create-a-mobile-friendly-navigation-with-react
 
@@ -43,6 +44,12 @@ export default function Header() {
             <NavBar.Link>{l.name}</NavBar.Link>
           </NavLink>
         ))}
+        <Center>
+          <CancelImageStyle
+            src={CancelImage}
+            onClick={() => toggleDrawer(false)}
+          />
+        </Center>
       </NavBar.Links>
     </NavBar.Wrapper>
   );
@@ -72,7 +79,7 @@ const NavBar = {
       padding: 0.5rem 1rem;
     }
     @media only screen and (max-width: 600px) {
-      height: 25vw;
+      height: 15vw;
       padding: 0.5rem 1rem;
     }
   `,
@@ -106,6 +113,13 @@ const NavBar = {
     }
   `,
 };
+
+const CancelImageStyle = styled.img`
+  width: 15vw;
+  @media only screen and (min-width: 600px) {
+    display: none;
+  }
+`;
 
 const HamburgerButton = {
   Wrapper: styled.button`

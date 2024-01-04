@@ -72,7 +72,7 @@ export default function Team() {
             </TeamDiv>
           </div>
 
-          <div style={{ paddingBottom: "10vw" }}>
+          <div style={{ paddingBottom: "20vw" }}>
             {Members.map((members) => (
               <>
                 <h2>{members.header}</h2>
