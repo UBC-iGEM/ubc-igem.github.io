@@ -6,7 +6,6 @@ import {
   Background,
   Center,
   Col,
-  Favicon,
   Members,
   Padding,
   Row,
@@ -132,15 +131,13 @@ export default Team;
 export const Head = () => (
   <>
     <meta charset="utf-8" />
-    <link rel="icon" href={Favicon} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#b1cbc0" />
     <meta
       name="description"
       content="building a better future through synthetic biology"
     />
-    <link rel="apple-touch-icon" href={Favicon} />
 
-    <title>Team</title>
+    <title>Our Team.</title>
   </>
 );

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import PastMolecule from "../images/past/past_molecule.svg";
-import { Center, Favicon, Padding, Projects, TopPadding } from "../components/constants";
+import { Center, Padding, Projects, TopPadding } from "../components/constants";
 import "../components/index.css";
 
 const RightImage = styled.img`
@@ -73,15 +73,13 @@ export default Past;
 export const Head = () => (
   <>
     <meta charset="utf-8" />
-    <link rel="icon" href={Favicon} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#b1cbc0" />
     <meta
       name="description"
       content="building a better future through synthetic biology"
     />
-    <link rel="apple-touch-icon" href={Favicon} />
 
-    <title>Team</title>
+    <title>Past Projects.</title>
   </>
 );
