@@ -1,9 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.scss";
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
