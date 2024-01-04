@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import { FAQs, Majors, Padding, TopPadding } from "../constants";
-import JoinBackground from "../images/join/join_background.svg";
+import JoinBackground from "../images/join/join_background.png";
 
 const Green = styled.div`
   background-color: #b1cbc0;

@@ -3,7 +3,7 @@ import Button from "../components/button";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import { Padding, TopPadding } from "../constants";
-import LandingBackground from "../images/landing/landing_background.svg";
+import LandingBackground from "../images/landing/landing_background.webp";
 import LandingPhoto from "../images/landing/landing_photo.svg";
 import { ScrollRestoration } from "react-router-dom";
 

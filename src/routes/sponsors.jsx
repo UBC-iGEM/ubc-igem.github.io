@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import SponsorBackground from "../images/sponsor/sponsor_background.svg";
+import SponsorBackground from "../images/sponsor/sponsor_background.webp";
 import { Padding, TopPadding } from "../constants";
 import AMS from "../images/sponsor/ams.png";
 import BMB from "../images/sponsor/bmb.png";
