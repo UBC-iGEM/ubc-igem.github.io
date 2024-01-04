@@ -15,6 +15,9 @@ const Background = styled.div`
 const Logo = styled.img`
   height: 20vh;
   margin: auto;
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const RowSpaced = styled.div`
@@ -46,6 +49,9 @@ const Link = styled.p`
 
 const Links = styled.div`
   padding: 5vh 5vw;
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const Imgs = styled.div`
