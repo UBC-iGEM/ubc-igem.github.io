@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./index.scss";
+import "./index.css";
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
 import About from "./routes/about";
@@ -10,6 +10,7 @@ import Sponsors from "./routes/sponsors";
 import Join from "./routes/join";
 import Contact from "./routes/contact";
 import Past from "./routes/past";
+import { GlobalStyle } from "./constants";
 
 const router = createBrowserRouter([
   {

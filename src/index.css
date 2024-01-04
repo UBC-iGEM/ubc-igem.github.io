@@ -9,53 +9,52 @@ h1,
 h2,
 h3,
 h4 {
-  color: #373F57;
-  font-family: 'Poppins', sans-serif;
+  color: #373f57;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
 
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  p,
+  a {
+    font-size: 20px;
+  }
+}
 
 h1 {
   font-size: 80px;
   margin: 0;
   padding: 0px;
-
-  @media only screen and (max-width: 600px) {
-    font-size: 40px;
-  }
 }
 
 h2 {
   font-size: 50px;
   margin: 0;
   padding: 0px;
-
-  @media only screen and (max-width: 600px) {
-    font-size: 30px;
-  }
 }
 
 h3 {
   font-size: 40px;
   margin: 0;
   padding: 0px;
-
-  @media only screen and (max-width: 600px) {
-    font-size: 30px;
-  }
 }
 
 p,
 a {
-  color: #373F57;
-  font-family: 'Open Sans', sans-serif;
+  color: #373f57;
+  font-family: "Open Sans", sans-serif;
   font-size: 25px;
   margin: 0;
   padding: 0px;
-
-  @media only screen and (max-width: 600px) {
-    font-size: 20px;
-  }
 }
 
 a {
@@ -64,17 +63,7 @@ a {
   font-weight: 500;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-}
-
-.col {
-  display: flex;
-  flex-direction: column;
-}
-
-input[type=text] {
+input[type="text"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
