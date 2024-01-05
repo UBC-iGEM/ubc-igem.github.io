@@ -89,6 +89,6 @@ export const Head = () => (
       content="building a better future through synthetic biology"
     />
 
-    <title>Join Us.</title>
+    <title>Join the Team</title>
   </>
 );

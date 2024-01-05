@@ -80,6 +80,6 @@ export const Head = () => (
       content="building a better future through synthetic biology"
     />
 
-    <title>Past Projects.</title>
+    <title>Past Projects</title>
   </>
 );

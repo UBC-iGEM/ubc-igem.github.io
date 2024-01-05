@@ -182,6 +182,6 @@ export const Head = () => (
       content="building a better future through synthetic biology"
     />
 
-    <title>About us.</title>
+    <title>About Us</title>
   </>
 );
