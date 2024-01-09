@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import SponsorBackgroundImage from "../images/sponsor/sponsor_background.webp";
+import SponsorBackgroundImage from "../images/sponsor/sponsor_background_short.png";
 import {
   Background,
   Center,
