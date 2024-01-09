@@ -11,7 +11,7 @@ import {
   Row,
   TopPadding,
 } from "../components/constants";
-import TeamBackgroundImage from "../images/team/team_background.png";
+import TeamBackgroundImage from "../images/team/team_background_short.webp";
 import Button from "../components/button";
 import "../components/index.css";
 
@@ -74,7 +74,7 @@ const Team = () => {
             </TeamDiv>
           </div>
 
-          <div style={{ paddingBottom: "20vw" }}>
+          <div>
             {Members.map((members) => (
               <>
                 <h2>{members.header}</h2>
@@ -105,8 +105,8 @@ const Team = () => {
               style={{
                 display: "flex",
                 flexDirection: "column",
-                paddingTop: "10vw",
-                paddingBottom: "80vw",
+                paddingTop: "20vw",
+                paddingBottom: "10vw",
               }}
             >
               <h2>Want to join us?</h2>
