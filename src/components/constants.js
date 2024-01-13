@@ -171,15 +171,15 @@ export const Majors = [
 export const FAQs = [
   {
     q: "Do you accept students from any year level?",
-    a: "yes! some of our most valued members have been on the team since their first year. as long as you are an undergraduate student eager to learn and work well in a team context for a common goal, come join us! ",
+    a: "Yes! Some of our most valued members have been on the team since their first year. As long as you are an undergraduate student eager to learn and work well in a team context for a common goal, come join us! ",
   },
   {
     q: "Do I need to have any particular experience to be considered? ",
-    a: "not necessarily. if you wish to join the wet lab sub-team, it is ideal if you have previous wet lab experience from courses, volunteering, work, or other extracurriculars. however, even in this case, we have students whose first wet lab experience is through iGEM!",
+    a: "Not necessarily. If you wish to join the wet lab sub-team, it is ideal if you have previous wet lab experience from courses, volunteering, work, or other extracurriculars. However, even in this case, we have students whose first wet lab experience is through iGEM!",
   },
   {
     q: "What are the most important qualities when you look at when a candidate applies?",
-    a: "willingness to learn and a genuine enthusiasm! since synthetic biology is a niche subject, we do not expect extensive knowledge of the field. BUT we do require you to complement this with an eagerness to learn the necessary concepts and skills.",
+    a: "Willingness to learn and a genuine enthusiasm! Since synthetic biology is a niche subject, we do not expect extensive knowledge of the field. BUT we do require you to complement this with an eagerness to learn the necessary concepts and skills.",
   },
 ];
 export const Members = [
