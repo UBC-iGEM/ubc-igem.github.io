@@ -6,9 +6,9 @@ import Linkedin from "../images/social-media/linkedin.svg";
 import Email from "../images/social-media/email.svg";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import { Col, Row } from "./constants";
+import { Background, Col, Row } from "./constants";
 
-const Background = styled.div`
+const FooterBackground = styled(Background)`
   background-image: url(${Blob});
   background-repeat: no-repeat;
   min-height: fit-content;
@@ -67,7 +67,7 @@ const Icon = styled.img`
 
 export default function Footer() {
   return (
-    <Background>
+    <FooterBackground>
       <RowSpaced>
         <LeftSide>
           <Logo src={Logo_Transparent} />
@@ -115,6 +115,6 @@ export default function Footer() {
           </Imgs>
         </ColSpaced>
       </RowSpaced>
-    </Background>
+    </FooterBackground>
   );
 }
