@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import SponsorBackgroundImage from "../images/sponsor/sponsor_background_short.png";
+import sponsorPdf from "../images/2024 iGEM Sponsorship Package.pdf";
 import {
   Background,
   Center,
@@ -21,6 +22,7 @@ import STEM from "../images/sponsor/stemcell.png";
 import SUS from "../images/sponsor/sus.png";
 import ZOO from "../images/sponsor/zoology.png";
 import "../components/index.css";
+import { Document } from "react-pdf";
 
 const SponsorBackground = styled(Background)`
   background-image: url(${SponsorBackgroundImage});
@@ -62,10 +64,22 @@ const Sponsors = () => {
         </Padding>
         <Padding style={{ paddingBottom: "10vw" }}>
           <h2>Want to sponsor us?</h2>
-          <p>
-            Check out our sponsorship package for more information.
-            <i> Coming soon.</i>
-          </p>
+          <p>Check out our sponsorship package for more information.</p>
+          <object
+            data={sponsorPdf}
+            type="application/pdf"
+            width="100%"
+            height="800px"
+          >
+            <br />
+            <p>
+              Unable to display PDF file.
+              <br />
+              <a href="https://drive.google.com/file/d/17LPU6mpLFxne4OrxrUUuuMjciblx4yXU/view?usp=sharing">
+                Download instead.
+              </a>
+            </p>
+          </object>
         </Padding>
       </SponsorBackground>
       <Footer />
