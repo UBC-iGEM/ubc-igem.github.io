@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: `ubcigem`,
-    siteUrl: `https://ubc-igem.github.io`,
+    siteUrl: `ubcigem.com`,
   },
   plugins: [
     "gatsby-plugin-styled-components",
