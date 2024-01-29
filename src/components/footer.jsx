@@ -9,9 +9,11 @@ import { Link } from "gatsby";
 import { Background, Col, Row } from "./constants";
 
 const FooterBackground = styled(Background)`
-  background-image: url(${Blob});
-  background-repeat: no-repeat;
-  min-height: fit-content;
+  @media only screen and (min-width: 600px) {
+    background-image: url(${Blob});
+    background-repeat: no-repeat;
+    min-height: fit-content;
+  }
 `;
 
 const Logo = styled.img`

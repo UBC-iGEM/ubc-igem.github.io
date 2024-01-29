@@ -22,7 +22,6 @@ import STEM from "../images/sponsor/stemcell.png";
 import SUS from "../images/sponsor/sus.png";
 import ZOO from "../images/sponsor/zoology.png";
 import "../components/index.css";
-import { Document } from "react-pdf";
 
 const SponsorBackground = styled(Background)`
   background-image: url(${SponsorBackgroundImage});
