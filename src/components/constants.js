@@ -286,7 +286,7 @@ export const Members = [
         major: "Chemical and Biological Engineering",
       },
       {
-        name: "Qinru Kong",
+        name: "QingRu Kong",
         photo: "",
         major: "Microbiology and Immunology",
       },
@@ -351,7 +351,7 @@ export const Members = [
     header: "Wiki",
     people: [
       {
-        name: "Deigo Perez Hidalgo",
+        name: "Diego Perez Hidalgo",
         photo: "",
         major: "Honours Biochemistry",
       },
