@@ -386,6 +386,11 @@ export const Members = [
         major: "Graduate Advisor",
       },
       {
+        name: "Nikita Telkar",
+        photo: "",
+        major: "Graduate Advisor",
+      },
+      {
         name: "Rodrigo Vallejos",
         photo: "",
         major: "Graduate Advisor",
