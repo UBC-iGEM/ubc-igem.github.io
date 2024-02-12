@@ -66,16 +66,27 @@ const Root = () => {
             <Button text={"Learn More"} link={"https://igem.org/"} />
           </PadBottom>
 
+          <PadBottom>
+            <div>
+              <h2>Our Team</h2>
+              <p>
+                the UBC iGEM team is an undergraduate student design team that
+                has competed in this competition since 2009. Our current team
+                consists of highly motivated undergraduate students along with
+                graduate and faculty advisors that span various life sciences
+                and engineering fields.
+              </p>
+              <Button text={"Learn More"} link={"/team"} />
+            </div>
+          </PadBottom>
+
           <div>
-            <h2>Our Team</h2>
-            <p>
-              the UBC iGEM team is an undergraduate student design team that has
-              competed in this competition since 2009. Our current team consists
-              of highly motivated undergraduate students along with graduate and
-              faculty advisors that span various life sciences and engineering
-              fields.
-            </p>
-            <Button text={"Learn More"} link={"/team"} />
+            <h2>Simply Synbio</h2>
+            <p>Check out our new blog, Simply Synbio!</p>
+            <Button
+              text={"Learn More"}
+              link={"https://ubcigem.com/simplysynbio/"}
+            />
           </div>
         </Padding>
       </LandingBackground>
