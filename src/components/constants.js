@@ -222,7 +222,6 @@ export const Members = [
       },
       {
         name: "Piyush Awasthi",
-        photo: "piyushawasthi.webp",
         position: "Dry Lab",
         major: "Biomedical Engineering",
       },
@@ -375,48 +374,43 @@ export const Members = [
     header: "Advisors",
     people: [
       {
+        name: "Brian Guo",
+        major: "Graduate Advisor",
+      },
+      {
         name: "Laura Gonzalez Campos",
-        photo: "false",
         major: "Graduate Advisor",
       },
       {
         name: "Madina Kagieva",
-        photo: "false",
         major: "Graduate Advisor",
       },
       {
         name: "Nikita Telkar",
-        photo: "false",
         major: "Graduate Advisor",
       },
       {
         name: "Rodrigo Vallejos",
-        photo: "false",
         major: "Graduate Advisor",
       },
       {
         name: "Anjali Parthasarathy",
-        photo: "false",
         major: "Undergraduate Advisor",
       },
       {
         name: "Brenda Ma",
-        photo: "false",
         major: "Undergraduate Advisor",
       },
       {
         name: "Edward Li",
-        photo: "false",
         major: "Undergraduate Advisor",
       },
       {
         name: "Parneet Sekhon",
-        photo: "false",
         major: "Undergraduate Advisor",
       },
       {
         name: "Umar Ali",
-        photo: "false",
         major: "Undergraduate Advisor",
       },
     ],
@@ -425,14 +419,14 @@ export const Members = [
     header: "Principal Investigator",
     people: [
       {
-        name: "Dr. Steven Hallam",
-        photo: "false",
+        name: "Steven Hallam",
         major: "Faculty Advisor",
+        dr: true,
       },
       {
-        name: "Dr. David Oliver",
-        photo: "false",
+        name: "David Oliver",
         major: "Faculty Advisor",
+        dr: true,
       },
     ],
   },

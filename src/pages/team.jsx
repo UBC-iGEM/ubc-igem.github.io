@@ -120,14 +120,37 @@ const Team = () => {
               <>
                 <h2>{members.header}</h2>
                 <FlexRow style={{ paddingBottom: "5vw" }}>
-                  {members.people.map(({ name, position, photo, major }) => (
-                    <Center>
-                      <FlipCard>
-                        <Inner>
-                          <Front>
-                            {photo === "false" ? (
+                  {members.people.map(
+                    ({ name, position, photo, major, dr }) => (
+                      <Center>
+                        <FlipCard>
+                          <Inner>
+                            <Front>
+                              {photo === "false" ? (
+                                <div>
+                                  <Text>{dr ? "Dr. " + name : name}</Text>
+                                  <div style={{ paddingTop: "15px" }}>
+                                    <Text>{position}</Text>
+                                    <Text>
+                                      <i>{major}</i>
+                                    </Text>
+                                  </div>
+                                </div>
+                              ) : (
+                                <ProfileImg
+                                  src={
+                                    "/headshots/" +
+                                    (photo
+                                      ? photo
+                                      : name.split(" ")[0].toLowerCase() +
+                                        ".jpg")
+                                  }
+                                />
+                              )}
+                            </Front>
+                            <Back>
                               <div>
-                                <Text>{name}</Text>
+                                <Text>{dr ? "Dr. " + name : name}</Text>
                                 <div style={{ paddingTop: "15px" }}>
                                   <Text>{position}</Text>
                                   <Text>
@@ -135,32 +158,12 @@ const Team = () => {
                                   </Text>
                                 </div>
                               </div>
-                            ) : (
-                              <ProfileImg
-                                src={
-                                  "/headshots/" +
-                                  (photo
-                                    ? photo
-                                    : name.split(" ")[0].toLowerCase() + ".jpg")
-                                }
-                              />
-                            )}
-                          </Front>
-                          <Back>
-                            <div>
-                              <Text>{name}</Text>
-                              <div style={{ paddingTop: "15px" }}>
-                                <Text>{position}</Text>
-                                <Text>
-                                  <i>{major}</i>
-                                </Text>
-                              </div>
-                            </div>
-                          </Back>
-                        </Inner>
-                      </FlipCard>
-                    </Center>
-                  ))}
+                            </Back>
+                          </Inner>
+                        </FlipCard>
+                      </Center>
+                    )
+                  )}
                 </FlexRow>
               </>
             ))}
