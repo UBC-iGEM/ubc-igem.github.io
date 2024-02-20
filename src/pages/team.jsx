@@ -5,7 +5,6 @@ import Header from "../components/header";
 import {
   Background,
   Center,
-  Col,
   Members,
   Padding,
   Row,

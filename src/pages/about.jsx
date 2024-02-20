@@ -5,7 +5,8 @@ import Header from "../components/header";
 import AboutBackgroundImage from "../images/about/about_background.webp";
 import LeftAbout from "../images/about/left_about.svg";
 import RightAbout from "../images/about/about_right.svg";
-import SimplySynbio from "../images/about/simply_synbio.svg";
+import SimplySynbioVideo from "../images/about/simply_synbio.svg";
+import SimplySynbioBlog from "../images/about/simplysynbioblog.svg";
 import Sustain from "../images/about/sustainability_in_synbio.svg";
 import Blank from "../images/about/blank.svg";
 import "../components/index.css";
@@ -89,11 +90,28 @@ const ButtonDiv = styled.div`
 
 const About = () => {
   const initiatives = [
-    { name: "2023 project", image: Pilot },
-    { name: "simply synbio video series", image: SimplySynbio },
-    { name: "sustainability in synbio podcast", image: Sustain },
-    { name: "Community Outreach", image: Blank },
-    { name: "Past Projects", image: Blank },
+    {
+      name: "2023 project",
+      image: Pilot,
+      link: "https://2023.igem.wiki/ubc-vancouver/",
+    },
+    {
+      name: "simply synbio video series",
+      image: SimplySynbioVideo,
+      link: "https://www.youtube.com/watch?v=XH2Rd_OYp_Q&t=2s&ab_channel=UBCiGEM",
+    },
+    {
+      name: "sustainability in synbio podcast",
+      image: Sustain,
+      link: "https://open.spotify.com/show/0XoxgxlAEtypmucLuxUzig?si=8badd4a711e14f97",
+    },
+    { name: "Community Outreach", image: Blank, link: "" },
+    {
+      name: "Simply Synbio Blog",
+      image: SimplySynbioBlog,
+      link: "https://ubcigem.com/simplysynbio/",
+    },
+    { name: "Past Projects", image: Blank, link: "https://ubcigem.com/past/" },
   ];
 
   return (
@@ -151,7 +169,9 @@ const About = () => {
             {initiatives.map((i) => (
               <Initiative>
                 <div>
-                  <InitImg src={i.image} />
+                  <a href={i.link} target="_blank">
+                    <InitImg src={i.image} />
+                  </a>
                 </div>
                 <p>{i.name}</p>
               </Initiative>
