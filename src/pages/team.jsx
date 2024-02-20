@@ -28,27 +28,69 @@ const TeamDiv = styled.div`
   padding-bottom: 10vw;
 `;
 
-const MemberBlock = styled(Col)`
-  width: 55vw;
-  height: 55vw;
-  margin: 1vw;
-  padding: 1vw;
-  border-radius: 60px;
-  background-color: #b1cbc0;
-  justify-content: center;
-  @media only screen and (min-width: 600px) {
-    width: 12vw;
-    height: 12vw;
-  }
-`;
-
 const FlexRow = styled(Row)`
   flex-wrap: wrap;
+`;
+
+const ProfileImg = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 30px;
 `;
 
 const Text = styled.p`
   text-align: center;
   font-size: 20px;
+`;
+
+const Inner = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+`;
+
+const FlipCard = styled.div`
+  background-color: transparent;
+  padding: 1vw;
+  @media only screen and (min-width: 600px) {
+    width: 12vw;
+    height: 12vw;
+  }
+  &:hover ${Inner} {
+    transform: rotateY(180deg);
+  }
+`;
+
+const Front = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 30px;
+  background-color: #b1cbc0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Back = styled.div`
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  background-color: #b1cbc0;
+  border-radius: 30px;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Team = () => {
@@ -79,17 +121,45 @@ const Team = () => {
               <>
                 <h2>{members.header}</h2>
                 <FlexRow style={{ paddingBottom: "5vw" }}>
-                  {members.people.map(({ name, position, major }) => (
+                  {members.people.map(({ name, position, photo, major }) => (
                     <Center>
-                      <MemberBlock>
-                        <Text>{name}</Text>
-                        <div style={{ paddingTop: "15px" }}>
-                          <Text>{position}</Text>
-                          <Text>
-                            <i>{major}</i>
-                          </Text>
-                        </div>
-                      </MemberBlock>
+                      <FlipCard>
+                        <Inner>
+                          <Front>
+                            {photo === "false" ? (
+                              <div>
+                                <Text>{name}</Text>
+                                <div style={{ paddingTop: "15px" }}>
+                                  <Text>{position}</Text>
+                                  <Text>
+                                    <i>{major}</i>
+                                  </Text>
+                                </div>
+                              </div>
+                            ) : (
+                              <ProfileImg
+                                src={
+                                  "/headshots/" +
+                                  (photo
+                                    ? photo
+                                    : name.split(" ")[0].toLowerCase() + ".jpg")
+                                }
+                              />
+                            )}
+                          </Front>
+                          <Back>
+                            <div>
+                              <Text>{name}</Text>
+                              <div style={{ paddingTop: "15px" }}>
+                                <Text>{position}</Text>
+                                <Text>
+                                  <i>{major}</i>
+                                </Text>
+                              </div>
+                            </div>
+                          </Back>
+                        </Inner>
+                      </FlipCard>
                     </Center>
                   ))}
                 </FlexRow>

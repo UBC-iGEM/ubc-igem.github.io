@@ -188,13 +188,13 @@ export const Members = [
     people: [
       {
         name: "Chaehyeon Lee",
-        photo: "",
+
         position: "Co-Director",
         major: "Biomedical Engineering",
       },
       {
         name: "Narjis Alhusseini",
-        photo: "",
+
         position: "Co-Director",
         major: "Microbiology and Immunology",
       },
@@ -205,43 +205,42 @@ export const Members = [
     people: [
       {
         name: "Stella Kauryzhka",
-        photo: "",
+
         position: "Wet Lab",
         major: "Biomedical Engineering",
       },
       {
         name: "Tina Wang",
-        photo: "",
+
         position: "Wet Lab",
         major: "Microbiology and Immunology",
       },
       {
         name: "Lucy Hao",
-        photo: "",
         position: "Dry Lab and Wiki",
         major: "Computer Science and Chemistry",
       },
       {
         name: "Piyush Awasthi",
-        photo: "",
+        photo: "piyushawasthi.webp",
         position: "Dry Lab",
         major: "Biomedical Engineering",
       },
       {
         name: "Harrison Kim",
-        photo: "",
+
         position: "Human Practices",
         major: "Biomedical Engineering",
       },
       {
         name: "Yejin Lhee",
-        photo: "",
-        position: "Design and External",
+
+        position: "External, Design, Human Practices",
         major: "Biochemistry",
       },
       {
         name: "Achint Lail",
-        photo: "",
+
         position: "Finance",
         major: "Honours in Chemistry and Biochemistry",
       },
@@ -252,47 +251,47 @@ export const Members = [
     people: [
       {
         name: "Achint Lail",
-        photo: "",
+
         major: "Honours in Chemistry and Biochemistry",
       },
       {
         name: "Ada Jiang",
-        photo: "",
+
         major: "Microbiology and Immunology",
       },
       {
         name: "Burak Ozkan",
-        photo: "",
+
         major: "Microbiology and Immunology",
       },
       {
         name: "Chloe King",
-        photo: "",
+
         major: "Applied Biology",
       },
       {
         name: "Daniel Hinatsu",
-        photo: "",
+
         major: "Biomedical Engineering",
       },
       {
         name: "Diego Perez Hidalgo",
-        photo: "",
+
         major: "Honours Biochemistry",
       },
       {
         name: "Pattarin Blanchard",
-        photo: "",
+
         major: "Chemical and Biological Engineering",
       },
       {
         name: "QingRu Kong",
-        photo: "",
+
         major: "Microbiology and Immunology",
       },
       {
         name: "Ran Tao",
-        photo: "",
+
         major: "Microbiology and Immunology",
       },
     ],
@@ -302,22 +301,22 @@ export const Members = [
     people: [
       {
         name: "Matthias Wong",
-        photo: "",
+
         major: "Biomedical Engineering",
       },
       {
         name: "Riya Alluri",
-        photo: "",
+
         major: "Biology and Computer Science",
       },
       {
         name: "Samuel Salitra",
-        photo: "",
+
         major: "Microbiology and Immunology and Computer Science",
       },
       {
         name: "Sebastian Hyland",
-        photo: "",
+
         major: "Applied Science",
       },
     ],
@@ -327,22 +326,22 @@ export const Members = [
     people: [
       {
         name: "Charlotte Lee",
-        photo: "",
+
         major: "Microbiology and Immunology",
       },
       {
         name: "Claire Pinckney",
-        photo: "",
+        photo: "false",
         major: "Science",
       },
       {
         name: "Jessica Xin",
-        photo: "",
+
         major: "Biomedical Engineering",
       },
       {
         name: "Yejin Lhee",
-        photo: "",
+
         major: "Biochemistry",
       },
     ],
@@ -352,7 +351,7 @@ export const Members = [
     people: [
       {
         name: "Diego Perez Hidalgo",
-        photo: "",
+
         major: "Honours Biochemistry",
       },
     ],
@@ -362,12 +361,12 @@ export const Members = [
     people: [
       {
         name: "Aoniya Colynn",
-        photo: "",
+
         major: "Science",
       },
       {
         name: "Karen Lin",
-        photo: "",
+        photo: "false",
         major: "Visual Arts",
       },
     ],
@@ -377,47 +376,47 @@ export const Members = [
     people: [
       {
         name: "Laura Gonzalez Campos",
-        photo: "",
+        photo: "false",
         major: "Graduate Advisor",
       },
       {
         name: "Madina Kagieva",
-        photo: "",
+        photo: "false",
         major: "Graduate Advisor",
       },
       {
         name: "Nikita Telkar",
-        photo: "",
+        photo: "false",
         major: "Graduate Advisor",
       },
       {
         name: "Rodrigo Vallejos",
-        photo: "",
+        photo: "false",
         major: "Graduate Advisor",
       },
       {
         name: "Anjali Parthasarathy",
-        photo: "",
+        photo: "false",
         major: "Undergraduate Advisor",
       },
       {
         name: "Brenda Ma",
-        photo: "",
+        photo: "false",
         major: "Undergraduate Advisor",
       },
       {
         name: "Edward Li",
-        photo: "",
+        photo: "false",
         major: "Undergraduate Advisor",
       },
       {
         name: "Parneet Sekhon",
-        photo: "",
+        photo: "false",
         major: "Undergraduate Advisor",
       },
       {
         name: "Umar Ali",
-        photo: "",
+        photo: "false",
         major: "Undergraduate Advisor",
       },
     ],
@@ -427,12 +426,12 @@ export const Members = [
     people: [
       {
         name: "Dr. Steven Hallam",
-        photo: "",
+        photo: "false",
         major: "Faculty Advisor",
       },
       {
         name: "Dr. David Oliver",
-        photo: "",
+        photo: "false",
         major: "Faculty Advisor",
       },
     ],
