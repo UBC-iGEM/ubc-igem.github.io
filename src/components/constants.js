@@ -423,11 +423,6 @@ export const Members = [
         major: "Faculty Advisor",
         dr: true,
       },
-      {
-        name: "David Oliver",
-        major: "Faculty Advisor",
-        dr: true,
-      },
     ],
   },
 ];
