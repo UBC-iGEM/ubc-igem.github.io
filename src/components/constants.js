@@ -204,14 +204,18 @@ export const Members = [
     header: "Leads",
     people: [
       {
-        name: "Stella Kauryzhka",
+        name: "Achint Lail",
 
         position: "Wet Lab",
-        major: "Biomedical Engineering",
+        major: "Honours in Chemistry and Biochemistry",
+      },
+      {
+        name: "QingRu Kong",
+        position: "Wet Lab",
+        major: "Microbiology and Immunology",
       },
       {
         name: "Tina Wang",
-
         position: "Wet Lab",
         major: "Microbiology and Immunology",
       },
@@ -222,26 +226,18 @@ export const Members = [
       },
       {
         name: "Piyush Awasthi",
-        position: "Dry Lab",
+        position: "Dry Lab and Finance",
         major: "Biomedical Engineering",
       },
       {
         name: "Harrison Kim",
-
         position: "Human Practices",
         major: "Biomedical Engineering",
       },
       {
         name: "Yejin Lhee",
-
         position: "External, Design, Human Practices",
         major: "Biochemistry",
-      },
-      {
-        name: "Achint Lail",
-
-        position: "Finance",
-        major: "Honours in Chemistry and Biochemistry",
       },
     ],
   },
@@ -249,48 +245,31 @@ export const Members = [
     header: "Wet Lab",
     people: [
       {
-        name: "Achint Lail",
-
-        major: "Honours in Chemistry and Biochemistry",
-      },
-      {
         name: "Ada Jiang",
-
         major: "Microbiology and Immunology",
       },
       {
         name: "Burak Ozkan",
-
         major: "Microbiology and Immunology",
       },
       {
         name: "Chloe King",
-
         major: "Applied Biology",
       },
       {
         name: "Daniel Hinatsu",
-
         major: "Biomedical Engineering",
       },
       {
         name: "Diego Perez Hidalgo",
-
         major: "Honours Biochemistry",
       },
       {
         name: "Pattarin Blanchard",
-
         major: "Chemical and Biological Engineering",
       },
       {
-        name: "QingRu Kong",
-
-        major: "Microbiology and Immunology",
-      },
-      {
         name: "Ran Tao",
-
         major: "Microbiology and Immunology",
       },
     ],
@@ -300,22 +279,18 @@ export const Members = [
     people: [
       {
         name: "Matthias Wong",
-
         major: "Biomedical Engineering",
       },
       {
         name: "Riya Alluri",
-
         major: "Biology and Computer Science",
       },
       {
         name: "Samuel Salitra",
-
         major: "Microbiology and Immunology and Computer Science",
       },
       {
         name: "Sebastian Hyland",
-
         major: "Applied Science",
       },
     ],
@@ -325,7 +300,6 @@ export const Members = [
     people: [
       {
         name: "Charlotte Lee",
-
         major: "Microbiology and Immunology",
       },
       {
@@ -335,13 +309,7 @@ export const Members = [
       },
       {
         name: "Jessica Xin",
-
         major: "Biomedical Engineering",
-      },
-      {
-        name: "Yejin Lhee",
-
-        major: "Biochemistry",
       },
     ],
   },
@@ -349,9 +317,20 @@ export const Members = [
     header: "Wiki",
     people: [
       {
+        name: "Burak Ozkan",
+        major: "Microbiology and Immunology",
+      },
+      {
         name: "Diego Perez Hidalgo",
-
         major: "Honours Biochemistry",
+      },
+      {
+        name: "Jessica Xin",
+        major: "Biomedical Engineering",
+      },
+      {
+        name: "Riya Alluri",
+        major: "Biology and Computer Science",
       },
     ],
   },
