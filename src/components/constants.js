@@ -357,6 +357,10 @@ export const Members = [
         major: "Graduate Advisor",
       },
       {
+        name: "Janella Schwab",
+        major: "Graduate Advisor",
+      },
+      {
         name: "Laura Gonzalez Campos",
         major: "Graduate Advisor",
       },
