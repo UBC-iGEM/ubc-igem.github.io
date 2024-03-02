@@ -45,6 +45,10 @@ const Text = styled.p`
 `;
 
 const Inner = styled.div`
+  @media only screen and (max-width: 600px) {
+    min-width: 65vw;
+    min-height: 65vw;
+  }
   position: relative;
   width: 100%;
   height: 100%;
@@ -162,7 +166,7 @@ const Team = () => {
                           </Inner>
                         </FlipCard>
                       </Center>
-                    )
+                    ),
                   )}
                 </FlexRow>
               </>
