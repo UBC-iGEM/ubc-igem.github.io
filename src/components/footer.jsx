@@ -75,10 +75,10 @@ export default function Footer() {
           <Logo src={Logo_Transparent} />
           <Links>
             {[
-              { link: "/about", name: "about" },
-              { link: "/team", name: "our team" },
-              { link: "/sponsors", name: "sponsors" },
-              { link: "/join", name: "join us" },
+              { link: "/about", name: "About" },
+              { link: "/team", name: "Our Team" },
+              { link: "/sponsors", name: "Sponsors" },
+              { link: "/join", name: "Join Us" },
             ].map((l) => (
               <Link
                 to={l.link}
@@ -99,7 +99,7 @@ export default function Footer() {
               isPending ? "pending" : isActive ? "active" : ""
             }
           >
-            <LinkStyle>contact us</LinkStyle>
+            <LinkStyle>Contact Us</LinkStyle>
           </Link>
           <Imgs className="row">
             {[

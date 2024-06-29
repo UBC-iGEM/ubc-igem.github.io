@@ -44,7 +44,7 @@ const Root = () => {
         <Padding>
           <LandingDiv>
             <h1>UBC iGEM</h1>
-            <h2>building a better future through synthetic biology</h2>
+            <h2>Building a better future through synthetic biology</h2>
           </LandingDiv>
         </Padding>
 
@@ -104,7 +104,7 @@ export const Head = () => (
     <meta name="theme-color" content="#b1cbc0" />
     <meta
       name="description"
-      content="building a better future through synthetic biology"
+      content="Building a better future through synthetic biology"
     />
 
     <title>UBC iGEM</title>

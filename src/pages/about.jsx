@@ -122,7 +122,7 @@ const About = () => {
           <AboutDiv>
             <h1>iGEM at UBC</h1>
             <p>
-              we are an eager team of undergraduates, supported by multiple
+              We are an eager team of undergraduates, supported by multiple
               professors and graduate students who act as mentors.
             </p>
           </AboutDiv>
@@ -151,12 +151,13 @@ const About = () => {
 
         <Padding>
           <div style={{ paddingBottom: "35vw" }}>
-            <h2>The iGEM Jamboree</h2>
+            <h2>Where our work is showcased</h2>
             <p>
-              is an international synthetic biology competition where student
-              teams build their own genetic circuits and express them in
-              biological systems. At this competition, students present their
-              work and get judged by a scientific jury to win the Grand Prize.
+              The iGEM Jamboree is an international synthetic biology
+              competition where student teams build their own genetic circuits
+              and express them in biological systems. At this competition,
+              students present their work and get judged by a scientific jury to
+              win the Grand Prize.
             </p>
           </div>
         </Padding>

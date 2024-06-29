@@ -14,12 +14,12 @@ import favicon from "../../static/icons/icon-512x512.png";
 export const Favicon = favicon;
 
 export const links = [
-  { link: "/", name: "home" },
-  { link: "/about", name: "about" },
-  { link: "/team", name: "our team" },
-  { link: "/sponsors", name: "sponsors" },
-  { link: "/join", name: "join us" },
-  { link: "/contact", name: "contact us" },
+  { link: "/", name: "Home" },
+  { link: "/about", name: "About" },
+  { link: "/team", name: "Our Team" },
+  { link: "/sponsors", name: "Sponsors" },
+  { link: "/join", name: "Join Us" },
+  { link: "/contact", name: "Contact Us" },
 ];
 
 export const Padding = styled.div`
@@ -226,7 +226,7 @@ export const Members = [
       },
       {
         name: "Piyush Awasthi",
-        position: "Dry Lab and Finance",
+        position: "Dry Lab",
         major: "Biomedical Engineering",
       },
       {
@@ -236,8 +236,14 @@ export const Members = [
       },
       {
         name: "Yejin Lhee",
-        position: "External, Design, Human Practices",
+        position: "Design, Human Practices",
         major: "Biochemistry",
+      },
+      {
+        name: "Aden Chan",
+        position: "Finance",
+        photo: "false",
+        major: "Biomedical Engineering",
       },
     ],
   },
