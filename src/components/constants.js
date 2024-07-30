@@ -230,13 +230,8 @@ export const Members = [
         major: "Biomedical Engineering",
       },
       {
-        name: "Harrison Kim",
-        position: "Human Practices",
-        major: "Biomedical Engineering",
-      },
-      {
         name: "Yejin Lhee",
-        position: "Design, Human Practices",
+        position: "Design",
         major: "Biochemistry",
       },
       {
@@ -305,13 +300,12 @@ export const Members = [
     header: "Human Practices",
     people: [
       {
-        name: "Charlotte Lee",
-        major: "Microbiology and Immunology",
+        name: "Harrison Kim",
+        major: "Biomedical Engineering",
       },
       {
-        name: "Claire Pinckney",
-        photo: "false",
-        major: "Science",
+        name: "Charlotte Lee",
+        major: "Microbiology and Immunology",
       },
       {
         name: "Jessica Xin",
