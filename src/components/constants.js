@@ -292,7 +292,7 @@ export const Members = [
       },
       {
         name: "Sebastian Hyland",
-        major: "Applied Science",
+        major: "Biomedical Engineering",
       },
     ],
   },
@@ -317,6 +317,10 @@ export const Members = [
     header: "Wiki",
     people: [
       {
+        name: "Ada Jiang",
+        major: "Microbiology and Immunology",
+      },
+      {
         name: "Burak Ozkan",
         major: "Microbiology and Immunology",
       },
@@ -339,7 +343,6 @@ export const Members = [
     people: [
       {
         name: "Aoniya Colynn",
-
         major: "Science",
       },
       {
