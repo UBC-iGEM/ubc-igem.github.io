@@ -300,10 +300,6 @@ export const Members = [
     header: "Human Practices",
     people: [
       {
-        name: "Harrison Kim",
-        major: "Biomedical Engineering",
-      },
-      {
         name: "Charlotte Lee",
         major: "Microbiology and Immunology",
       },
@@ -351,6 +347,15 @@ export const Members = [
         major: "Visual Arts",
       },
     ],
+  },
+  {
+    header: "Instructors",
+    people: [
+      {
+        name: "Antonio Wong",
+        major: "Wet Lab Instructor"
+      }
+    ]
   },
   {
     header: "Advisors",
