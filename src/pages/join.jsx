@@ -42,12 +42,20 @@ const Join = () => {
             <p>
               Want to meet like-minded students to design something amazing?
             </p>
-            <h3>Applications are now open</h3>
+{/*             <h3>Applications are now open</h3>
             <Button
                 text={"Apply Now"}
                 link={"https://docs.google.com/document/d/1PlSSRl_sazZLjdEMRWfcl1mDDrglq31F"}
-              />
+              /> */}
+            
           </LandingDiv>
+        </Padding>
+         <Padding style={{ paddingBottom: "8vw" }}>
+          <h2>Our applications are currently closed.</h2>
+          <p>
+            Consider joining us for our next competition season. Come visit our
+            website in the fall or follow us on Instagram for updates!
+          </p>
         </Padding>
         <Green>
           <Padding style={{ paddingTop: "8vw", paddingBottom: "6vw" }}>
