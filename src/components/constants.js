@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import NUCLOUD from "../images/past/2024.svg";
 import PILOT from "../images/past/2023.svg";
 import SYN from "../images/past/2022.svg";
 import DEC from "../images/past/2021.svg";
@@ -60,6 +61,13 @@ export const Center = styled.div`
 `;
 
 export const Projects = [
+    {
+    svg: NUCLOUD,
+    title: "2024: nuCloud",
+    description:
+      "The 2024 team developed a .",
+    achievements: "Best Hardware, Best Sustainable Development Impact, Nominated for Best Biomanufacturing, Gold Medal",
+  },
   {
     svg: PILOT,
     title: "2023: PILOT",
@@ -124,7 +132,7 @@ export const Projects = [
     description:
       "Honeybee Colony Collapse Disorder destroys whole bee colonies, where neonicotinoid pesticides poison plat-feeders like bees. The 2015 team engineered honeybee intestinal bacteria to degrade imidacloprid, a widely-used neonicotinoid.",
     achievements:
-      "Nominated for Best Environmental Project,Nominated for Best Poster, Gold Medal",
+      "Nominated for Best Environmental Project, Nominated for Best Poster, Gold Medal",
   },
   {
     svg: DAR,
