@@ -65,7 +65,7 @@ export const Projects = [
     svg: NUCLOUD,
     title: "2024: nuCloud",
     description:
-      "The 2024 team developed a .",
+      "The 2024 team developed a TdT-based solid phase DNA synthesis platform that allows users to synthesize data-encoding DNA.",
     achievements: "Best Hardware, Best Sustainable Development Impact, Nominated for Best Biomanufacturing, Gold Medal",
   },
   {
