@@ -10,7 +10,7 @@ import SimplySynbioBlog from "../images/about/simplysynbioblog.svg";
 import Sustain from "../images/about/sustainability_in_synbio.svg";
 import Blank from "../images/about/blank.svg";
 import "../components/index.css";
-import Pilot from "../images/past/2023.svg";
+import nuCloud from "../images/past/2024.svg";
 import {
   Background,
   Center,
@@ -91,9 +91,9 @@ const ButtonDiv = styled.div`
 const About = () => {
   const initiatives = [
     {
-      name: "2023 project",
-      image: Pilot,
-      link: "https://2023.igem.wiki/ubc-vancouver/",
+      name: "2024 project",
+      image: nuCloud,
+      link: "https://2024.igem.wiki/ubc-vancouver/",
     },
     {
       name: "simply synbio video series",
@@ -106,11 +106,6 @@ const About = () => {
       link: "https://open.spotify.com/show/0XoxgxlAEtypmucLuxUzig?si=8badd4a711e14f97",
     },
     { name: "Community Outreach", image: Blank, link: "" },
-    {
-      name: "Simply Synbio Blog",
-      image: SimplySynbioBlog,
-      link: "https://ubcigem.com/simplysynbio/",
-    },
     { name: "Past Projects", image: Blank, link: "https://ubcigem.com/past/" },
   ];
 
