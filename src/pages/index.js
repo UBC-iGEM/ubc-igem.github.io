@@ -7,6 +7,8 @@ import { Background, Padding, TopPadding } from "../components/constants";
 import LandingBackgroundImage from "../images/landing/landing_background.webp";
 import LandingPhoto from "../images/landing/landing_photo.svg";
 import "../components/index.css";
+import Announcement from 'react-announcement'
+import NUCLOUD from "../images/past/2024.svg";
 
 const LandingBackground = styled(Background)`
   background-image: url(${LandingBackgroundImage});
@@ -39,6 +41,16 @@ const PadBottom = styled.div`
 const Root = () => {
   return (
     <>
+    <Announcement
+        title="Jamboree Results are in!"
+        subtitle="UBC iGEM 2024 is officially the Best Undergrad Team in North America this year! 🌎🥳 "
+        link="https://2024.igem.wiki/ubc-vancouver/awards/"
+        imageSource={NUCLOUD}
+        secondsBeforeBannerShows={0}
+        closeIconSize={30}
+        animateInDuration={500}
+        animateOutDuration={500}
+      />
       <Header />
       <LandingBackground>
         <Padding>
