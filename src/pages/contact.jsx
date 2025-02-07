@@ -80,11 +80,6 @@ const Contact = () => {
           ))}
         </PaddedCol>
       </Padding>
-
-      <Padding>
-        <h2>... or shoot us a message.</h2>
-        <Form />
-      </Padding>
       <Footer />
     </>
   );
