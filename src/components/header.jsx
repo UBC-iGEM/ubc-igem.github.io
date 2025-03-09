@@ -67,6 +67,7 @@ const NavBar = {
       bottom: 0;
       background-color: #b1cbc0;
       justify-content: space-around;
+      z-index: 10;  //Ensures the header appears above
     }
   `,
   Logo: styled.img`

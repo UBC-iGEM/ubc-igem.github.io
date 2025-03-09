@@ -60,6 +60,8 @@ const Inner = styled.div`
 const FlipCard = styled.div`
   background-color: transparent;
   padding: 1vw;
+  width: 65vw; //added fixed width for mobile view too
+  height: 65vw; //added fixed height for mobile view too
   @media only screen and (min-width: 600px) {
     width: 12vw;
     height: 12vw;
