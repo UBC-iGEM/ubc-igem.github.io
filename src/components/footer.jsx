@@ -72,7 +72,7 @@ export default function Footer() {
     <FooterBackground>
       <RowSpaced>
         <LeftSide>
-          <Logo src={Logo_Transparent} />
+          <Logo src={Logo_Transparent} alt= "igem-footer-logo" />
           <Links>
             {[
               { link: "/about", name: "About" },
