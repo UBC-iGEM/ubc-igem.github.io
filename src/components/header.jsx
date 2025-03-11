@@ -28,7 +28,7 @@ export default function Header() {
 
   return (
     <NavBar.Wrapper>
-      <NavBar.Logo src={Logo_Transparent} />
+      <NavBar.Logo src={Logo_Transparent} alt="igem-header-logo" />
 
       <HamburgerButton.Wrapper onClick={() => toggleDrawer(true)}>
         <HamburgerButton.Lines />
