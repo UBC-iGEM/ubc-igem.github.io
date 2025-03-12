@@ -19,7 +19,7 @@ const FooterBackground = styled(Background)`
 const Logo = styled.img`
   height: 20vh;
   margin: auto;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 600px)
     display: none;
   }
 `;
@@ -103,14 +103,17 @@ export default function Footer() {
           </Link>
           <Imgs className="row">
             {[
-              { svg: Email, href: "mailto:ubcigem@gmail.com" },
-              { svg: IG, href: "https://www.instagram.com/ubcigem" },
+              { svg: Email, href: "mailto:ubcigem@gmail.com", title: "ubc-igem email"},
+              { svg: IG, href: "https://www.instagram.com/ubcigem",
+                title: "ubc-igem instagram"
+              },
               {
                 svg: Linkedin,
                 href: "https://www.linkedin.com/company/ubc-igem",
+                title: "ubc-igem linkedin"
               },
             ].map((sm) => (
-              <a href={sm.href}>
+              <a href={sm.href} title = {sm.title}>
                 <Icon src={sm.svg} />
               </a>
             ))}

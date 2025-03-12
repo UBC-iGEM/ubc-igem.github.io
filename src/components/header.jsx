@@ -36,9 +36,17 @@ export default function Header() {
 
       <NavBar.Links ref={drawerRef} openDrawer={openDrawer}>
         {links.map((l) => (
-          <Link to={l.link}>
-            <NavBar.Link>{l.name}</NavBar.Link>
-          </Link>
+            <Link to={l.link}>
+              <NavBar.Link>{l.name}</NavBar.Link>
+            </Link>
+
+
+          // The below code works but needs to ensure style consistency
+          // <li key={l.name}>
+          // <Link to={l.link}>
+          //   {l.name}
+          // </Link>
+          // </li>
         ))}
         <Center>
           <CancelImageStyle
