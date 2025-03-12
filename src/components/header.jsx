@@ -36,17 +36,11 @@ export default function Header() {
 
       <NavBar.Links ref={drawerRef} openDrawer={openDrawer}>
         {links.map((l) => (
+          <NavBar.li>
             <Link to={l.link}>
               <NavBar.Link>{l.name}</NavBar.Link>
             </Link>
-
-
-          // The below code works but needs to ensure style consistency
-          // <li key={l.name}>
-          // <Link to={l.link}>
-          //   {l.name}
-          // </Link>
-          // </li>
+          </NavBar.li>
         ))}
         <Center>
           <CancelImageStyle
@@ -108,7 +102,7 @@ const NavBar = {
         openDrawer ? `translateX(0)` : `translateX(100%)`};
     }
   `,
-  Link: styled.li`
+  Link: styled.span`
     padding: 0 1rem;
     cursor: pointer;
 
@@ -116,6 +110,12 @@ const NavBar = {
       padding: 1rem 0;
     }
   `,
+  li: styled.li`
+    cursor: pointer;
+
+    @media only screen and (max-width: 600px) {
+      padding: 1rem 0;
+    }`
 };
 
 const CancelImageStyle = styled.img`
