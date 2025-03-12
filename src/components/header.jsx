@@ -1,5 +1,5 @@
 import React from "react";
-import { Center, links } from "./constants";
+import { ElementCenter, links } from "./constants";
 import styled from "styled-components";
 import Logo_Transparent from "../images/logo/iGEMLogo_Transparent.svg";
 import { useEffect, useRef, useState } from "react";
@@ -42,12 +42,12 @@ export default function Header() {
             </Link>
           </NavBar.li>
         ))}
-        <Center>
+        <ElementCenter>
           <CancelImageStyle
             src={CancelImage}
             onClick={() => toggleDrawer(false)}
           />
-        </Center>
+        </ElementCenter>
       </NavBar.Links>
     </NavBar.Wrapper>
   );
