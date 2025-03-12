@@ -57,7 +57,12 @@ export const Col = styled.div`
 `;
 
 //
-export const Center = styled.li`
+export const ElementCenter = styled.li`
+  display: flex;
+  justify-content: center; 
+`;
+
+export const Center = styled.div`
   display: flex;
   justify-content: center; 
 `;
