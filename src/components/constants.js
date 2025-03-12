@@ -55,9 +55,11 @@ export const Col = styled.div`
   display: flex;
   flex-direction: column;
 `;
-export const Center = styled.div`
+
+//
+export const Center = styled.li`
   display: flex;
-  justify-content: center;
+  justify-content: center; 
 `;
 
 export const Projects = [
