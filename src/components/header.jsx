@@ -104,15 +104,11 @@ const NavBar = {
   `,
   Link: styled.span`
     padding: 0 1rem;
-    cursor: pointer;
-
     @media only screen and (max-width: 600px) {
       padding: 1rem 0;
     }
   `,
   li: styled.li`
-    cursor: pointer;
-
     @media only screen and (max-width: 600px) {
       padding: 1rem 0;
     }`
