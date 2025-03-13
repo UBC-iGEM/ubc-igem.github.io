@@ -46,7 +46,6 @@ const Root = () => {
         subtitle="UBC iGEM 2024 is officially the Best Undergrad Team in North America this year! 🌎🥳 "
         link="https://2024.igem.wiki/ubc-vancouver/awards/"
         imageSource={NUCLOUD}
-        daysToLive={0}
         secondsBeforeBannerShows={0}
         closeIconSize={30}
         animateInDuration={500}
