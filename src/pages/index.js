@@ -47,6 +47,7 @@ const Root = () => {
         link="https://2024.igem.wiki/ubc-vancouver/awards/"
         imageSource={NUCLOUD}
         secondsBeforeBannerShows={0}
+        daysToLive={1}
         closeIconSize={30}
         animateInDuration={500}
         animateOutDuration={500}
