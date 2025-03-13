@@ -19,7 +19,7 @@ const FooterBackground = styled(Background)`
 const Logo = styled.img`
   height: 20vh;
   margin: auto;
-  @media only screen and (max-width: 600px)
+  @media only screen and (max-width: 600px) {
     display: none;
   }
 `;
