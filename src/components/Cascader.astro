@@ -1,0 +1,53 @@
+---
+import { getHeadings } from "../assets/mock.md";
+
+// Define the type for a heading object
+interface MarkdownHeading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+const headings: MarkdownHeading[] = await getHeadings();
+
+let htmlOutput = "";
+if (headings && headings.length > 0) {
+  let prevHeadingLevel = 0;
+  let openDetailsTags = 0;
+  const indentationUnit = 20;
+
+  headings.forEach((heading) => {
+    const currentHeadingLevel = heading.depth;
+    const currentIndent = (currentHeadingLevel - 1) * indentationUnit;
+
+    if (prevHeadingLevel > 0) {
+      if (currentHeadingLevel <= prevHeadingLevel) {
+        const closersToRender = prevHeadingLevel - currentHeadingLevel + 1;
+        for (let i = 0; i < closersToRender; i++) {
+          if (openDetailsTags > 0) {
+            htmlOutput += "</details>";
+            openDetailsTags--;
+          }
+        }
+      }
+    }
+    htmlOutput += `<details style="padding-left: ${currentIndent}px;"><summary><a href="#${heading.slug}">${heading.text}</a></summary>`;
+    openDetailsTags++;
+    prevHeadingLevel = currentHeadingLevel;
+  });
+
+  for (let i = 0; i < openDetailsTags; i++) {
+    htmlOutput += "</details>";
+  }
+}
+---
+
+<div>
+  {
+    (
+      <div class="cascader-details-container">
+        <Fragment set:html={htmlOutput} />
+      </div>
+    )
+  }
+</div>
