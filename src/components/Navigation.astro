@@ -1,0 +1,172 @@
+<nav class="navigation">
+  <div class="navigation-container">
+    <a href="/" class="logo">
+      <img src="src/assets/igem-logo.svg" alt="UBC iGEM Logo" />
+    </a>
+    <button class="menu-button" aria-label="Toggle navigation menu" />
+    <div class="navigation-links">
+      <a href="/">Home</a>
+      <a href="/about-us">About Us</a>
+      <a href="/our-team">Our Team</a>
+      <a href="/sponsors">Sponsors</a>
+      <a href="/past-projects">Past Projects</a>
+      <a href="/gallery">Gallery</a>
+      <a href="/contact-us">Contact Us</a>
+    </div>
+  </div>
+</nav>
+<div class="navigation-placeholder" />
+
+<script>
+  const menuButton = document.querySelector('.menu-button')
+  const navigationLinks = document.querySelector('.navigation-links')
+
+  if (menuButton instanceof HTMLButtonElement && navigationLinks instanceof HTMLElement) {
+    menuButton.addEventListener('click', () => {
+      menuButton.classList.toggle('open')
+      navigationLinks.classList.toggle('open')
+
+      const isOpen = menuButton.classList.contains('open')
+      menuButton.setAttribute('aria-expanded', String(isOpen))
+    })
+  }
+</script>
+
+<style>
+  .navigation {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: var(--navigation-height);
+    background-color: var(--background-color);
+    border-bottom: 2px solid var(--primary-dark-color);
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+  }
+
+  .navigation-container {
+    display: flex;
+    width: var(--max-width);
+    height: 100%;
+    padding: 0 3rem 0 2rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: auto;
+    height: 80%;
+  }
+
+  .logo img {
+    width: auto;
+    height: 100%;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .navigation-links {
+    display: flex;
+    gap: 3rem;
+    font-weight: 500;
+  }
+
+  .navigation-placeholder {
+    width: auto;
+    height: var(--navigation-height);
+    background-color: transparent;
+  }
+
+  @media (max-width: 985px) {
+    .navigation-container {
+      padding: 0 2rem 0 1.5rem;
+    }
+
+    .navigation-links {
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 865px) {
+    .navigation-container {
+      padding: 0 1rem;
+    }
+
+    .navigation-links {
+      gap: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    body {
+      padding-bottom: var(--navigation-height) !important;
+    }
+
+    .navigation {
+      bottom: 0;
+      background-color: var(--primary-green-color);
+      border-top: 2px solid var(--primary-dark-color);
+      border-bottom: none;
+    }
+
+    .navigation-container {
+      padding: 0 3rem 0 2rem;
+    }
+
+    .menu-button {
+      display: flex;
+      width: auto;
+      height: 100%;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      font-family: inherit;
+      font-size: 4rem;
+      cursor: pointer;
+    }
+
+    .menu-button.open {
+      width: auto;
+      height: auto;
+      margin-right: 0.5rem;
+    }
+
+    .menu-button::before {
+      content: '☰';
+    }
+
+    .menu-button.open::before {
+      content: '×';
+    }
+
+    .navigation-links {
+      display: none;
+    }
+
+    .navigation-links.open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      bottom: var(--navigation-height);
+      right: 0;
+      gap: 1rem;
+      padding: 1rem 2rem;
+      background-color: var(--primary-green-color);
+      border-top: 2px solid var(--primary-dark-color);
+      border-left: 2px solid var(--primary-dark-color);
+      border-top-left-radius: 2rem;
+      align-items: flex-end;
+    }
+
+    .navigation-links a {
+      padding: 0.5rem 0;
+    }
+
+    .navigation-placeholder {
+      display: none;
+    }
+  }
+</style>
