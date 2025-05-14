@@ -34,12 +34,14 @@
 
 <style>
   .navigation {
+    --navigation-height: 7rem;
+
     display: flex;
     position: fixed;
     width: 100%;
     height: var(--navigation-height);
     background-color: var(--background-color);
-    border-bottom: 2px solid var(--primary-dark-color);
+    border-bottom: 2px solid var(--border-color);
     align-items: center;
     justify-content: center;
     z-index: 100;
@@ -107,8 +109,8 @@
 
     .navigation {
       bottom: 0;
-      background-color: var(--primary-green-color);
-      border-top: 2px solid var(--primary-dark-color);
+      background-color: var(--color-primary-green);
+      border-top: 2px solid var(--border-color);
       border-bottom: none;
     }
 
@@ -154,10 +156,10 @@
       right: 0;
       gap: 1rem;
       padding: 1rem 2rem;
-      background-color: var(--primary-green-color);
-      border-top: 2px solid var(--primary-dark-color);
-      border-left: 2px solid var(--primary-dark-color);
-      border-top-left-radius: 2rem;
+      background-color: var(--color-primary-green);
+      border-top: 2px solid var(--border-color);
+      border-left: 2px solid var(--border-color);
+      border-top-left-radius: var(--border-radius-md);
       align-items: flex-end;
     }
 

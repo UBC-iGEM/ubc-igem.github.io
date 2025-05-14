@@ -27,27 +27,28 @@ const { title = 'UBC iGEM' } = Astro.props
 
 <style is:global>
 	:root {
-		--primary-dark-color: #042a2b;
-		--primary-green-color: #afdbbf;
-		--primary-orange-color: #ffdab9;
-		--primary-purple-color: #babcd5;
-		--primary-yellow-color: #fbf8dd;
-		--primary-peach-color: #f7dfca;
+		--color-primary-black: #042a2b;
+		--color-primary-green: #afdbbf;
+		--color-primary-orange: #ffdab9;
+		--color-primary-purple: #babcd5;
+		--color-primary-yellow: #fbf8dd;
+		--color-primary-peach: #f7dfca;
 
-		--secondary-dark-color: #373f57;
-		--secondary-green-color: #d8f0e2;
-		--secondary-orange-color: #fff0e2;
-		--secondary-purple-color: #e4e6fc;
-		--secondary-yellow-color: #fffef3;
-		--secondary-peach-color: #fdf2e9;
+		--color-secondary-black: #373f57;
+		--color-secondary-green: #d8f0e2;
+		--color-secondary-orange: #fff0e2;
+		--color-secondary-purple: #e4e6fc;
+		--color-secondary-yellow: #fffef3;
+		--color-secondary-peach: #fdf2e9;
 
 		--background-color: #ffffff;
-
-		--primary-text-color: var(--primary-dark-color);
-		--secondary-text-color: var(--secondary-dark-color);
+		--text-color-primary: var(--color-primary-black);
+		--text-color-secondary: var(--color-secondary-black);
+		--border-color: var(--color-primary-black);
 
 		--max-width: 1440px;
-		--navigation-height: 7rem;
+		--border-radius-sm: 5px;
+		--border-radius-md: 10px;
 	}
 
 	body {
@@ -58,7 +59,7 @@ const { title = 'UBC iGEM' } = Astro.props
 		padding: 0;
 		margin: 0;
 		font-family: 'Poppins', sans-serif;
-		color: var(--primary-text-color);
+		color: var(--text-color-primary);
 		box-sizing: border-box;
 		scroll-behavior: smooth;
 	}
