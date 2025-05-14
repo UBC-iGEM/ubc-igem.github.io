@@ -3,8 +3,8 @@
     <a href="/" class="logo">
       <img src="src/assets/igem-logo.svg" alt="UBC iGEM Logo" />
     </a>
-    <button class="menu-button" aria-label="Toggle navigation menu" />
-    <div class="navigation-links">
+    <button id="navigation-menu-button" aria-label="Toggle navigation menu">☰</button>
+    <div id="navigation-links">
       <a href="/">Home</a>
       <a href="/about-us">About Us</a>
       <a href="/our-team">Our Team</a>
@@ -15,27 +15,30 @@
     </div>
   </div>
 </nav>
-<div class="navigation-placeholder" />
+<div id="navigation-placeholder" />
 
 <script>
-  const menuButton = document.querySelector('.menu-button')
-  const navigationLinks = document.querySelector('.navigation-links')
+  const menuButton = document.getElementById('navigation-menu-button')
+  const links = document.getElementById('navigation-links')
 
-  if (menuButton instanceof HTMLButtonElement && navigationLinks instanceof HTMLElement) {
+  if (menuButton instanceof HTMLButtonElement && links instanceof HTMLElement) {
     menuButton.addEventListener('click', () => {
       menuButton.classList.toggle('open')
-      navigationLinks.classList.toggle('open')
+      links.classList.toggle('open')
 
       const isOpen = menuButton.classList.contains('open')
+      menuButton.textContent = isOpen ? '×' : '☰'
       menuButton.setAttribute('aria-expanded', String(isOpen))
     })
   }
 </script>
 
 <style>
-  .navigation {
+  :root {
     --navigation-height: 7rem;
+  }
 
+  .navigation {
     display: flex;
     position: fixed;
     width: 100%;
@@ -51,7 +54,7 @@
     display: flex;
     width: var(--max-width);
     height: 100%;
-    padding: 0 3rem 0 2rem;
+    padding: 0 min(3rem, 3vw) 0 min(2rem, 2vw);
     align-items: center;
     justify-content: space-between;
   }
@@ -66,43 +69,24 @@
     height: 100%;
   }
 
-  .menu-button {
+  #navigation-menu-button {
     display: none;
   }
 
-  .navigation-links {
+  #navigation-links {
     display: flex;
-    gap: 3rem;
+    gap: min(3rem, 3vw);
     font-weight: 500;
   }
 
-  .navigation-placeholder {
+  #navigation-placeholder {
     width: auto;
     height: var(--navigation-height);
     background-color: transparent;
   }
 
-  @media (max-width: 985px) {
-    .navigation-container {
-      padding: 0 2rem 0 1.5rem;
-    }
-
-    .navigation-links {
-      gap: 2rem;
-    }
-  }
-
-  @media (max-width: 865px) {
-    .navigation-container {
-      padding: 0 1rem;
-    }
-
-    .navigation-links {
-      gap: 1rem;
-    }
-  }
-
-  @media (max-width: 768px) {
+  /* Mobile Device Layout */
+  @media (max-width: 800px) {
     body {
       padding-bottom: var(--navigation-height) !important;
     }
@@ -118,7 +102,7 @@
       padding: 0 3rem 0 2rem;
     }
 
-    .menu-button {
+    #navigation-menu-button {
       display: flex;
       width: auto;
       height: 100%;
@@ -130,25 +114,17 @@
       cursor: pointer;
     }
 
-    .menu-button.open {
+    #navigation-menu-button.open {
       width: auto;
       height: auto;
       margin-right: 0.5rem;
     }
 
-    .menu-button::before {
-      content: '☰';
-    }
-
-    .menu-button.open::before {
-      content: '×';
-    }
-
-    .navigation-links {
+    #navigation-links {
       display: none;
     }
 
-    .navigation-links.open {
+    #navigation-links.open {
       display: flex;
       flex-direction: column;
       position: absolute;
@@ -163,11 +139,11 @@
       align-items: flex-end;
     }
 
-    .navigation-links a {
+    #navigation-links a {
       padding: 0.5rem 0;
     }
 
-    .navigation-placeholder {
+    #navigation-placeholder {
       display: none;
     }
   }
