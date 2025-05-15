@@ -1,0 +1,146 @@
+---
+import Layout from "../layouts/Layout.astro";
+const pageTitle = "Contact Us - UBC iGEM";
+---
+
+<Layout title={pageTitle}>
+  <style>
+    h1 {
+      font-size: 4.5em;
+      font-weight: 900;
+      text-decoration-color: #042a2b;
+    }
+    h2 {
+      font-size: 2em;
+      font-weight: 400;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      text-decoration-color: #042a2b;
+    }
+    p {
+      font-size: 1.3em;
+      text-decoration-color: #042a2b;
+    }
+
+    .page-main-heading {
+      margin-bottom: 0.75em;
+    }
+
+    .faq-heading {
+      text-decoration-color: #042a2c;
+      margin-top: 0.5em;
+      margin-bottom: 0.25em;
+      font-weight: 700;
+    }
+
+    .contact-section {
+      background-color: #afdbbf;
+      padding-bottom: 5%;
+      padding-inline: 10%;
+      text-align: left;
+      border-top: solid 2.5px black;
+      border-bottom: solid 2.5px black;
+      text-decoration-color: #042a2a;
+      outline: black;
+      max-width: 100%;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-row img {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      margin-right: 12px;
+    }
+
+    .contact-row a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .contact-handle {
+      text-decoration-color: #383f57;
+    }
+
+    .contact-handle-email {
+      text-decoration: underline;
+      text-decoration-color: #383f57;
+    }
+
+    .faq-section {
+      padding-inline: 10%;
+      padding-bottom: 5%;
+      padding-top: 5%;
+      border-bottom: solid 2.5px black;
+      text-align: left;
+      max-width: 100%;
+    }
+
+    .faq-markdown-content h2 {
+      font-size: 2.25em;
+      font-weight: 900;
+      margin-bottom: 0.1em;
+      margin-top: 0.1em;
+    }
+
+    .faq-markdown-content p {
+      font-size: 1.3em;
+      margin-bottom: 1em;
+      margin-top: 0.5em;
+    }
+  </style>
+
+  <section class="contact-section">
+    <h1 class="page-main-heading">Contact us</h1>
+
+    <div class="contact-row">
+      <img src="/email.svg" alt="Email Icon" />
+      <a href="mailto:ubcigem@gmail.com">
+        <h2 class="contact-handle contact-handle-email">ubcigem@gmail.com</h2>
+      </a>
+    </div>
+    <div class="contact-row">
+      <img src="/instagram.svg" alt="Instagram Icon" />
+      <a href="https://instagram.com/ubcigem" target="_blank" rel="noopener noreferrer">
+        <h2 class="contact-handle">@ubcigem</h2>
+      </a>
+    </div>
+    <div class="contact-row">
+      <img src="/linkedin.svg" alt="LinkedIn Icon" />
+      <a href="https://linkedin.com/company/ubcigem" target="_blank" rel="noopener noreferrer">
+        <h2 class="contact-handle">UBC iGEM</h2>
+      </a>
+    </div>
+  </section>
+  <section class="faq-section">
+    <h1 class="faq-heading">FAQ</h1>
+    <div class="faq-markdown-content">
+      <h2>How do I join the team?</h2>
+      <p>
+        Follow our instagram for hiring updates! We typically hire at the beginning of each competition season, mid-end
+        of September.
+      </p>
+      <h2>Do you accept students from any year level?</h2>
+      <p>
+        Yes! Some of our most valued members have been on the team since their first year. As long as you are an
+        undergraduate student eager to learn and work well in a team context for a common goal, come join us!
+      </p>
+      <h2>What background do I need to have to join iGEM?</h2>
+      <p>
+        As an interdisciplinary team, we welcome students from all backgrounds! Our team currently consists of members
+        from over 12 disciplines, contributing to different aspects of our work ranging from administration to building
+        hardware.
+      </p>
+      <h2>Do I need to have any particular experience to be considered?</h2>
+      <p>
+        Not necessarily. We look for students with willingness to learn and genuine enthusiasm! Since synthetic biology
+        is a niche subject, we do not expect extensive knowledge of the field. BUT we do require you to complement this
+        with an eagerness to learn the necessary concepts and skills.
+      </p>
+    </div>
+  </section>
+</Layout>
