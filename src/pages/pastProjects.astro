@@ -1,0 +1,121 @@
+---
+import ProjectBlock from "../components/pastProjectsComponents/ProjectBlock.astro";
+import { pastProjects } from "../data/pastProjects.ts"
+
+const {title = "Default Title"} = Astro.props;
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+  <body>
+    <header>
+      This is the header.
+    </header>
+
+    <main>
+        <div class= "title-container">
+            <h1 id="page-title">Past Projects</h1>
+        </div>
+        <div class="master-container">
+            <div class="line">
+            </div>
+            <div class= "content">
+            
+                {
+                    pastProjects.map((project)=> (
+                        <ProjectBlock 
+                            title = {project.title} 
+                            description = {project.description}
+                            icon = {project.icon}
+                            awards = {project.awards}
+                            link = {project.link}
+                            year = {project.year}
+                        />
+                    ))
+                }
+            </div>
+        </div>
+        
+        
+    </main>
+
+    <footer>
+      This is the footer.
+    </footer>
+  </body>
+</html>
+
+
+<style>
+    * {
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+    }
+    header {
+        height:20vh;
+        background-color:beige;
+    }
+    footer {
+        height:20vh;
+        background-color:beige;
+    }
+    
+    #page-title {
+        /* font-size:4.7rem; */
+        font-size: 4.688rem;
+        font-family: "Poppins";
+    }
+
+    .title-container {
+        border-bottom:3px solid black;
+        padding:5rem 2.1rem 2.5rem 7.938rem;
+    }
+
+    .master-container {
+        padding: 0;
+        margin: 0;
+        padding-left: 16%;
+        position:relative;
+    }
+
+    .content {
+        position:relative;
+        padding-bottom: 8rem;
+    }
+
+    .line {
+        border-left:3.5px solid black;
+        padding-bottom: 5rem;
+        z-index: 10;
+        height: 100%;
+        left: 15.75%;
+        position:absolute;
+    }
+
+    @media (max-width: 880px) {
+        .master-container {
+            padding-left:0;
+        }
+
+        .content {
+            padding-left:5%;
+            padding-bottom: 4rem;
+        }
+
+        .line {
+            left: 13.5%;
+        }
+
+        .title-container {
+            padding-left: 2rem;
+        }
+    }
+</style>

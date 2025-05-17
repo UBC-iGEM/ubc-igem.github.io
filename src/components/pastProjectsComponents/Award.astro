@@ -1,0 +1,62 @@
+---
+
+export interface Award {
+    icon: string,
+    description: string
+}
+
+const {icon, description} = Astro.props;
+---
+
+<div class="award-container">
+    <img class = "award-icon" src = {icon} alt = {icon} >
+    <p class = "award-description">{description}</p>
+</div>
+
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .award-container {
+        background:transparent;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        padding: 0.2rem;
+    }
+
+    .award-icon {
+        width: 3.375rem;
+        height: 3.375rem;
+        margin-right: 0.8rem;
+    }
+
+    .award-description {
+        font-size:1.125rem;
+        color: #373F57;
+        /* font-family:open sans */
+        font-weight:lighter;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    @media (max-width: 880px) {
+        .award-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            margin-right: 0.6rem;
+            margin-left: 0.6rem;
+        }
+
+        .award-description {
+            font-size:1rem;
+        }
+    }
+
+</style>
+
+
+
+
