@@ -1,5 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Content as FaqContent } from '../content/faq.md';
+import "../content/markdown-styles.css";
+
 const pageTitle = "Contact Us - UBC iGEM";
 ---
 
@@ -79,19 +82,6 @@ const pageTitle = "Contact Us - UBC iGEM";
       text-align: left;
       max-width: 100%;
     }
-
-    .faq-markdown-content h2 {
-      font-size: 2.25em;
-      font-weight: 900;
-      margin-bottom: 0.1em;
-      margin-top: 0.1em;
-    }
-
-    .faq-markdown-content p {
-      font-size: 1.3em;
-      margin-bottom: 1em;
-      margin-top: 0.5em;
-    }
   </style>
 
   <section class="contact-section">
@@ -119,28 +109,7 @@ const pageTitle = "Contact Us - UBC iGEM";
   <section class="faq-section">
     <h1 class="faq-heading">FAQ</h1>
     <div class="faq-markdown-content">
-      <h2>How do I join the team?</h2>
-      <p>
-        Follow our instagram for hiring updates! We typically hire at the beginning of each competition season, mid-end
-        of September.
-      </p>
-      <h2>Do you accept students from any year level?</h2>
-      <p>
-        Yes! Some of our most valued members have been on the team since their first year. As long as you are an
-        undergraduate student eager to learn and work well in a team context for a common goal, come join us!
-      </p>
-      <h2>What background do I need to have to join iGEM?</h2>
-      <p>
-        As an interdisciplinary team, we welcome students from all backgrounds! Our team currently consists of members
-        from over 12 disciplines, contributing to different aspects of our work ranging from administration to building
-        hardware.
-      </p>
-      <h2>Do I need to have any particular experience to be considered?</h2>
-      <p>
-        Not necessarily. We look for students with willingness to learn and genuine enthusiasm! Since synthetic biology
-        is a niche subject, we do not expect extensive knowledge of the field. BUT we do require you to complement this
-        with an eagerness to learn the necessary concepts and skills.
-      </p>
+      <FaqContent />
     </div>
   </section>
 </Layout>
