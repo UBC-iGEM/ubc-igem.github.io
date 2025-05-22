@@ -1,14 +1,7 @@
 ---
-import { getHeadings } from "../assets/mock.md";
+import type { MarkdownHeading } from "astro";
 
-// Define the type for a heading object
-interface MarkdownHeading {
-  depth: number;
-  slug: string;
-  text: string;
-}
-
-const headings: MarkdownHeading[] = await getHeadings();
+const { headings } = Astro.props;
 
 let htmlOutput = "";
 if (headings && headings.length > 0) {
@@ -16,7 +9,7 @@ if (headings && headings.length > 0) {
   let openDetailsTags = 0;
   const indentationUnit = 20;
 
-  headings.forEach((heading) => {
+  headings.forEach((heading: MarkdownHeading) => {
     const currentHeadingLevel = heading.depth;
     const currentIndent = (currentHeadingLevel - 1) * indentationUnit;
 
