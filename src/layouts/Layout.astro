@@ -2,10 +2,10 @@
 import Navigation from '../components/Navigation.astro'
 
 interface Props {
-	title?: string;
+	title: string;
 }
 
-const { title = 'UBC iGEM' } = Astro.props
+const { title } = Astro.props
 ---
 
 <!doctype html>
@@ -30,7 +30,7 @@ const { title = 'UBC iGEM' } = Astro.props
 <style is:global>
 	:root {
 		--color-primary-black: #042a2b;
-		--color-primary-green: #afdbbf;
+		--color-primary-green: #479162;
 		--color-primary-orange: #ffdab9;
 		--color-primary-purple: #babcd5;
 		--color-primary-yellow: #fbf8dd;
@@ -71,7 +71,8 @@ const { title = 'UBC iGEM' } = Astro.props
 
 	main {
 		max-width: var(--max-width);
-		padding: 0 110px;
+		padding-right: min(110px, 15vw);
+		padding-left: min(110px, 15vw);
 	}
 
 	a {
