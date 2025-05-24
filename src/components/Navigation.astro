@@ -32,12 +32,12 @@
   }
 </script>
 
-<style is:inline>
+<style>
   :root {
     --navigation-height: 7rem;
   }
 
-  body {
+  html body {
     padding-top: var(--navigation-height);
   }
 
@@ -80,7 +80,7 @@
   }
   
   #navigation-menu a:hover {
-    color: var(--color-primary-green);
+    color: var(--color-tertiary-green);
   }
 
   #navigation-menu-button {
@@ -90,7 +90,7 @@
 
   /* Mobile Device Layout */
   @media (max-width: 900px) {
-    body {
+    html body {
       padding-top: 0;
       padding-bottom: var(--navigation-height);
     }
