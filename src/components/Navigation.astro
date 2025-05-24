@@ -1,30 +1,29 @@
 <nav class="navigation">
   <div class="navigation-container">
     <a href="/" class="logo">
-      <img src="/igem-logo.svg" alt="UBC iGEM Logo" />
+      <img src="/igem-logo.svg" alt="UBC iGEM Logo" draggable="false" />
     </a>
-    <button id="navigation-menu-button" aria-label="Toggle navigation menu">☰</button>
-    <div id="navigation-links">
+    <div id="navigation-menu">
       <a href="/">Home</a>
-      <a href="/about-us">About Us</a>
+      <a href="/how-we-work">How We Work</a>
       <a href="/our-team">Our Team</a>
       <a href="/sponsors">Sponsors</a>
       <a href="/past-projects">Past Projects</a>
       <a href="/gallery">Gallery</a>
       <a href="/contact-us">Contact Us</a>
     </div>
+    <button id="navigation-menu-button" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
   </div>
 </nav>
-<div id="navigation-placeholder" />
 
 <script>
+  const menu = document.getElementById('navigation-menu')
   const menuButton = document.getElementById('navigation-menu-button')
-  const links = document.getElementById('navigation-links')
 
-  if (menuButton instanceof HTMLButtonElement && links instanceof HTMLElement) {
+  if (menu instanceof HTMLElement && menuButton instanceof HTMLButtonElement) {
     menuButton.addEventListener('click', () => {
+      menu.classList.toggle('open')
       menuButton.classList.toggle('open')
-      links.classList.toggle('open')
 
       const isOpen = menuButton.classList.contains('open')
       menuButton.textContent = isOpen ? '×' : '☰'
@@ -33,9 +32,13 @@
   }
 </script>
 
-<style>
+<style is:inline>
   :root {
     --navigation-height: 7rem;
+  }
+
+  body {
+    padding-top: var(--navigation-height);
   }
 
   .navigation {
@@ -43,6 +46,7 @@
     position: fixed;
     width: 100%;
     height: var(--navigation-height);
+    top: 0;
     background-color: var(--background-color);
     border-bottom: var(--border-width) solid var(--border-color);
     align-items: center;
@@ -69,37 +73,62 @@
     height: 100%;
   }
 
-  #navigation-menu-button {
-    display: none;
-  }
-
-  #navigation-links {
+  #navigation-menu {
     display: flex;
     gap: min(3rem, 3vw);
     font-weight: 500;
   }
+  
+  #navigation-menu a:hover {
+    color: var(--color-primary-green);
+  }
 
-  #navigation-placeholder {
-    width: auto;
-    height: var(--navigation-height);
-    background-color: transparent;
+  #navigation-menu-button {
+    display: none;
+    user-select: none;
   }
 
   /* Mobile Device Layout */
-  @media (max-width: 850px) {
+  @media (max-width: 900px) {
     body {
-      padding-bottom: var(--navigation-height) !important;
+      padding-top: 0;
+      padding-bottom: var(--navigation-height);
     }
 
     .navigation {
+      top: initial;
       bottom: 0;
-      background-color: var(--color-primary-green);
+      background-color: var(--background-color);
       border-top: var(--border-width) solid var(--border-color);
       border-bottom: none;
     }
 
     .navigation-container {
       padding: 0 3rem 0 2rem;
+    }
+
+    #navigation-menu {
+      flex-direction: column;
+      position: absolute;
+      height: calc(100vh - var(--navigation-height) + var(--border-width));
+      bottom: calc(var(--navigation-height) - var(--border-width));
+      right: 0;
+      gap: 1rem;
+      padding: 1rem 2rem;
+      background-color: var(--background-color);
+      border-left: var(--border-width) solid var(--border-color);
+      align-items: flex-end;
+      justify-content: flex-end;
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(100%);
+    }
+
+    #navigation-menu.open {
+      transform: translateX(0);
+    }
+
+    #navigation-menu a {
+      padding: 0.5rem 0;
     }
 
     #navigation-menu-button {
@@ -118,33 +147,6 @@
       width: auto;
       height: auto;
       margin-right: 0.5rem;
-    }
-
-    #navigation-links {
-      display: none;
-    }
-
-    #navigation-links.open {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      bottom: calc(var(--navigation-height) - var(--border-width));
-      right: 0;
-      gap: 1rem;
-      padding: 1rem 2rem;
-      background-color: var(--color-primary-green);
-      border-top: var(--border-width) solid var(--border-color);
-      border-left: var(--border-width) solid var(--border-color);
-      border-top-left-radius: var(--border-radius-md);
-      align-items: flex-end;
-    }
-
-    #navigation-links a {
-      padding: 0.5rem 0;
-    }
-
-    #navigation-placeholder {
-      display: none;
     }
   }
 </style>
