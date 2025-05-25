@@ -1,11 +1,12 @@
 ---
 import ProjectBlock from "../components/pastProjectsComponents/ProjectBlock.astro";
 import { pastProjects } from "../data/pastProjects.ts"
+import Layout from '../layouts/Layout.astro';
 
 const {title = "Default Title"} = Astro.props;
 
 ---
-
+<!-- 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -39,8 +40,31 @@ const {title = "Default Title"} = Astro.props;
         </div>
     </main>
   </body>
-</html>
+</html> -->
 
+<Layout title="UBC iGEM">
+    <div class= "title-container">
+        <h1 id="page-title">Past Projects</h1>
+    </div>
+    <div class="master-container">
+        <div class="line">
+        </div>
+        <div class= "content">
+            {
+                pastProjects.map((project)=> (
+                    <ProjectBlock 
+                        title = {project.title} 
+                        description = {project.description}
+                        icon = {project.icon}
+                        awards = {project.awards}
+                        link = {project.link}
+                        year = {project.year}
+                    />
+                ))
+            }
+        </div>
+    </div>
+</Layout>
 
 <style>
     * {
