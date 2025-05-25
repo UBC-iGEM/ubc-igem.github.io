@@ -6,13 +6,15 @@ const {title, description, icon, link, awards = [], year} = Astro.props;
 ---
 <div class="outer-container">
     <div class ="project-container">
-        <div>
-            <a href = {link} target= "_blank">
-                <img class ="direct-arrow" 
-                    src = "../../../static/icons/direct_arrow.svg" 
-                    alt="direct arrow" />
-            </a>
-        </div>
+        {link===""? <></> : 
+            <div>
+                <a href = {link} target= "_blank">
+                    <img class ="direct-arrow" 
+                        src = "../../../static/icons/direct_arrow.svg" 
+                        alt="direct arrow" />
+                </a>
+            </div>
+            }
         <div class ="info-container">
             <div class="title-container">
                 <div class="title-icon-container">

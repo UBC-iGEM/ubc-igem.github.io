@@ -50,7 +50,7 @@ export const pastProjects = [
         awards: [
             { icon: "../../../static/past-project-icons/planarySpeechHarvard.svg", description: "Plenary speech at Harvard’s National Collegiate Research Conference and Stanford Research" },
           ],
-        link: "https://2020.igem.org/Team:British_Columbia", // There should be no link here?
+        link: "",
         year: "2020"
 
     },
@@ -176,7 +176,4 @@ export const pastProjects = [
         link: "https://2009.igem.org/Team:British_Columbia",
         year: "2009"
     }, 
-
-
-
 ]
