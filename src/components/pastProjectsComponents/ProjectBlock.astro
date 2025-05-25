@@ -37,6 +37,35 @@ const {title, description, icon, link, awards = [], year} = Astro.props;
 
 
 <style>
+    :root {
+		--color-primary-black: #042a2b;
+		--color-primary-green: #afdbbf;
+		--color-primary-orange: #ffdab9;
+		--color-primary-purple: #babcd5;
+		--color-primary-yellow: #fbf8dd;
+		--color-primary-peach: #f7dfca;
+
+		--color-secondary-black: #373f57;
+		--color-secondary-green: #d8f0e2;
+		--color-secondary-orange: #fff0e2;
+		--color-secondary-purple: #e4e6fc;
+		--color-secondary-yellow: #fffef3;
+		--color-secondary-peach: #fdf2e9;
+
+		--background-color: #ffffff;
+		--text-color-primary: var(--color-primary-black);
+		--text-color-secondary: var(--color-secondary-black);
+		--border-color: var(--color-primary-black);
+
+		--max-width: 1440px;
+		--border-width: 2px;
+		--border-radius-sm: 5px;
+		--border-radius-md: 10px;
+
+        /* newly added tokens */
+        --border-radius-lg: 20px;
+    }
+
     * {
         padding:0;
         margin:0;
@@ -96,13 +125,14 @@ const {title, description, icon, link, awards = [], year} = Astro.props;
     .project-container {
         width:90%;
         min-height:10rem;
-        background:#FBF8DD;  
+        background:var(--color-primary-yellow);  
         display:flex;
         flex-direction: row;
         flex-wrap:wrap;
         padding: 2.8rem;
-        border: 2px solid black;
-        border-radius:0.6rem;
+        border: 2px solid var(--color-primary-black);
+        /* border-radius:0.6rem; */
+        border-radius: var(--border-radius-md);
         min-width: 340px;
         box-shadow: rgba(0, 0, 0, 0.4) 5px 5px 5.3px;
         position:relative;
@@ -197,6 +227,11 @@ const {title, description, icon, link, awards = [], year} = Astro.props;
 
         .project-title {
             font-size: 2.5rem;
+        }
+
+        .project-container {
+            /* border-radius: var(--border-radius-lg); */
+            border-radius: var(--border-radius-md);
         }
 
         .img-container {
