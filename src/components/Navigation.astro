@@ -58,7 +58,7 @@
     display: flex;
     width: var(--max-width);
     height: 100%;
-    padding: 0 min(3rem, 3vw) 0 min(2rem, 2vw);
+    padding: 0 min(3rem, 1.5vw) 0 min(2rem, 1vw);
     align-items: center;
     justify-content: space-between;
   }
@@ -75,7 +75,7 @@
 
   #navigation-menu {
     display: flex;
-    gap: min(3rem, 3vw);
+    gap: min(3rem, 2vw);
     font-weight: 500;
   }
   
@@ -88,8 +88,7 @@
     user-select: none;
   }
 
-  /* Mobile Device Layout */
-  @media (max-width: 900px) {
+  @media (max-width: 800px) {
     html body {
       padding-top: 0;
       padding-bottom: var(--navigation-height);
