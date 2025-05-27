@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro'
+import MemberCard from '../components/MemberCard.astro'
+import TableOfContents from '../components/TableOfContents.astro'
+import team from '../data/team.json'
+
+interface Member {
+  name: string;
+  role: string;
+  major: string;
+  image: string;
+}
+
+const subteamKeys = Object.keys(team) as (keyof typeof team)[]
+---
+
+<Layout title="Our Team">
+  <div class="our-team">
+    <h1 class="title">Our Team</h1>
+    <p class="subtitle">
+      Our team of motivated undergraduates collaborate to design innovative
+      synthetic biology solutions. Under the guidance of professors and graduate
+      student mentors, we conduct meaningful research that not only meets
+      competition requirements but also addresses pressing local and global
+      challenges.
+    </p>
+    {
+      subteamKeys.map(subteamKey => {
+        const subteam = team[subteamKey]
+        const title = subteam.title
+        const colorToken = subteam.colorToken
+        const members = subteam.members
+    
+        return (
+          <section id={subteamKey}>
+            <h2>{title}</h2>
+            <div class="subteam">
+              {members.map((member: Member) => (
+                <MemberCard {...member} colorToken={colorToken} />
+              ))}
+            </div>
+          </section>
+        )
+      })
+    }
+    <TableOfContents
+      entries={subteamKeys.map(subteamKey => {
+        return {
+          title: team[subteamKey].title,
+          anchor: subteamKey
+        }
+      })}
+    />
+  </div>
+</Layout>
+
+<style>
+  .our-team {
+		max-width: var(--max-width);
+		padding-right: var(--page-horizontal-padding);
+		padding-left: var(--page-horizontal-padding);
+	}
+
+  section {
+    scroll-margin-top: calc(var(--navigation-height) + 1rem);
+  }
+
+  h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    padding-right: 3rem;
+  }
+
+  .subteam {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 800px) {
+    .subtitle {
+      padding-right: 0;
+    }
+  }
+</style>
