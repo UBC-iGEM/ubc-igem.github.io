@@ -10,11 +10,13 @@ const { entries } = Astro.props
 ---
 
 <div class="table-of-contents">
-  {entries.map(entry => (
-    <a href={`#${entry.anchor}`} data-entry={entry.anchor}>
-      <p>{entry.title}</p>
-    </a>
-  ))}
+  {
+    entries.map(entry => (
+      <a href={`#${entry.anchor}`} data-entry={entry.anchor}>
+        <p>{entry.title}</p>
+      </a>
+    ))
+  }
 </div>
 
 <script is:inline>
@@ -48,10 +50,10 @@ const { entries } = Astro.props
     flex-direction: column;
     position: fixed;
     max-width: 125px;
-    top: calc(var(--navigation-height) + 10px);
-    right: 10px;
+    top: calc(var(--navigation-height) + 0.5rem);
+    right: 0.5rem;
     padding: 1.5rem 1rem;
-    gap: 15px;
+    gap: 1rem;
     font-family: 'Open Sans', sans-serif;
     font-size: 0.8rem;
     background-color: var(--background-color);

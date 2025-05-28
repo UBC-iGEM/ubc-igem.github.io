@@ -35,9 +35,9 @@ const subteamKeys = Object.keys(team) as (keyof typeof team)[]
           <section id={subteamKey}>
             <h2>{title}</h2>
             <div class="subteam">
-              {members.map((member: Member) => (
+              {members.map((member: Member) =>
                 <MemberCard {...member} colorToken={colorToken} />
-              ))}
+              )}
             </div>
           </section>
         )
