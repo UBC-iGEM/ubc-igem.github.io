@@ -12,23 +12,27 @@
       <a href="/gallery">Gallery</a>
       <a href="/contact-us">Contact Us</a>
     </div>
-    <button id="navigation-menu-button" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+    <button
+      id="navigation-menu-button"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false">☰</button
+    >
   </div>
 </nav>
 
 <script>
-  const menu = document.getElementById('navigation-menu')
-  const menuButton = document.getElementById('navigation-menu-button')
+  const menu = document.getElementById("navigation-menu");
+  const menuButton = document.getElementById("navigation-menu-button");
 
   if (menu instanceof HTMLElement && menuButton instanceof HTMLButtonElement) {
-    menuButton.addEventListener('click', () => {
-      menu.classList.toggle('open')
-      menuButton.classList.toggle('open')
+    menuButton.addEventListener("click", () => {
+      menu.classList.toggle("open");
+      menuButton.classList.toggle("open");
 
-      const isOpen = menuButton.classList.contains('open')
-      menuButton.textContent = isOpen ? '×' : '☰'
-      menuButton.setAttribute('aria-expanded', String(isOpen))
-    })
+      const isOpen = menuButton.classList.contains("open");
+      menuButton.textContent = isOpen ? "×" : "☰";
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+    });
   }
 </script>
 
@@ -78,7 +82,7 @@
     gap: min(3rem, 3vw);
     font-weight: 500;
   }
-  
+
   #navigation-menu a:hover {
     color: var(--color-tertiary-green);
   }
