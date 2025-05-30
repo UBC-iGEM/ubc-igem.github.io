@@ -1,38 +1,46 @@
 ---
-import Award from './Award.astro'
+import Award, { type AwardProps } from './Award.astro'
 
-const {title, description, icon, link, awards = [], year} = Astro.props;
-// awards is a list of objects with keyvalues of icon and description
+const {title, description, icon, link, awards = [], year} = Astro.props as Props;
+export interface Props {
+    title: string,
+    description: string,
+    icon: string,
+    link: string, 
+    awards: AwardProps[],
+    year: string
+}
 ---
 <div class="outer-container">
-    <div class ="project-container">
-        {link===""? <></> : 
-            <div>
-                <a href = {link} target= "_blank">
-                    <img class ="direct-arrow" 
-                        src = "../../../static/icons/direct_arrow.svg" 
-                        alt="direct arrow" />
-                </a>
-            </div>
-            }
-        <div class ="info-container">
-            <div class="title-container">
-                <div class="title-icon-container">
-                    <img class ="title-icon" src= {icon} alt = {icon} />
+    <a href = {link} target= "_blank" class={link===""? "no-link":""}>
+        <div class ="project-container">
+                {link===""? <></> : 
+                    <div>
+                        <img class ="direct-arrow" 
+                            src = "../../../static/icons/direct_arrow.svg" 
+                            alt="direct arrow" />
+                    </div>
+                }
+                <div class ="info-container">
+                    <div class="title-container">
+                        <div class="title-icon-container">
+                            <img class ="title-icon" src= {icon} alt = {icon} />
+                        </div>
+                        <h1 class="project-title">{title}</h1>
+                    </div>
+                    <p class="project-description">{description}</p>
+                    <div class="award-container">
+                        {awards.map((award: AwardProps) =>  
+                            (<Award icon = {`../../../static/award-icons/${award.icon}`} description = {award.description} />)   
+                        )}
+                    </div>
                 </div>
-                <h1 class="project-title">{title}</h1>
-            </div>
-            <p class="project-description">{description}</p>
-            <div class="award-container">
-                {awards.map((award: any) => 
-                    (<Award icon = {award.icon} description = {award.description} />)   
-                )}
-            </div>
+                <div class= "img-container">
+                    <img class="project-icon" src = {icon} alt = {icon}>
+                </div>
+            </a>
         </div>
-        <div class= "img-container">
-            <img class="project-icon" src = {icon} alt = {icon}>
-        </div>
-    </div>
+    </a>
     <div class ="marker"></div>
     <div class ="year"><p>{year}</p></div>
 </div>
@@ -43,70 +51,84 @@ const {title, description, icon, link, awards = [], year} = Astro.props;
         padding:0;
         margin:0;
         box-sizing: border-box;
+
+        --marker-size: 15px;
+        --max-icon-container-size: 330px;
+        --title-icon-container-padding: 3rem;
+        --year-horizontal-shift: -5rem;
+        --marker-horizontal-shift: -9px;
+
+
+        --outer-container-web-padding:4rem;
+        --outer-container-mobile-padding:6rem;
+
+        --project-container-padding:2.8rem;
+        --project-container-min-height:10rem;
+        --project-container-min-width:340px;
+
+        --arrow-size:2.2rem;
+
+        --info-container-web-width:65%;
+        --info-container-mobile-width:100%;
+
+        --award-container-min-height:120px;
     }
+
+    .no-link{
+        pointer-events:none;
+    }
+
     .direct-arrow {
         position:absolute; 
         top: 1.2rem;
         right:1.2rem;
-        width: 2.2rem;
-        height:2.2rem;
-        opacity: 0.8;
-        cursor: pointer;
-        /* This color can be a global variable */
+        width: var(--arrow-size);
+        height: var(--arrow-size);
     }
 
     .marker {
         position:absolute;
-        width: 15px;
-        height: 15px;
+        width:var(--marker-size);
+        height: var(--marker-size);
         border-radius: 50%;
-        top: calc(50% + 2rem);
-        transform: translateY(-50%);
-        left:-9px;
+        top: calc(50% + 2rem - calc(var(--marker-size)/2));
+        left:var(--marker-horizontal-shift);
         background: black;
     }
 
     .year {
-        /* background: red; */
         font-size: 1.125rem;
-        /* font-family: Poppins; */
         position: absolute;
-        text-align: center;
-        justify-content: center;
         display: flex;
-        justify-content:center;
-        width: auto;
-        height: auto;
+        justify-content: center;
         top: calc(50% + 2rem);
         transform: translateY(-50%);
-        left: calc(-5.5rem);
+        left: var(--year-horizontal-shift);
         font-weight: 500;
-        font-family: "Poppins";
     }
 
     .direct-arrow:hover {
-        opacity: 0.6;
+        opacity: 0.8;
     }
 
     .outer-container {
         width: 100%;
-        padding-left: 4rem;
-        padding-top: 4rem;
+        padding-left: var(--outer-container-web-padding);
+        padding-top: var(--outer-container-web-padding);
         position: relative;
     }
 
     .project-container {
         width:90%;
-        min-height:10rem;
+        min-height:var(--project-container-min-height);
         background:var(--color-primary-yellow);  
         display:flex;
         flex-direction: row;
         flex-wrap:wrap;
-        padding: 2.8rem;
+        padding: var(--project-container-padding);
         border: 2px solid var(--color-primary-black);
-        /* border-radius:0.6rem; */
         border-radius: var(--border-radius-md);
-        min-width: 340px;
+        min-width: var(--project-container-min-width);
         box-shadow: rgba(0, 0, 0, 0.4) 5px 5px 5.3px;
         position:relative;
         z-index: 30;
@@ -115,7 +137,7 @@ const {title, description, icon, link, awards = [], year} = Astro.props;
     .info-container {
         display:flex;
         flex-direction: column;
-        width:65%;
+        width:var(--info-container-web-width);
     }
 
     .title-container {
@@ -130,14 +152,13 @@ const {title, description, icon, link, awards = [], year} = Astro.props;
         width: auto;
         height: 3rem;
         display: none;
-        /* display: flex; */
         justify-content: center;
         align-items: center;
     }
 
     .title-icon {
         height: 100%;
-        max-width: calc(330px - 6rem);  
+        max-width: calc(var(--max-icon-container-size) - 2* (var(--title-icon-container-padding)));  
     }
 
     .img-container {
@@ -145,15 +166,15 @@ const {title, description, icon, link, awards = [], year} = Astro.props;
         display:flex;
         align-items: center;
         flex: 1 1 180px;
-        padding: 3rem;
-        max-width: 330px;
+        padding: var(--title-icon-container-padding);
+        max-width: var(--max-icon-container-size);
     }
 
     .award-container {
         display:flex;
         flex-direction: column;
         justify-content: center;
-        min-height: 120px;
+        min-height: var(--award-container-min-height);
     }
 
     .project-title {
@@ -176,22 +197,22 @@ const {title, description, icon, link, awards = [], year} = Astro.props;
 
     @media (max-width: 880px) {
         .outer-container {
-            padding-top: 6rem;
+            padding-top: var(--outer-container-mobile-padding);
         }
+
         .info-container {
-            width:100%;
+            width:var(--info-container-mobile-width);
         }
 
         .marker {
-            top: 4rem;
+            top: 3.5rem;
             left: 8%;
         }
 
         .year {
             top: 4rem;
             font-size: 2rem; 
-            left: calc(13%);
-            font-weight: bold;
+            left: 13%;
         }
         
         .outer-container {
@@ -203,7 +224,6 @@ const {title, description, icon, link, awards = [], year} = Astro.props;
         }
 
         .project-container {
-            /* border-radius: var(--border-radius-lg); */
             border-radius: var(--border-radius-md);
         }
 
@@ -212,7 +232,7 @@ const {title, description, icon, link, awards = [], year} = Astro.props;
         }
 
         .title-icon-container {
-            max-width: 330px;
+            max-width: var(--max-icon-container-size);
             display:block;
         }
     }

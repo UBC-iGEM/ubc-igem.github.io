@@ -1,10 +1,10 @@
 ---
-export interface Award {
+export interface AwardProps {
     icon: string,
     description: string
 }
 
-const {icon, description} = Astro.props;
+const {icon, description} = Astro.props as AwardProps;
 ---
 
 <div class="award-container">
@@ -16,7 +16,6 @@ const {icon, description} = Astro.props;
     * {
         padding: 0;
         margin: 0;
-        box-sizing: border-box;
     }
     .award-container {
         background:transparent;
@@ -34,9 +33,7 @@ const {icon, description} = Astro.props;
 
     .award-description {
         font-size:1.125rem;
-        /* color: #373F57; */
         color: var(--color-secondary-black);
-        /* font-family:open sans */
         font-weight:lighter;
         font-family: "Open Sans", sans-serif;
     }
@@ -46,7 +43,6 @@ const {icon, description} = Astro.props;
             width: 2.5rem;
             height: 2.5rem;
             margin-right: 0.6rem;
-            margin-left: 0.4rem;
         }
 
         .award-description {
