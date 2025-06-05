@@ -1,50 +1,70 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Content as FaqContent } from '../content/faq.md';
+import { Content as FaqContent } from "../content/faq.md";
 import "../content/markdown-styles.css";
 
 const pageTitle = "Contact Us - UBC iGEM";
 ---
 
 <Layout title={pageTitle}>
+  <section class="contact-section">
+    <h1>Contact us</h1>
+
+    <div class="contact-row">
+      <img src="/email.svg" alt="Email Icon" />
+      <a href="mailto:ubcigem@gmail.com">
+        <h2>ubcigem@gmail.com</h2>
+      </a>
+    </div>
+    <div class="contact-row">
+      <img src="/instagram.svg" alt="Instagram Icon" />
+      <a href="https://instagram.com/ubcigem" target="_blank" rel="noopener noreferrer">
+        <h2>@ubcigem</h2>
+      </a>
+    </div>
+    <div class="contact-row">
+      <img src="/linkedin.svg" alt="LinkedIn Icon" />
+      <a href="https://linkedin.com/company/ubcigem" target="_blank" rel="noopener noreferrer">
+        <h2>UBC iGEM</h2>
+      </a>
+    </div>
+  </section>
+  <section class="faq-section">
+    <h1 class="faq-heading">FAQ</h1>
+    <div class="faq-markdown-content">
+      <FaqContent />
+    </div>
+  </section>
+
   <style>
     h1 {
       font-size: 4.5em;
       font-weight: 900;
-      text-decoration-color: #042a2b;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
     }
+
     h2 {
       font-size: 2em;
       font-weight: 400;
       margin-top: 0.5em;
       margin-bottom: 0.5em;
-      text-decoration-color: #042a2b;
     }
+
     p {
       font-size: 1.3em;
-      text-decoration-color: #042a2b;
-    }
-
-    .page-main-heading {
-      margin-bottom: 0.75em;
-    }
-
-    .faq-heading {
-      text-decoration-color: #042a2c;
       margin-top: 0.5em;
       margin-bottom: 0.25em;
       font-weight: 700;
     }
 
     .contact-section {
-      background-color: #afdbbf;
-      padding-bottom: 5%;
+      background-color: var(--color-primary-green);
+      padding-block: 5%;
       padding-inline: 10%;
       text-align: left;
-      border-top: solid 2.5px black;
-      border-bottom: solid 2.5px black;
-      text-decoration-color: #042a2a;
-      outline: black;
+      border-bottom: solid var(--border-width) var(--border-color);
+      outline: var(--border-color);
       max-width: 100%;
     }
 
@@ -65,51 +85,11 @@ const pageTitle = "Contact Us - UBC iGEM";
       color: inherit;
     }
 
-    .contact-handle {
-      text-decoration-color: #383f57;
-    }
-
-    .contact-handle-email {
-      text-decoration: underline;
-      text-decoration-color: #383f57;
-    }
-
     .faq-section {
       padding-inline: 10%;
-      padding-bottom: 5%;
-      padding-top: 5%;
-      border-bottom: solid 2.5px black;
+      border-bottom: solid var(--border-width) var(--border-color);
       text-align: left;
       max-width: 100%;
     }
   </style>
-
-  <section class="contact-section">
-    <h1 class="page-main-heading">Contact us</h1>
-
-    <div class="contact-row">
-      <img src="/email.svg" alt="Email Icon" />
-      <a href="mailto:ubcigem@gmail.com">
-        <h2 class="contact-handle contact-handle-email">ubcigem@gmail.com</h2>
-      </a>
-    </div>
-    <div class="contact-row">
-      <img src="/instagram.svg" alt="Instagram Icon" />
-      <a href="https://instagram.com/ubcigem" target="_blank" rel="noopener noreferrer">
-        <h2 class="contact-handle">@ubcigem</h2>
-      </a>
-    </div>
-    <div class="contact-row">
-      <img src="/linkedin.svg" alt="LinkedIn Icon" />
-      <a href="https://linkedin.com/company/ubcigem" target="_blank" rel="noopener noreferrer">
-        <h2 class="contact-handle">UBC iGEM</h2>
-      </a>
-    </div>
-  </section>
-  <section class="faq-section">
-    <h1 class="faq-heading">FAQ</h1>
-    <div class="faq-markdown-content">
-      <FaqContent />
-    </div>
-  </section>
 </Layout>
