@@ -29,7 +29,7 @@ const subteamKeys = Object.keys(team) as (keyof typeof team)[]
         const title = subteam.title
         const colorToken = subteam.colorToken
         const members = subteam.members
-    
+
         return (
           <section id={subteamKey}>
             <h2>{title}</h2>
@@ -47,9 +47,9 @@ const subteamKeys = Object.keys(team) as (keyof typeof team)[]
 
 <style>
   .our-team {
-		max-width: var(--max-width);
-		padding-right: var(--page-horizontal-padding);
-		padding-left: var(--page-horizontal-padding);
+    max-width: var(--max-width);
+    padding-right: var(--page-horizontal-padding);
+    padding-left: var(--page-horizontal-padding);
 	}
 
   section {
