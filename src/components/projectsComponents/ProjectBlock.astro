@@ -17,35 +17,37 @@ export interface Props {
             <p class="year">{year}</p>
             <div class ="marker"></div>
         </div>
-
-        <div class="project-block">
+        <div class="info-block">
             <a href = {link} target= "_blank" class={link===""? "no-link":""}>
-            {link===""? <></> : 
-                <div>
-                    <img class ="direct-arrow" 
-                        src = "../../../static/icons/direct_arrow.svg" 
-                        alt="direct arrow" />
-                </div>
-            }
-            <div class ="info-container">
-                <div class="title-container">
-                    <div class="title-icon-container">
-                        <img class ="title-icon" src= {icon} alt = {icon} />
+                <div class="project-block">
+                    {link===""? <></> : 
+                        <div>
+                            <img class ="direct-arrow" 
+                                src = "../../../static/icons/direct_arrow.svg" 
+                                alt="direct arrow" />
+                        </div>
+                    }
+                    <div class ="info-container">
+                        <div class="title-container">
+                            <div class="title-icon-container">
+                                <img class ="title-icon" src= {icon} alt = {icon} />
+                            </div>
+                            <h1 class="project-title">{title}</h1>
+                        </div>
+                        <p class="project-description">{description}</p>
+                        <div class="award-container">
+                            {awards.map((award: AwardProps) =>  
+                                (<Award icon = {`../../../static/award-icons/${award.icon}`} description = {award.description} />)   
+                            )}
+                        </div>
                     </div>
-                    <h1 class="project-title">{title}</h1>
+                    <div class= "img-container">
+                        <img class="project-icon" src = {icon} alt = {icon}>
+                    </div>
                 </div>
-                <p class="project-description">{description}</p>
-                <div class="award-container">
-                    {awards.map((award: AwardProps) =>  
-                        (<Award icon = {`../../../static/award-icons/${award.icon}`} description = {award.description} />)   
-                    )}
-                </div>
-            </div>
-            <div class= "img-container">
-                <img class="project-icon" src = {icon} alt = {icon}>
-            </div>
             </a>
         </div>
+        
     </div>
 </div>
 
@@ -61,7 +63,6 @@ export interface Props {
         --year-horizontal-shift: 5rem;
         
         --marker-horizontal-shift: -9px;
-
 
         --outer-container-web-padding:4rem;
         --outer-container-mobile-padding:6rem;
@@ -119,6 +120,12 @@ export interface Props {
         width:100%;
     }
 
+    .info-block {
+        width:var(--project-block-screen-proportion);
+        padding-top: var(--project-block-padding-top);
+        padding-left: 4rem;
+    }
+
     .project-container{
         display:flex;
         flex-direction: row;
@@ -142,10 +149,7 @@ export interface Props {
     }
 
     .project-block{
-        margin-top: var(--project-block-padding-top);
-        margin-left: 4rem;
-
-        width:var(--project-block-screen-proportion);
+        width:100%;
         min-height:var(--project-container-min-height);
         background:var(--color-primary-yellow);  
         display:flex;
@@ -253,6 +257,11 @@ export interface Props {
             flex-wrap:wrap;
         }
 
+        .info-block {
+            padding-top:0;
+            width:100%;
+        }
+
         .project-block{
             margin-top: 0;
         }
@@ -263,7 +272,6 @@ export interface Props {
             margin-left:7rem;
             width:auto;
         }
-
 
         .img-container {
             display: none;
