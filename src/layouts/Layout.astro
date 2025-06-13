@@ -43,7 +43,7 @@ const { title } = Astro.props
 		--color-secondary-yellow: #fffef3;
 		--color-secondary-peach: #fdf2e9;
 
-		--color-tertiary-green: #479162;
+		--color-tertiary-green: #1b8043;
 
 		--background-color: #ffffff;
 		--text-color-primary: var(--color-primary-black);
@@ -51,6 +51,7 @@ const { title } = Astro.props
 		--border-color: var(--color-primary-black);
 
 		--max-width: 1440px;
+		--page-horizontal-padding: min(7rem, 15vw);
 		--border-width: 2px;
 		--border-radius-sm: 5px;
 		--border-radius-md: 10px;
@@ -63,18 +64,11 @@ const { title } = Astro.props
 
 	body {
 		display: flex;
-		flex-direction: column;
 		padding: 0;
 		margin: 0;
 		font-family: 'Poppins', sans-serif;
 		color: var(--text-color-primary);
-		align-items: center;
-	}
-
-	main {
-		/* max-width: var(--max-width);
-		padding-right: min(110px, 15vw);
-		padding-left: min(110px, 15vw); */
+		justify-content: center;
 	}
 
 	a {
@@ -87,12 +81,18 @@ const { title } = Astro.props
 	.title {
 		font-size: 4.5rem;
 		font-weight: bold;
-		margin-top: 80px 0 0 0;
+		margin-top: 5rem;
 	}
 
 	.subtitle {
 		font-size: 2rem;
 		line-height: 1.2;
-		margin-bottom: 50px;
+		margin-bottom: 3rem;
+	}
+
+	@media (max-width: 800px) {
+		body {
+			justify-content: start;
+		}
 	}
 </style>
