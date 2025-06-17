@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Content as FaqContent } from "../content/faq.md";
-import "../content/markdown-styles.css";
 
 const pageTitle = "Contact Us - UBC iGEM";
 ---
@@ -31,9 +30,7 @@ const pageTitle = "Contact Us - UBC iGEM";
   </section>
   <section class="faq-section">
     <h1 class="faq-heading">FAQ</h1>
-    <div class="faq-markdown-content">
-      <FaqContent />
-    </div>
+    <FaqContent />
   </section>
 
   <style>
@@ -90,6 +87,19 @@ const pageTitle = "Contact Us - UBC iGEM";
       border-bottom: solid var(--border-width) var(--border-color);
       text-align: left;
       max-width: 100%;
+
+      h2 {
+        font-size: 2.25em;
+        font-weight: 900;
+        margin-bottom: 0.1em;
+        margin-top: 0.1em;
+      }
+
+      p {
+        font-size: 1.3em;
+        margin-bottom: 1em;
+        margin-top: 0.5em;
+      } 
     }
   </style>
 </Layout>
