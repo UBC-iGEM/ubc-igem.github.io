@@ -1,5 +1,5 @@
 ---
-import ProjectBlock from "../components/pastProjectsComponents/ProjectBlock.astro";
+import ProjectBlock from "../components/projectsComponents/ProjectBlock.astro";
 import { pastProjects } from "../data/pastProjects.ts"
 import Layout from '../layouts/Layout.astro';
 ---
@@ -8,22 +8,22 @@ import Layout from '../layouts/Layout.astro';
     <div class= "title-container">
         <h1 id="page-title">Past Projects</h1>
     </div>
-    <div class="master-container">
-        <div class="line">
-        </div>
-        <div class= "content">
-            {
-                pastProjects.map((project)=> (
-                    <ProjectBlock 
-                        title = {project.title} 
-                        description = {project.description}
-                        icon = {`../../../static/past-project-icons/${project.icon}`}
-                        awards = {project.awards}
-                        link = {project.link}
-                        year = {project.year}
-                    />
-                ))
-            }
+    <div class= "content">
+        {
+            pastProjects.map((project)=> (
+                <ProjectBlock 
+                    title = {project.title} 
+                    description = {project.description}
+                    icon = {`../../../static/past-project-icons/${project.icon}`}
+                    awards = {project.awards}
+                    link = {project.link}
+                    year = {project.year}
+                />
+            ))
+        }
+        <div class ="spacer">
+            <div class="left"></div>
+            <div class="right"></div>
         </div>
     </div>
 </Layout>
@@ -33,14 +33,9 @@ import Layout from '../layouts/Layout.astro';
         padding:0;
         margin:0;
         box-sizing: border-box;
-    }
-    header {
-        height:20vh;
-        background-color:beige;
-    }
-    footer {
-        height:20vh;
-        background-color:beige;
+
+        --spacer-height: 8rem;
+        --line-width: 3.5px;
     }
     
     #page-title {
@@ -53,43 +48,30 @@ import Layout from '../layouts/Layout.astro';
         padding:5rem 2.1rem 2.5rem 7.938rem;
     }
 
-    .master-container {
-        padding: 0;
-        margin: 0;
-        padding-left: 16%;
-        position:relative;
-    }
-
     .content {
-        position:relative;
-        padding-bottom: 8rem;
+        width:100%;
     }
 
-    .line {
-        border-left:3.5px solid black;
-        padding-bottom: 5rem;
-        z-index: 10;
-        height: 100%;
-        left: 15.75%;
-        position:absolute;
+    .spacer {
+        width:100%;
+        display:flex;
+        height:var(--spacer-height);
+    }
+
+    .left {
+        width:calc(17% - 0.7rem);
+        border-right:var(--line-width) solid black;
     }
 
     @media (max-width: 880px) {
-        .master-container {
-            padding-left:0;
-        }
-
-        .content {
-            padding-left:5%;
-            padding-bottom: 4rem;
-        }
-
-        .line {
-            left: 13.5%;
+        .left {
+            margin-left:7rem;
+            border-left:var(--line-width) solid black;
+            border-right:0;
         }
 
         .title-container {
-            padding-left: 2rem;
+            padding-left: 4rem;
         }
     }
 </style>
