@@ -12,39 +12,44 @@ export interface Props {
 }
 ---
 <div class="outer-container">
-    <a href = {link} target= "_blank" class={link===""? "no-link":""}>
-        <div class ="project-container">
-                {link===""? <></> : 
-                    <div>
-                        <img class ="direct-arrow" 
-                            src = "../../../static/icons/direct_arrow.svg" 
-                            alt="direct arrow" />
-                    </div>
-                }
-                <div class ="info-container">
-                    <div class="title-container">
-                        <div class="title-icon-container">
-                            <img class ="title-icon" src= {icon} alt = {icon} />
+    <div class ="project-container">
+        <div class="line-block">
+            <p class="year">{year}</p>
+            <div class ="marker"></div>
+        </div>
+        <div class="info-block">
+            <a href = {link} target= "_blank" class={link===""? "no-link":""}>
+                <div class="project-block">
+                    {link===""? <></> : 
+                        <div>
+                            <img class ="direct-arrow" 
+                                src = "../../../static/icons/direct_arrow.svg" 
+                                alt="direct arrow" />
                         </div>
-                        <h1 class="project-title">{title}</h1>
+                    }
+                    <div class ="info-container">
+                        <div class="title-container">
+                            <div class="title-icon-container">
+                                <img class ="title-icon" src= {icon} alt = {icon} />
+                            </div>
+                            <h1 class="project-title">{title}</h1>
+                        </div>
+                        <p class="project-description">{description}</p>
+                        <div class="award-container">
+                            {awards.map((award: AwardProps) =>  
+                                (<Award icon = {`../../../static/award-icons/${award.icon}`} description = {award.description} />)   
+                            )}
+                        </div>
                     </div>
-                    <p class="project-description">{description}</p>
-                    <div class="award-container">
-                        {awards.map((award: AwardProps) =>  
-                            (<Award icon = {`../../../static/award-icons/${award.icon}`} description = {award.description} />)   
-                        )}
+                    <div class= "img-container">
+                        <img class="project-icon" src = {icon} alt = {icon}>
                     </div>
-                </div>
-                <div class= "img-container">
-                    <img class="project-icon" src = {icon} alt = {icon}>
                 </div>
             </a>
         </div>
-    </a>
-    <div class ="marker"></div>
-    <div class ="year"><p>{year}</p></div>
+        
+    </div>
 </div>
-
 
 <style>
     * {
@@ -55,9 +60,9 @@ export interface Props {
         --marker-size: 15px;
         --max-icon-container-size: 330px;
         --title-icon-container-padding: 3rem;
-        --year-horizontal-shift: -5rem;
+        --year-horizontal-shift: 5rem;
+        
         --marker-horizontal-shift: -9px;
-
 
         --outer-container-web-padding:4rem;
         --outer-container-mobile-padding:6rem;
@@ -72,6 +77,12 @@ export interface Props {
         --info-container-mobile-width:100%;
 
         --award-container-min-height:120px;
+
+        --line-width: 3.5px;
+
+        --project-block-padding-top: 5rem;
+        --project-block-screen-proportion: 83%;
+        --line-block-screen-proportion:17%;
     }
 
     .no-link{
@@ -91,20 +102,9 @@ export interface Props {
         width:var(--marker-size);
         height: var(--marker-size);
         border-radius: 50%;
-        top: calc(50% + 2rem - calc(var(--marker-size)/2));
-        left:var(--marker-horizontal-shift);
+        top: calc(50% + calc(var(--project-block-padding-top)/2) - calc(var(--marker-size)/2));
+        right:var(--marker-horizontal-shift);
         background: black;
-    }
-
-    .year {
-        font-size: 1.125rem;
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        top: calc(50% + 2rem);
-        transform: translateY(-50%);
-        left: var(--year-horizontal-shift);
-        font-weight: 500;
     }
 
     .direct-arrow:hover {
@@ -113,13 +113,43 @@ export interface Props {
 
     .outer-container {
         width: 100%;
-        padding-left: var(--outer-container-web-padding);
-        padding-top: var(--outer-container-web-padding);
-        position: relative;
+        padding: 0 var(--outer-container-web-padding) 0 0;
     }
 
-    .project-container {
-        width:90%;
+    a{
+        width:100%;
+    }
+
+    .info-block {
+        width:var(--project-block-screen-proportion);
+        padding-top: var(--project-block-padding-top);
+        padding-left: 4rem;
+    }
+
+    .project-container{
+        display:flex;
+        flex-direction: row;
+        width:100%;
+    }
+
+    .line-block {
+        width:var(--line-block-screen-proportion);
+        border-right: var(--line-width) solid black;
+        position:relative;
+        display:flex;
+        align-items: center;
+        justify-content: right;
+    }
+
+    .year {
+        margin-top:var(--project-block-padding-top);
+        margin-right: 2rem;
+        font-weight:500;
+        font-size: 1.125rem;
+    }
+
+    .project-block{
+        width:100%;
         min-height:var(--project-container-min-height);
         background:var(--color-primary-yellow);  
         display:flex;
@@ -131,7 +161,6 @@ export interface Props {
         min-width: var(--project-container-min-width);
         box-shadow: rgba(0, 0, 0, 0.4) 5px 5px 5.3px;
         position:relative;
-        z-index: 30;
     }
 
     .info-container {
@@ -198,6 +227,7 @@ export interface Props {
     @media (max-width: 880px) {
         .outer-container {
             padding-top: var(--outer-container-mobile-padding);
+            padding-right:2rem;
         }
 
         .info-container {
@@ -205,18 +235,17 @@ export interface Props {
         }
 
         .marker {
-            top: 3.5rem;
-            left: 8%;
+            left:var(--marker-horizontal-shift);
         }
 
         .year {
-            top: 4rem;
-            font-size: 2rem; 
-            left: 13%;
+            font-size: 1.6rem; 
+            font-weight:600;
+            margin-left: calc(var(--year-horizontal-shift)/2);
         }
         
         .outer-container {
-            padding-left:0rem;
+            padding-top:0;
         }
 
         .project-title {
@@ -225,6 +254,24 @@ export interface Props {
 
         .project-container {
             border-radius: var(--border-radius-md);
+            flex-wrap:wrap;
+        }
+
+        .info-block {
+            padding-top:0;
+            width:100%;
+            padding-left:2rem;
+        }
+
+        .project-block{
+            margin-top: 0;
+        }
+
+        .line-block {
+            border-left: var(--line-width) solid black;
+            border-right: 0;
+            margin-left:7rem;
+            width:auto;
         }
 
         .img-container {

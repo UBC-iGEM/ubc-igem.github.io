@@ -95,8 +95,8 @@ export const pastProjects = [
             { icon: "nominee_bestManufacture.svg", description: "BEST MANUFACTURING PROJECT NOMINEE" },
             { icon: "goldMedal.png", description: "GOLD MEDAL" },
           ],
-        link: "https://2017.igem.org/Team:British_Columbia",
-        year: "2017"
+        link: "https://2016.igem.org/Team:British_Columbia",
+        year: "2016"
     }, 
 
     {
