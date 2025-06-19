@@ -1,0 +1,58 @@
+---
+export interface SponsorCategoryProps {
+    name: string,
+    icons: string[]
+}
+
+const {name, icons} = Astro.props as SponsorCategoryProps;
+const {path} = Astro.props;
+---
+
+<div class="category-container">
+    {name === ""? <></> : <p class="category-name">{name}</p>}
+    {
+        icons.map((icon) => (
+            <img src={`${path}${icon}`} alt={icon} />
+        ))
+    }
+</div>
+
+
+<style>
+    * {
+        --icon-height:5rem;
+    }
+
+    .category-container {
+        display:flex;
+        gap: 2rem;
+        flex-wrap:wrap;
+        margin:1rem;
+    }
+
+    .category-name {
+        font-size:1.49rem;
+        font-weight:lighter;
+        color: var(--color-secondary-black);
+        align-self: center;
+        width:5rem;
+    }
+
+    img {
+        height:6rem;
+    }
+
+    @media (max-width: 880px) {
+        img {
+            max-width:220px;
+        }
+
+        .category-container {
+            gap:1rem;
+        }
+    }
+
+
+</style>
+
+

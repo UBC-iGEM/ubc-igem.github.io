@@ -1,0 +1,80 @@
+---
+import SponsorBlock from "./SponsorBlock.astro"
+import { pastSponsors } from "../../data/pastSponsors"
+
+---
+<div class= "title-container">
+    <h1 id="page-title">Past Sponsors</h1>
+</div>
+<div class= "content">
+    {
+        pastSponsors.map((block)=> (
+            <SponsorBlock 
+                year= {block.year} 
+                categories= {block.categories}
+            />
+        ))
+    }
+    
+    <div class ="spacer">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</div>
+
+<style>
+    * {
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+
+        --spacer-height: 8rem;
+        --line-width: 3.5px;
+    }
+    
+    #page-title {
+        font-size: 4.688rem;
+        font-family: "Poppins";
+    }
+
+    .title-container {
+        border-bottom:3px solid black;
+        padding:5rem 2.1rem 2.5rem 7.938rem;
+    }
+
+    .test {
+        color:black;
+    }
+
+    .content {
+        width:100%;
+    }
+
+    .spacer {
+        width:100%;
+        display:flex;
+        height:var(--spacer-height);
+    }
+
+    .left {
+        width:calc(17% - 0.7rem);
+        border-right:var(--line-width) solid black;
+    }
+
+    @media (max-width: 880px) {
+        .left {
+            margin-left:7rem;
+            border-left:var(--line-width) solid black;
+            border-right:0;
+        }
+
+        .title-container {
+            padding: 4rem 2.1rem 2.5rem 3rem;
+        }
+
+        #page-title {
+            font-size: 3.8rem;
+        }
+    }
+
+</style>
