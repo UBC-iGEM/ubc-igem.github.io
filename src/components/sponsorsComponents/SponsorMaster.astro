@@ -17,8 +17,6 @@ import { pastSponsors } from "../../data/pastSponsors"
     }
     
     <div class ="spacer">
-        <div class="left"></div>
-        <div class="right"></div>
     </div>
 </div>
 
@@ -42,24 +40,17 @@ import { pastSponsors } from "../../data/pastSponsors"
         padding:5rem 2.1rem 2.5rem 7.938rem;
     }
 
-    .test {
-        color:black;
-    }
-
     .content {
         width:100%;
     }
 
     .spacer {
-        width:100%;
+        width:calc(17% - 0.7rem);
+        border-right:var(--line-width) solid black;
         display:flex;
         height:var(--spacer-height);
     }
 
-    .left {
-        width:calc(17% - 0.7rem);
-        border-right:var(--line-width) solid black;
-    }
 
     @media (max-width: 880px) {
         .left {

@@ -69,6 +69,7 @@ const {year, categories} = Astro.props as Props;
 
     .outer-container {
         width: 100%;
+        padding: 0 var(--outer-container-web-padding) 0 0;
     }
 
     .info-block {
@@ -112,7 +113,7 @@ const {year, categories} = Astro.props as Props;
         padding: var(--project-container-padding);
         border: 2px solid var(--color-primary-black);
         border-radius: var(--border-radius-md);
-        min-width: var(--project-container-min-width);
+        /* min-width: var(--project-container-min-width); */
         box-shadow: rgba(0, 0, 0, 0.4) 5px 5px 5.3px;
         position:relative;
     }
@@ -125,7 +126,8 @@ const {year, categories} = Astro.props as Props;
 
     @media (max-width: 880px) {
         .outer-container {
-            padding-top:0;
+            padding-top: var(--outer-container-mobile-padding);
+            padding-right:1rem;
         }
 
         .info-container {
@@ -149,12 +151,12 @@ const {year, categories} = Astro.props as Props;
         .project-container {
             border-radius: var(--border-radius-md);
             flex-wrap:wrap;
-            padding: 0 3rem 0 1.5rem;
+            padding: 0 1rem 0 1rem;
         }
 
         .info-block {
             padding-top:0;
-            padding-left:1.5rem;
+            padding-left:1rem;
             width:100%;
         }
 
