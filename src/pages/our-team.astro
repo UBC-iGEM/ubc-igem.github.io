@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import MemberCard from '../components/MemberCard.astro'
+import TableOfContents from '../components/TableOfContents.astro'
 import team from '../data/team.json'
 
 interface Member {
@@ -42,6 +43,14 @@ const subteamKeys = Object.keys(team) as (keyof typeof team)[]
         )
       })
     }
+    <TableOfContents
+      entries={subteamKeys.map(subteamKey => {
+        return {
+          title: team[subteamKey].title,
+          fragment: subteamKey
+        }
+      })}
+    />
   </div>
 </Layout>
 
