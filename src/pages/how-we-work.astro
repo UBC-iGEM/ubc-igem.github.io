@@ -30,39 +30,50 @@ const images = [
       <div class="caption">
         <p>igem petri dishes</p>
       </div>
-      <button class="prev-button">prev</button>
-      <button class="next-button">next</button>
+      <div class="carousel-buttons">
+        <button class="prev-button">prev</button>
+        <button class="next-button">next</button>
+      </div>
     </div>
   </div>
 </Layout>
 
 <script>
-  document.querySelector(".next-button")!.addEventListener("click", (event: Event) => {
+  const handleCarouselButtonClick = (
+    event: Event,
+    findCurrAndNext: (carousel: Element) => Element[]
+  ) => {
     const cause_button = event.target as HTMLButtonElement
     const carousel = cause_button.closest(".carousel")!
 
-    const currentActive = carousel.querySelector(".active")!
-    const nextActive = carousel.querySelector(
-      ".active + .caption + img"
-    ) ?? carousel.firstElementChild!
+    const [currentActive, nextActive] = findCurrAndNext(carousel)
 
-    currentActive?.classList.remove("active")
-    nextActive?.classList.add("active")
+    currentActive.classList.remove("active")
+    nextActive.classList.add("active")
     nextActive.scrollIntoView({block: "nearest", inline: "nearest"})
-  })
+  }
 
-  document.querySelector(".prev-button")!.addEventListener("click", (event: Event) => {
-    const cause_button = event.target as HTMLButtonElement
-    const carousel = cause_button.closest(".carousel")!
+  const nextButtonHandler = (event: Event) => handleCarouselButtonClick(
+    event, (carousel) => {
+      const curr = carousel.querySelector(".active")!
+      const next = carousel.querySelector(
+        ".active + .caption + img"
+      ) ?? carousel.firstElementChild!
+      return [curr, next]
+    }
+  )
 
-    const currentActive = carousel.querySelector(".active")!
-    const nextActive = currentActive.previousElementSibling?.previousElementSibling
-        ?? carousel.querySelector("img:last-of-type")
+  const prevButtonHandler = (event: Event) => handleCarouselButtonClick(
+    event, (carousel) => {
+      const curr = carousel.querySelector(".active")!
+      const next = curr.previousElementSibling?.previousElementSibling
+          ?? carousel.querySelector("img:last-of-type")
+      return [curr, next!]
+    }
+  )
 
-    currentActive?.classList.remove("active")
-    nextActive?.classList.add("active")
-    nextActive?.scrollIntoView({block: "nearest", inline: "nearest"})
-  })
+  document.querySelectorAll(".next-button").forEach(x => x.addEventListener("click", nextButtonHandler))
+  document.querySelectorAll(".prev-button").forEach(x => x.addEventListener("click", prevButtonHandler))
 </script>
 
 <style>
@@ -96,8 +107,15 @@ const images = [
     left: 10px;
   }
 
-  button {
+  .carousel-buttons {
+    grid-row: 2;
+    justify-self: end;
     position: sticky;
     right: 10px;
+
+    button {
+      height: 64px;
+      width: 64px;
+    }
   }
 </style>
