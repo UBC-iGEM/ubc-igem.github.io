@@ -14,25 +14,56 @@ const images = [
 <Layout title="How We Work">
   <div class="page-content">
     <div class="carousel">
-      <img src="/static/subteam-pics/pat.png" alt="pat" class="active"/>
+      <img id="img1" src="/static/subteam-pics/pat.png" alt="pat" class="active"/>
       <div class="caption">
         <p>the goat</p>
       </div>
-      <img src="/static/subteam-pics/guy-at-bsc.png" alt="guy-at-bsc" />
+      <img id="img2" src="/static/subteam-pics/guy-at-bsc.png" alt="guy-at-bsc" />
       <div class="caption">
         <p>guy at bsc</p>
       </div>
-      <img src="/static/subteam-pics/guy-looking-at-tubes.png" alt="guy-looking-at-tubes" />
+      <img id="img3" src="/static/subteam-pics/guy-looking-at-tubes.png" alt="guy-looking-at-tubes" />
       <div class="caption">
         <p>guy looking at tubes</p>
       </div>
-      <img src="/static/subteam-pics/igem-petri-dishes.png" alt="igem-petri-dishes" />
+      <img id="img4" src="/static/subteam-pics/igem-petri-dishes.png" alt="igem-petri-dishes" />
       <div class="caption">
         <p>igem petri dishes</p>
       </div>
+      <button class="prev-button">prev</button>
+      <button class="next-button">next</button>
     </div>
   </div>
 </Layout>
+
+<script>
+  document.querySelector(".next-button")!.addEventListener("click", (event: Event) => {
+    const cause_button = event.target as HTMLButtonElement
+    const carousel = cause_button.closest(".carousel")!
+
+    const currentActive = carousel.querySelector(".active")!
+    const nextActive = carousel.querySelector(
+      ".active + .caption + img"
+    ) ?? carousel.firstElementChild!
+
+    currentActive?.classList.remove("active")
+    nextActive?.classList.add("active")
+    nextActive.scrollIntoView({block: "nearest", inline: "nearest"})
+  })
+
+  document.querySelector(".prev-button")!.addEventListener("click", (event: Event) => {
+    const cause_button = event.target as HTMLButtonElement
+    const carousel = cause_button.closest(".carousel")!
+
+    const currentActive = carousel.querySelector(".active")!
+    const nextActive = currentActive.previousElementSibling?.previousElementSibling
+        ?? carousel.querySelector("img:last-of-type")
+
+    currentActive?.classList.remove("active")
+    nextActive?.classList.add("active")
+    nextActive?.scrollIntoView({block: "nearest", inline: "nearest"})
+  })
+</script>
 
 <style>
   :root {
@@ -63,5 +94,10 @@ const images = [
     grid-row: 2;
     position: sticky;
     left: 10px;
+  }
+
+  button {
+    position: sticky;
+    right: 10px;
   }
 </style>
