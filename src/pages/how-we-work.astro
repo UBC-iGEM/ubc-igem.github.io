@@ -1,0 +1,97 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+
+const images = [
+  {img: 'pat.png', alt: 'the goat'},
+  {img: 'guy-at-bsc.png', alt: 'guy at bsc'},
+  {img: 'guy-looking-at-tubes.png', alt: 'tubes!!'},
+  {img: 'igem-petri-dishes.png', alt: 'petri dish dish petri petri dish dish petri'},
+]
+---
+
+
+<Layout title="How We Work">
+  <div class="page-content">
+    <div class="carousel">
+      <div class="imgs">
+        {images.map((img, idx) => (
+          <img src={`/static/subteam-pics/${img.img}`} alt={img.alt} class={idx === 0 ? "active" : null}/>
+        ))}
+      </div>
+      <div class="captions">
+        {images.map((img, idx) => (
+          <p class={idx === 0 ? "active-p" : null}>{img.alt}</p>
+        ))}
+        <button id="next-button">next</button>
+      </div>
+      <!-- <img src="/static/subteam-pics/pat.png" alt="pat" class="active"/> -->
+      <!-- <p>the goat</p> -->
+      <!-- <img src="/static/subteam-pics/guy-at-bsc.png" alt="guy-at-bsc" /> -->
+      <!-- <p>guy at bsc</p> -->
+      <!-- <img src="/static/subteam-pics/guy-looking-at-tubes.png" alt="guy-looking-at-tubes" /> -->
+      <!-- <p>guy looking at tubes</p> -->
+      <!-- <img src="/static/subteam-pics/igem-petri-dishes.png" alt="igem-petri-dishes" /> -->
+      <!-- <p>igem petri dishes</p> -->
+    </div>
+  </div>
+</Layout>
+
+<script>
+  const nextButton = document.getElementById('next-button')!
+
+  const clickHandler = () => {
+    /* const numImgs = nextButton.closest(".imgs") */
+    const currentlyActive = document.querySelector('.active-p')
+    currentlyActive?.nextElementSibling?.classList.add('active-p')
+    currentlyActive?.classList.remove('active-p')
+  }
+
+  nextButton.addEventListener('click', clickHandler)
+</script>
+
+<style>
+  .page-content {
+    /* padding: 10vw; */
+  }
+
+  .carousel > img {
+    /* grid-column: 1; */
+    grid-row: 1;
+    height: 100%;
+    width: fit-content;
+  }
+
+  .carousel {
+    display: grid;
+    grid-template-rows: 380px 1fr;
+    margin: 10vw;
+  }
+
+  .imgs {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 10px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .captions {
+    grid-column: 1;
+    grid-row: 2;
+
+  }
+
+  p {
+    display: none;
+  }
+
+
+  .captions > .active-p {
+    display: grid;
+    position: sticky;
+  }
+</style>
