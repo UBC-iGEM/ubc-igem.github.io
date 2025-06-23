@@ -72,7 +72,7 @@ const props = Astro.props;
     --carousel-img-height: 400px;
     --carousel-img-vertical-margin: 30px;
     --carousel-border: 2px solid var(--border-color);
-    --carousel-side-margin: calc(clamp(100px, 10vw, 1080px) - 100px);
+    --carousel-side-margin: 12vw;
 
     --carousel-button-size: 48px;
     --carousel-button-padding: 18px;
@@ -85,11 +85,18 @@ const props = Astro.props;
     );
   }
 
+  @media (max-width: 710px) {
+    :root {
+      --carousel-side-margin: 0;
+    }
+  }
+
   .carousel {
     display: grid;
     grid-auto-flow: column;
     grid-template-rows: var(--carousel-img-height) 2px 1fr;
     overflow-x: auto;
+    scrollbar-color: gray transparent;
     border-top: var(--carousel-border);
     border-bottom: var(--carousel-border);
 
