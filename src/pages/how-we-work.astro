@@ -10,16 +10,28 @@ type SubteamInfo = {
   imgs: CarouselImg[];
 }
 
+const generateSubteamId = (name: string) =>
+  name.toLowerCase().replace(' ', '-')
+
 const subteams = subteamInfo as SubteamInfo[]
 ---
 
 <Layout title="How We Work">
   <div class="page-content">
     <h1 class="title">How We Work</h1>
+    <div class="subteam-links">
+      {subteams.map((x) => (
+        <div class="subteam-links-bar">
+          <a href={`#${generateSubteamId(x.name)}`}>
+            {x.name}
+          </a>
+        </div>
+      ))}
+    </div>
     {subteams.map((x) => (
       <div
         class="subteam"
-        id={`${x.name.toLowerCase().replace(' ', '-')}`}
+        id={generateSubteamId(x.name)}
         style={`background-color: var(--color-primary-${x.colourVar})`}
       >
         <div
@@ -44,6 +56,27 @@ const subteams = subteamInfo as SubteamInfo[]
 
   h2 {
     font-size: 3.6rem;
+    word-wrap: break-word;
+  }
+
+  .subteam-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .subteam-links-bar {
+    flex: 1;
+    height: 70px;
+    min-width: 162px;
+    padding: 10px;
+    align-content: center;
+    border: var(--border-width) solid var(--border-color);
+    background-color: var(--color-primary-yellow);
+
+    a {
+      justify-content: center;
+    }
   }
 
   .subteam {
