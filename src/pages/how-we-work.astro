@@ -15,10 +15,17 @@ const subteams = subteamInfo as SubteamInfo[]
 
 <Layout title="How We Work">
   <div class="page-content">
-    <h1>How We Work</h1>
+    <h1 class="title">How We Work</h1>
     {subteams.map((x) => (
-      <div class="subteam" id={`${x.name.toLowerCase().replace(' ', '-')}`}>
-        <div class="subteam-info-box">
+      <div
+        class="subteam"
+        id={`${x.name.toLowerCase().replace(' ', '-')}`}
+        style={`background-color: var(--color-primary-${x.colourVar})`}
+      >
+        <div
+          class="subteam-info-box"
+          style={`background-color: var(--color-secondary-${x.colourVar})`}
+        >
           <h2>{x.name}</h2>
           <p>{x.description}</p>
         </div>
@@ -29,3 +36,29 @@ const subteams = subteamInfo as SubteamInfo[]
     ))}
   </div>
 </Layout>
+
+<style>
+  h1 {
+    padding: 0px var(--page-horizontal-padding);
+  }
+
+  h2 {
+    font-size: 3.6rem;
+  }
+
+  .subteam {
+    padding: 41px 0px;
+    margin: 32px 0px;
+  }
+
+  .subteam-info-box {
+    margin: 0px calc(var(--page-horizontal-padding) - 34px);
+    padding: 14px 34px;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius-md);
+
+    * {
+      margin: 0;
+    }
+  }
+</style>
