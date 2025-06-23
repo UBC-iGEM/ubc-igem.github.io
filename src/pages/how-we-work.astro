@@ -1,19 +1,31 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import Carousel from "../components/Carousel.astro"
+import Carousel, { type CarouselImg } from "../components/Carousel.astro"
+import subteamInfo from "../data/subteamInfo.json"
 
+type SubteamInfo = {
+  name: string;
+  description: string;
+  colourVar: string;
+  imgs: CarouselImg[];
+}
 
-const images = [
-  {img: 'pat.png', caption: 'the goat'},
-  {img: 'guy-at-bsc.png', caption: 'Consectetur voluptate velit cupidatat et est quis. Amet dolore velit eiusmod dolor enim ex aute laborum magna esse sit. Id mollit magna irure sint amet mollit fugiat qui non in ipsum reprehenderit nulla amet officia. Esse officia amet veniam cupidatat qui reprehenderit ad ut consequat nostrud cupidatat nisi.'},
-  {img: 'guy-looking-at-tubes.png', caption: 'tubes!!'},
-  {img: 'igem-petri-dishes.png', caption: 'petri dish dish petri petri dish dish petri dish dish petri'},
-]
+const subteams = subteamInfo as SubteamInfo[]
 ---
-
 
 <Layout title="How We Work">
   <div class="page-content">
-    <Carousel imgs={images} />
+    <h1>How We Work</h1>
+    {subteams.map((x) => (
+      <div class="subteam" id={`${x.name.toLowerCase().replace(' ', '-')}`}>
+        <div class="subteam-info-box">
+          <h2>{x.name}</h2>
+          <p>{x.description}</p>
+        </div>
+        {x.imgs.length !== 0 && (
+          <Carousel imgs={x.imgs} />
+        )}
+      </div>
+    ))}
   </div>
 </Layout>
