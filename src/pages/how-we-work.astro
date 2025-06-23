@@ -32,8 +32,12 @@ const images = [
       </div>
       <div class="divider" />
       <div class="carousel-buttons">
-        <button class="prev-button">prev</button>
-        <button class="next-button">next</button>
+        <button class="prev-button">
+          <img src="/static/icons/carousel-prev-button.svg" />
+        </button>
+        <button class="next-button">
+          <img src="/static/icons/carousel-next-button.svg" />
+        </button>
       </div>
     </div>
   </div>
@@ -75,6 +79,7 @@ const images = [
 <style>
   :root {
     --carousel-img-height: 400px;
+    --carousel-img-vertical-margin: 30px;
     --carousel-border: 2px solid var(--border-color);
     --carousel-side-margin: calc(clamp(100px, 10vw, 1080px) - 100px);
 
@@ -102,10 +107,10 @@ const images = [
 
   .carousel > img {
     grid-row: 1;
-    height: calc(var(--carousel-img-height) - 60px);
+    height: calc(var(--carousel-img-height) - var(--carousel-img-vertical-margin) * 2);
     border: 3px solid var(--border-color);
     border-radius: var(--border-radius-sm);
-    margin: 30px 20px;
+    margin: var(--carousel-img-vertical-margin) 20px;
   }
 
   .caption {
@@ -135,16 +140,18 @@ const images = [
     display: flex;
     flex-direction: row;
     justify-self: end;
-    align-self: center;
     position: sticky;
     gap: var(--carousel-button-padding);
     right: var(--carousel-button-padding);
 
-    padding: 15px 0px;
+    margin: 13px 0px;
 
     button {
       height: var(--carousel-button-size);
       width: var(--carousel-button-size);
+      border: var(--carousel-border);
+      border-radius: var(--border-radius-sm);
+      background-color: transparent;
     }
   }
 
