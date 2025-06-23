@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Wet Lab",
+    "description": "The Wet Lab subteam leads the hands-on experimental work, from planning (literature reviews, plasmid design) to executing synthetic biology techniques. They troubleshoot protocols, collaborate with Dry Lab to test hardware integration, and run experiments to prove our system works as intended, ensuring every step from design to validation is scientifically rigorous.",
+    "colourVar": "--color-primary-green",
+    "imgs": [
+      {"img": "pat.png", "caption": "the goat"},
+      {"img": "guy-at-bsc.png", "caption": "guy at bsc"},
+      {"img": "guy-looking-at-tubes.png", "caption": "tubes!!"},
+      {"img": "igem-petri-dishes.png", "caption": "igem petri dishes"}
+    ]
+  },
+  {
+    "name": "Dry Lab",
+    "description": "The Dry Lab subteam complements and supports work done by Wet Lab through the development of cutting-edge hardware, advanced models, and novel software tools. We also use computational techniques to model, study, and optimize biological processes in silico, covering fields such as mathematical modelling, protein modelling, and bioinformatics. ",
+    "colourVar": "--color-primary-orange",
+    "imgs": [
+      {"img": "nucloud-mk-4-bioreactor.png", "caption": "MARK FOUR."},
+      {"img": "primer-gui.png", "caption": "dnadrive screenshot"},
+      {"img": "nucloud-microfluidics-sim.png", "caption": "fluidics of the microscopic variety"},
+      {"img": "guy-w-saw.jpg", "caption": "guy + saw"}
+    ]
+  },
+  {
+    "name": "Human Practices",
+    "description": "The Dry Lab subteam complements and supports work done by Wet Lab through the development of cutting-edge hardware, advanced models, and novel software tools. We also use computational techniques to model, study, and optimize biological processes in silico, covering fields such as mathematical modelling, protein modelling, and bioinformatics.",
+    "colourVar": "--color-primary-purple",
+    "imgs": [
+      {"img": "gmo-workshop-hp.png", "caption": "The 2024 UBC iGEM Human Practices team leading a GMO workshop at Science 101, a free science summer course for adults at UBC."},
+      {"img": "2024-edi-seminar-hp.png", "caption": "EDI seminar led by the 2024 UBC iGEM Human Practices team."},
+      {"img": "geering-up-event-hp.png", "caption": "plausibly something geering up related."},
+      {"img": "people-making-things-hp.png", "caption": "people making things"}
+    ]
+  },
+  {
+    "name": "Admin",
+    "description": "The Admin subteam handles budgets, purchases, and sponsorships, ensuring the team has sufficient resources and finances to succeed. They also explore ways to turn our project into real-world solutions, exploring entrepreneurial pathways.",
+    "colourVar": "--color-primary-red",
+    "imgs": []
+  },
+  {
+    "name": "Design-Wiki",
+    "description": "The Design/Wiki subteam ensures public accessibility and clarity of our work, primarily through developing the wiki, which details our project, results, and processes for judges, teams, and the public. Collaborating across subteams, we integrate diverse documentation (3D models, lab notebooks, experiment recordings) into the wiki.",
+    "colourVar": "--color-primary-blue",
+    "imgs": [
+      {"img": "the-squad.jpg", "caption": "Setting up to take headshots of the team."},
+      {"img": "billy-cooking.jpg", "caption": "Building the team website"},
+      {"img": "alexi-cooking.jpg", "caption": "Designing assets for the 2025 wiki"}
+    ]
+  }
+]
