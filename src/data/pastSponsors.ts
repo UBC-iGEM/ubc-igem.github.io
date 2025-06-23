@@ -3,7 +3,7 @@ export const pastSponsors = [
         year: "2024",
         categories: [
             {
-                name: "GOLD",
+                tier: "GOLD",
                 icons : [
                     "Koonkie.svg",
                     "UBC_SUS.svg",
@@ -12,7 +12,7 @@ export const pastSponsors = [
                 ]
             }, 
             {   
-                name: "SILVER",
+                tier: "SILVER",
                 icons : [
                     "UBC_Department_Microbiology_Immunology.svg",
                     "UBC_Science.svg",
@@ -22,7 +22,7 @@ export const pastSponsors = [
                 ]
             },
             {
-                name: "BRONZE",
+                tier: "BRONZE",
                 icons: [
                     "UBC_MSL.svg",
                     "UBC_BMB.svg",
@@ -35,7 +35,7 @@ export const pastSponsors = [
         year: "2023",
         categories: [
             {
-                name: "",
+                tier: "",
                 icons: [
                     "STEMCELL_Technologies.svg",
                     "Professional_Activities_Fund.svg",
@@ -55,7 +55,7 @@ export const pastSponsors = [
         year: "2022",
         categories: [
             {
-                name: "",
+                tier: "",
                 icons: [
                     "UBC_Walter_H_Gage_Memorial_Fund.svg",
                     "STEMCELL_Technologies.svg",
@@ -77,7 +77,7 @@ export const pastSponsors = [
         year: "2021",
         categories: [
             {
-                name: "",
+                tier: "",
                 icons: [
                     "Professional_Activities_Fund.svg",
                     "UBC_Walter_H_Gage_Memorial_Fund.svg",

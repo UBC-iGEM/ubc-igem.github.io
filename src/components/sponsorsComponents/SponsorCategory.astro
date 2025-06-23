@@ -1,15 +1,15 @@
 ---
 export interface SponsorCategoryProps {
-    name: string,
+    tier: string | null,
     icons: string[]
 }
 
-const {name, icons} = Astro.props as SponsorCategoryProps;
+const {tier, icons} = Astro.props as SponsorCategoryProps;
 const {path} = Astro.props;
 ---
 
 <div class="category-container">
-    {name === ""? <></> : <p class="category-name">{name}</p>}
+    {tier ? <p class="category-name">{tier}</p> : <></>}
     {
         icons.map((icon) => (
             <img src={`${path}${icon}`} alt={icon} />
@@ -51,7 +51,6 @@ const {path} = Astro.props;
             gap:1rem;
         }
     }
-
 </style>
 
 

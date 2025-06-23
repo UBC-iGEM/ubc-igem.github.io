@@ -19,7 +19,7 @@ const {year, categories} = Astro.props as Props;
                 <div class ="info-container">
                     {
                         categories.map((category)=> (
-                            <SponsorCategory name={category.name} 
+                            <SponsorCategory tier={category.tier} 
                                 icons={category.icons} 
                                 path="../../../static/sponsor-icons/"/>
                         ))
@@ -170,11 +170,6 @@ const {year, categories} = Astro.props as Props;
             border-right: 0;
             margin-left:7rem;
             width:auto;
-        }
-
-        .title-icon-container {
-            max-width: var(--max-icon-container-size);
-            display:block;
         }
     }
 </style>

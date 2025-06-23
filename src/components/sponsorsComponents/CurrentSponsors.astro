@@ -11,22 +11,22 @@ import SponsorCategory from './SponsorCategory.astro'
         {
             currentSponsors.map((sponsor)=> (
                 <>
-                    <p class="sponsor-title">PLATINUM</p>
+                    <p class="sponsor-title">{sponsor.tier}</p>
                     <SponsorCategory 
-                        name="" 
                         icons={sponsor.icons}
                         path="../../../static/sponsor-icons/"/>
                 </>
             ))
         }
     </div>
-    <a href="#want-to-sponsor-us"><button class="sponsor-us"><p>Support Us</p></button></a>
+    <button class="sponsor-us" onclick="location.href='#want-to-sponsor-us';">
+        Support Us
+    </button>
 </div>
 
 <style>
     * {
         --sponsor-image-height: 6rem;
-        --sponsor-container-min-height:40rem;
         margin:0;
     }
 
@@ -59,16 +59,11 @@ import SponsorCategory from './SponsorCategory.astro'
     }
 
     .sponsors {
-        min-height:var(--sponsor-container-min-height);
         width:100%;
     }
 
     .sponsor-image {
         height:var(--sponsor-image-height);
-    }
-
-    a {
-        margin: 0 auto;
     }
 
     .sponsor-us {
@@ -80,6 +75,7 @@ import SponsorCategory from './SponsorCategory.astro'
         box-shadow: rgba(0, 0, 0, 0.4) 5px 5px 5.3px;
         width:16rem;
         height:4.5rem;
+        margin: 2rem auto 0 auto;
     }
 
     .sponsor-us:hover {

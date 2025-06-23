@@ -1,6 +1,6 @@
 export const currentSponsors = [
     {
-        category: "PLATINUM",
+        tier: "PLATINUM",
         icons: [
             "SnapGene_Logo.svg",
             "Geneious_Logo.svg"
