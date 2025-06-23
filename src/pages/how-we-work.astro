@@ -15,13 +15,21 @@ const images = [
   <div class="page-content">
     <div class="carousel">
       <img id="img1" src="/static/subteam-pics/pat.png" alt="pat" class="active"/>
-      <p>the goat</p>
+      <div class="caption">
+        <p>the goat</p>
+      </div>
       <img id="img2" src="/static/subteam-pics/guy-at-bsc.png" alt="guy-at-bsc" />
-      <p>guy at bsc</p>
+      <div class="caption">
+        <p>Consectetur voluptate velit cupidatat et est quis. Amet dolore velit eiusmod dolor enim ex aute laborum magna esse sit. Id mollit magna irure sint amet mollit fugiat qui non in ipsum reprehenderit nulla amet officia. Esse officia amet veniam cupidatat qui reprehenderit ad ut consequat nostrud cupidatat nisi.</p>
+      </div>
       <img id="img3" src="/static/subteam-pics/guy-looking-at-tubes.png" alt="guy-looking-at-tubes" />
-      <p>guy looking at tubes</p>
+      <div class="caption">
+        <p>guy looking at tubes</p>
+      </div>
       <img id="img4" src="/static/subteam-pics/igem-petri-dishes.png" alt="igem-petri-dishes" />
-      <p>petri dish dish petri petri dish dish petri</p>
+      <div class="caption">
+        <p>petri dish dish petri petri dish dish petri dish dish petri</p>
+      </div>
       <div class="divider" />
       <div class="carousel-buttons">
         <button class="prev-button">prev</button>
@@ -50,7 +58,7 @@ const images = [
   const nextButtonHandler = (event: Event) => handleCarouselButtonClick(
     event,
     (carousel, _) => carousel.querySelector(
-      ".active + p + img"
+      ".active + .caption + img"
     ) ?? carousel.firstElementChild!
   )
 
@@ -68,6 +76,17 @@ const images = [
   :root {
     --carousel-img-height: 400px;
     --carousel-border: 2px solid var(--border-color);
+    --carousel-side-margin: calc(clamp(100px, 10vw, 1080px) - 100px);
+
+    --carousel-button-size: 48px;
+    --carousel-button-padding: 18px;
+    --allowed-caption-width: calc(
+      100vw
+      - var(--carousel-side-margin) * 2
+      - var(--carousel-button-size) * 2
+      - var(--carousel-button-padding) * 3
+      - 20px
+    );
   }
 
   .carousel {
@@ -78,7 +97,7 @@ const images = [
     border-top: var(--carousel-border);
     border-bottom: var(--carousel-border);
 
-    margin: 56px calc(clamp(100px, 10vw, 1080px) - 100px);
+    margin: 56px var(--carousel-side-margin);
   }
 
   .carousel > img {
@@ -89,7 +108,7 @@ const images = [
     margin: 30px 20px;
   }
 
-  p {
+  .caption {
     display: none;
   }
 
@@ -97,25 +116,35 @@ const images = [
     box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
   }
 
-  .active + p {
+  .active + .caption {
     display: grid;
     grid-row: 3;
     grid-column: 1;
     position: sticky;
     left: 10px;
-    white-space: preserve nowrap;
     min-width: 0;
+
+    p {
+      width: var(--allowed-caption-width);
+    }
   }
 
   .carousel-buttons {
     grid-row: 3;
+
+    display: flex;
+    flex-direction: row;
     justify-self: end;
+    align-self: center;
     position: sticky;
-    right: 10px;
+    gap: var(--carousel-button-padding);
+    right: var(--carousel-button-padding);
+
+    padding: 15px 0px;
 
     button {
-      height: 64px;
-      width: 64px;
+      height: var(--carousel-button-size);
+      width: var(--carousel-button-size);
     }
   }
 
