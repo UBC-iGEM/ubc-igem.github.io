@@ -1,167 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import Carousel from "../components/Carousel.astro"
 
 
 const images = [
-  {img: 'pat.png', alt: 'the goat'},
-  {img: 'guy-at-bsc.png', alt: 'guy at bsc'},
-  {img: 'guy-looking-at-tubes.png', alt: 'tubes!!'},
-  {img: 'igem-petri-dishes.png', alt: 'petri dish dish petri petri dish dish petri'},
+  {img: 'pat.png', caption: 'the goat'},
+  {img: 'guy-at-bsc.png', caption: 'Consectetur voluptate velit cupidatat et est quis. Amet dolore velit eiusmod dolor enim ex aute laborum magna esse sit. Id mollit magna irure sint amet mollit fugiat qui non in ipsum reprehenderit nulla amet officia. Esse officia amet veniam cupidatat qui reprehenderit ad ut consequat nostrud cupidatat nisi.'},
+  {img: 'guy-looking-at-tubes.png', caption: 'tubes!!'},
+  {img: 'igem-petri-dishes.png', caption: 'petri dish dish petri petri dish dish petri dish dish petri'},
 ]
 ---
 
 
 <Layout title="How We Work">
   <div class="page-content">
-    <div class="carousel">
-      <img id="img1" src="/static/subteam-pics/pat.png" alt="pat" class="active"/>
-      <div class="caption">
-        <p>the goat</p>
-      </div>
-      <img id="img2" src="/static/subteam-pics/guy-at-bsc.png" alt="guy-at-bsc" />
-      <div class="caption">
-        <p>Consectetur voluptate velit cupidatat et est quis. Amet dolore velit eiusmod dolor enim ex aute laborum magna esse sit. Id mollit magna irure sint amet mollit fugiat qui non in ipsum reprehenderit nulla amet officia. Esse officia amet veniam cupidatat qui reprehenderit ad ut consequat nostrud cupidatat nisi.</p>
-      </div>
-      <img id="img3" src="/static/subteam-pics/guy-looking-at-tubes.png" alt="guy-looking-at-tubes" />
-      <div class="caption">
-        <p>guy looking at tubes</p>
-      </div>
-      <img id="img4" src="/static/subteam-pics/igem-petri-dishes.png" alt="igem-petri-dishes" />
-      <div class="caption">
-        <p>petri dish dish petri petri dish dish petri dish dish petri</p>
-      </div>
-      <div class="divider" />
-      <div class="carousel-buttons">
-        <button class="prev-button">
-          <img src="/static/icons/carousel-prev-button.svg" />
-        </button>
-        <button class="next-button">
-          <img src="/static/icons/carousel-next-button.svg" />
-        </button>
-      </div>
-    </div>
+    <Carousel imgs={images} />
   </div>
 </Layout>
-
-<script>
-  const handleCarouselButtonClick = (
-    event: Event,
-    findNextActiveImage: (carousel: Element, currentActive: Element) => Element
-  ) => {
-    const cause_button = event.target as HTMLButtonElement
-    const carousel = cause_button.closest(".carousel")!
-
-    const currentActive = carousel.querySelector(".active")!
-    const nextActive = findNextActiveImage(carousel, currentActive)
-
-    currentActive.classList.remove("active")
-    nextActive.classList.add("active")
-    nextActive.scrollIntoView({block: "nearest", inline: "nearest"})
-  }
-
-  const nextButtonHandler = (event: Event) => handleCarouselButtonClick(
-    event,
-    (carousel, _) => carousel.querySelector(
-      ".active + .caption + img"
-    ) ?? carousel.firstElementChild!
-  )
-
-  const prevButtonHandler = (event: Event) => handleCarouselButtonClick(
-    event,
-    (carousel, currentActive) => currentActive.previousElementSibling?.previousElementSibling
-      ?? carousel.querySelector("img:last-of-type")!
-  )
-
-  document.querySelectorAll(".next-button").forEach(x => x.addEventListener("click", nextButtonHandler))
-  document.querySelectorAll(".prev-button").forEach(x => x.addEventListener("click", prevButtonHandler))
-</script>
-
-<style>
-  :root {
-    --carousel-img-height: 400px;
-    --carousel-img-vertical-margin: 30px;
-    --carousel-border: 2px solid var(--border-color);
-    --carousel-side-margin: calc(clamp(100px, 10vw, 1080px) - 100px);
-
-    --carousel-button-size: 48px;
-    --carousel-button-padding: 18px;
-    --allowed-caption-width: calc(
-      100vw
-      - var(--carousel-side-margin) * 2
-      - var(--carousel-button-size) * 2
-      - var(--carousel-button-padding) * 3
-      - 20px
-    );
-  }
-
-  .carousel {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-rows: var(--carousel-img-height) 2px 1fr;
-    overflow-x: auto;
-    border-top: var(--carousel-border);
-    border-bottom: var(--carousel-border);
-
-    margin: 56px var(--carousel-side-margin);
-  }
-
-  .carousel > img {
-    grid-row: 1;
-    height: calc(var(--carousel-img-height) - var(--carousel-img-vertical-margin) * 2);
-    border: 3px solid var(--border-color);
-    border-radius: var(--border-radius-sm);
-    margin: var(--carousel-img-vertical-margin) 20px;
-  }
-
-  .caption {
-    display: none;
-  }
-
-  .active {
-    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
-  }
-
-  .active + .caption {
-    display: grid;
-    grid-row: 3;
-    grid-column: 1;
-    position: sticky;
-    left: 10px;
-    min-width: 0;
-
-    p {
-      width: var(--allowed-caption-width);
-    }
-  }
-
-  .carousel-buttons {
-    grid-row: 3;
-
-    display: flex;
-    flex-direction: row;
-    justify-self: end;
-    position: sticky;
-    gap: var(--carousel-button-padding);
-    right: var(--carousel-button-padding);
-
-    margin: 13px 0px;
-
-    button {
-      height: var(--carousel-button-size);
-      width: var(--carousel-button-size);
-      border: var(--carousel-border);
-      border-radius: var(--border-radius-sm);
-      background-color: transparent;
-    }
-  }
-
-  .divider {
-    grid-row: 2;
-    /* this looks cursed but it's actually impossible to
-     * force a grid item to span to the last column in an
-     * implicit grid: https://stackoverflow.com/a/44053668/17879981
-     */
-    grid-column: 1 / 99;
-    border-top: var(--carousel-border);
-  }
-</style>
