@@ -1,0 +1,181 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "Gallery - UBC iGEM";
+---
+
+<Layout title={pageTitle}>
+  <section class="gallery-hero-section">
+    <h1>Gallery</h1>
+  </section>
+  
+  <section class="gallery-content-section">
+    <div class="wrapper masonry">
+      <div class="switcher">
+        <!-- Column 1 -->
+        <div class="flow">
+          <div class="image-container" data-alt="Team members conducting laboratory experiments">
+            <img src="https://picsum.photos/400/600?random=21" alt="Team members conducting laboratory experiments" />
+          </div>
+          <div class="image-container" data-alt="Team presenting research findings">
+            <img src="https://picsum.photos/400/300?random=22" alt="Team presenting research findings" />
+          </div>
+          <div class="image-container" data-alt="iGEM team collaboration session">
+            <img src="https://picsum.photos/400/500?random=23" alt="iGEM team collaboration session" />
+          </div>
+          <div class="image-container" data-alt="Attending synthetic biology conference">
+            <img src="https://picsum.photos/400/400?random=24" alt="Attending synthetic biology conference" />
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="flow">
+          <div class="image-container" data-alt="Microscopy and cell culture work">
+            <img src="https://picsum.photos/400/350?random=25" alt="Microscopy and cell culture work" />
+          </div>
+          <div class="image-container" data-alt="Community outreach and education event">
+            <img src="https://picsum.photos/400/650?random=26" alt="Community outreach and education event" />
+          </div>
+          <div class="image-container" data-alt="UBC iGEM team group photo">
+            <img src="https://picsum.photos/400/450?random=27" alt="UBC iGEM team group photo" />
+          </div>
+          <div class="image-container" data-alt="Laboratory research and data analysis">
+            <img src="https://picsum.photos/400/280?random=28" alt="Laboratory research and data analysis" />
+          </div>
+          <div class="image-container" data-alt="Project presentation at competition">
+            <img src="https://picsum.photos/400/520?random=29" alt="Project presentation at competition" />
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="flow">
+          <div class="image-container" data-alt="iGEM competition presentation">
+            <img src="https://picsum.photos/400/480?random=30" alt="iGEM competition presentation" />
+          </div>
+          <div class="image-container" data-alt="Genetic engineering and cloning work">
+            <img src="https://picsum.photos/400/320?random=31" alt="Genetic engineering and cloning work" />
+          </div>
+          <div class="image-container" data-alt="STEM education and public engagement">
+            <img src="https://picsum.photos/400/580?random=32" alt="STEM education and public engagement" />
+          </div>
+          <div class="image-container" data-alt="Project planning and brainstorming">
+            <img src="https://picsum.photos/400/420?random=33" alt="Project planning and brainstorming" />
+          </div>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="flow">
+          <div class="image-container" data-alt="Team receiving recognition and awards">
+            <img src="https://picsum.photos/400/380?random=14" alt="Team receiving recognition and awards" />
+          </div>
+          <div class="image-container" data-alt="Advanced laboratory techniques">
+            <img src="https://picsum.photos/400/550?random=15" alt="Advanced laboratory techniques" />
+          </div>
+          <div class="image-container" data-alt="Networking with other iGEM teams">
+            <img src="https://picsum.photos/400/360?random=16" alt="Networking with other iGEM teams" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  h1 {
+    font-size: 4.5em;
+    font-weight: 900;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: var(--color-primary-black);
+  }
+
+  .gallery-hero-section {
+    background-color: var(--color-primary-green);
+    padding-block: 5%;
+    padding-inline: max(10%, min(110px, 15vw));
+    text-align: left;
+    border-bottom: solid var(--border-width) var(--border-color);
+    outline: var(--border-color);
+    max-width: 100vw;
+    margin-left: calc(-1 * min(110px, 15vw));
+    margin-right: calc(-1 * min(110px, 15vw));
+  }
+
+  .gallery-content-section {
+    padding: 5% max(2%, min(60px, 5vw));
+    min-height: 400px;
+  }
+
+  .masonry {
+    --gutter: 0.75rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .switcher {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gutter);
+    align-items: flex-start;
+  }
+
+  .switcher > * {
+    flex: 1 1 calc((20rem - 100%) * 999);
+  }
+
+  .flow > * + * {
+    margin-top: var(--gutter);
+  }
+
+  .image-container {
+    position: relative;
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+  }
+
+  .image-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: var(--color-secondary-green);
+    min-height: 200px;
+    object-fit: cover;
+  }
+
+  .image-container::after {
+    content: attr(data-alt);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 2rem 1rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.3;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .image-container:hover::after {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .switcher > * {
+      flex-basis: calc((25rem - 100%) * 999);
+    }
+    
+    .gallery-content-section {
+      padding-inline: max(1.5%, min(20px, 3vw));
+    }
+  }
+</style>
