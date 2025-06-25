@@ -31,12 +31,10 @@ const { entries } = Astro.props
     const pageEntries = document.querySelectorAll('section[id]')
     const tocEntries = document.querySelectorAll('[data-entry]')
 
-    const isSmallScreen = window.matchMedia('(max-width: 1000px)')
-
     const observerOptions = {
       root: null,
-      rootMargin: '-50px',
-      threshold: isSmallScreen ? 0.3 : 0.8
+      rootMargin: '0px',
+      threshold: 0.5
     }
 
     const observer = new IntersectionObserver(entries => {
