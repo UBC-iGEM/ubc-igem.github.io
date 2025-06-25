@@ -10,39 +10,36 @@ type SubteamInfo = {
   imgs: CarouselImg[];
 }
 
-const generateSubteamId = (name: string) =>
-  name.toLowerCase().replace(' ', '-')
-
-const subteams = subteamInfo as SubteamInfo[]
+const subteams = subteamInfo as unknown as Record<string, SubteamInfo>
 ---
 
 <Layout title="How We Work">
   <div class="page-content">
     <h1 class="title">How We Work</h1>
     <div class="subteam-links">
-      {subteams.map((x) => (
+      {Object.entries(subteams).map(([id, subteam]) => (
         <div class="subteam-links-bar">
-          <a href={`#${generateSubteamId(x.name)}`}>
-            {x.name}
+          <a href={`#${id}`}>
+            {subteam.name}
           </a>
         </div>
       ))}
     </div>
-    {subteams.map((x) => (
+    {Object.entries(subteams).map(([id, subteam]) => (
       <div
         class="subteam"
-        id={generateSubteamId(x.name)}
-        style={`background-color: var(--color-primary-${x.colourVar})`}
+        id={id}
+        style={`background-color: var(--color-primary-${subteam.colourVar})`}
       >
         <div
           class="subteam-info-box"
-          style={`background-color: var(--color-secondary-${x.colourVar})`}
+          style={`background-color: var(--color-secondary-${subteam.colourVar})`}
         >
-          <h2>{x.name}</h2>
-          <p>{x.description}</p>
+          <h2>{subteam.name}</h2>
+          <p>{subteam.description}</p>
         </div>
-        {x.imgs.length !== 0 && (
-          <Carousel imgs={x.imgs} />
+        {subteam.imgs.length !== 0 && (
+          <Carousel imgs={subteam.imgs} imgPrefix={"static/subteam-pics/"}/>
         )}
       </div>
     ))}
@@ -50,6 +47,10 @@ const subteams = subteamInfo as SubteamInfo[]
 </Layout>
 
 <style>
+  :root {
+    --default-border: var(--border-width) solid var(--border-color)
+  }
+
   h1 {
     padding: 0px var(--page-horizontal-padding);
   }
@@ -63,32 +64,41 @@ const subteams = subteamInfo as SubteamInfo[]
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    font-size: 20px;
   }
 
   .subteam-links-bar {
     flex: 1;
     height: 70px;
-    min-width: 162px;
+    min-width: 195px;
     padding: 10px;
     align-content: center;
-    border: var(--border-width) solid var(--border-color);
+    border: solid var(--border-color);
+    border-width: var(--border-width) calc(var(--border-width) / 2);
     background-color: var(--color-primary-yellow);
 
     a {
       justify-content: center;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   }
 
   .subteam {
     padding: 41px 0px;
     margin: 32px 0px;
+    border-top: var(--default-border);
+    border-bottom: var(--default-border);
   }
 
   .subteam-info-box {
     margin: 0px calc(var(--page-horizontal-padding) - 34px);
     padding: 14px 34px;
-    border: var(--border-width) solid var(--border-color);
+    border: var(--default-border);
     border-radius: var(--border-radius-md);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     * {
       margin: 0;

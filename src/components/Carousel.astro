@@ -6,30 +6,31 @@ export type CarouselImg = {
 }
 
 type Props = {
-  imgs: CarouselImg[]
+  imgs: CarouselImg[];
+  imgPrefix: string;
 };
 
 const props = Astro.props;
 ---
 
 <div class="carousel">
-  {props.imgs.map((x, idx) => (
+  {props.imgs.map((carouselImg, index) => (
     <img
-      src={`/static/subteam-pics/${x.img}`}
-      alt={x.separateAltText ?? x.caption}
-      class={idx === 0 ? "active" : null}
+      src={`${props.imgPrefix}${carouselImg.img}`}
+      alt={carouselImg.separateAltText ?? carouselImg.caption}
+      class={index === 0 ? "active" : null}
     />
     <div class="caption">
-      <p>{x.caption}</p>
+      <p>{carouselImg.caption}</p>
     </div>
   ))}
   <div class="divider" />
   <div class="carousel-buttons">
     <button class="prev-button">
-      <img src="/static/icons/carousel-prev-button.svg" />
+      <img src="static/icons/carousel-prev-button.svg" />
     </button>
     <button class="next-button">
-      <img src="/static/icons/carousel-next-button.svg" />
+      <img src="static/icons/carousel-next-button.svg" />
     </button>
   </div>
 </div>
@@ -71,7 +72,7 @@ const props = Astro.props;
   :root {
     --carousel-img-height: 400px;
     --carousel-img-vertical-margin: 30px;
-    --carousel-border: 2px solid var(--border-color);
+    --carousel-border: var(--border-width) solid var(--border-color);
     --carousel-side-margin: 12vw;
 
     --carousel-button-size: 48px;
@@ -106,7 +107,7 @@ const props = Astro.props;
   .carousel > img {
     grid-row: 1;
     height: calc(var(--carousel-img-height) - var(--carousel-img-vertical-margin) * 2);
-    border: 3px solid var(--border-color);
+    border: var(--carousel-border);
     border-radius: var(--border-radius-sm);
     margin: var(--carousel-img-vertical-margin) 20px;
   }
