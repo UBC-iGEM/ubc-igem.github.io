@@ -89,12 +89,22 @@ const props = Astro.props;
   @media (max-width: 710px) {
     :root {
       --carousel-side-margin: 0;
+      /* for some reason the definition of this var above completely breaks
+       * when --carousel-side-margin is 0, and needs to be redefined without it
+       * here */
+      --allowed-caption-width: calc(
+        100vw
+        - var(--carousel-button-size) * 2
+        - var(--carousel-button-padding) * 3
+        - 20px
+      );
     }
   }
 
   .carousel {
     display: grid;
     grid-auto-flow: column;
+    grid-auto-columns: 1fr auto;
     grid-template-rows: var(--carousel-img-height) 2px 1fr;
     overflow-x: auto;
     scrollbar-color: gray transparent;
