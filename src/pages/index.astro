@@ -1,7 +1,132 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Content as HeroContent } from '../content/we-are-ubc-igem.md'
 ---
 
 <Layout title="UBC iGEM">
-
+  <div class="section-box hero-box">
+    <h1 class="title">UBC iGEM</h1>
+    <div role="doc-subtitle">Building a better future through synthetic biology</div>
+    <div>
+      <img
+        src="team-photos/2024-team-photo.png"
+        alt="The UBC iGEM team in 2024."
+      />
+      <img
+        src="team-photos/2024-jamboree-photo.jpg"
+        alt="UBC iGEM team members at the 2024 Jamboree."
+      />
+      <div>
+        <HeroContent />
+        <a href="/past-projects">View our latest project</a>
+      </div>
+    </div>
+  </div>
 </Layout>
+
+<style>
+  h1 {
+    margin: 0;
+  }
+
+  [role="doc-subtitle"] {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .section-box {
+    padding: 3rem var(--page-horizontal-padding);
+  }
+
+  .hero-box {
+    background-color: var(--color-primary-green);
+
+    h2 {
+      font-size: 30px;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    p {
+      font-family: 'Open Sans';
+    }
+
+    a {
+      text-transform: uppercase;
+      border: var(--border-width) solid var(--border-color);
+      border-radius: var(--border-radius-sm);
+      background-color: var(--color-primary-yellow);
+      padding: 23px 49px;
+      justify-content: center;
+      box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.3);
+
+    }
+  }
+
+  .hero-box > div:last-child {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: auto auto;
+    grid-template-columns: 2fr 3fr;
+    gap: 35px;
+    margin-top: 3rem;
+
+    > img {
+      grid-column: 1;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border: var(--border-width) solid var(--border-color);
+      border-radius: var(--border-radius-md);
+
+      :first-of-type {
+        border-color: red;
+        object-position: 30%;
+      }
+    }
+
+    > div {
+      grid-column: 2;
+      grid-row: 1 / -1;
+      display: grid;
+      justify-content: space-evenly;
+
+      padding: 34px 47px;
+      border: var(--border-width) solid var(--border-color);
+      border-radius: var(--border-radius-md);
+      background-color: var(--color-secondary-green);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  @media (max-width: 945px) {
+    .hero-box > div:last-child {
+      grid-template-columns: 1fr 1fr;
+
+      > img {
+        grid-column: auto;
+      }
+
+      > div {
+        grid-column: 1 / -1;
+        grid-row: 2;
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    .hero-box > div:last-child {
+      grid-template-columns: 1fr;
+      gap: 15px;
+
+      > img {
+        grid-column: auto;
+      }
+
+      > div {
+        grid-column: auto;
+        grid-row: 3;
+      }
+    }
+  }
+</style>
