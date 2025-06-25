@@ -1,5 +1,5 @@
-[
-  {
+{
+  "wet-lab": {
     "name": "Wet Lab",
     "description": "The Wet Lab subteam leads the hands-on experimental work to create synthetic biological systems. After ideation, we review literature, design plasmids in silico, perform molecular biology experiments, and characterize the function of our genetically engineered machines. We work closely with the Dry Lab subteam to test hardware integration and use computational biology to improve our synthetic constructs. Together, we run experiments to prove our system works as intended in our target application, ensuring every step from design to validation is scientifically rigorous.",
     "colourVar": "green",
@@ -10,7 +10,7 @@
       {"img": "igem-petri-dishes.png", "caption": "Freshly poured agar plates labeled and ready for cell plating and colony selection."}
     ]
   },
-  {
+  "dry-lab": {
     "name": "Dry Lab",
     "description": "The Dry Lab subteam complements and supports work done by Wet Lab through the development of cutting-edge hardware, advanced models, and novel software tools. We also use computational techniques to model, study, and optimize biological processes in silico, covering fields such as mathematical modelling, protein modelling, and bioinformatics. ",
     "colourVar": "orange",
@@ -20,7 +20,7 @@
       {"img": "guy-w-saw.jpg", "caption": "Training in the SBME Makerspace."}
     ]
   },
-  {
+  "human-practices": {
     "name": "Human Practices",
     "description": "Human Practices evaluates our project’s societal impact by analyzing ethical, social, environmental, and cultural implications in synthetic biology. We integrate diverse stakeholder perspectives to ensure scientific advancements are equitable, responsible, and broadly beneficial. At UBC iGEM, our Human Practices prioritize Education, Inclusivity, and Sustainable Development. We do this by developing feedback-driven initiatives to evaluate how our work maximizes environmental and community benefits.",
     "colourVar": "purple",
@@ -31,13 +31,13 @@
       {"img": "people-making-things-hp.png", "caption": "Geering Up students creating their microfluidic chip models using filter paper and crayons."}
     ]
   },
-  {
+  "administration": {
     "name": "Administration",
     "description": "The Administration subteam handles budgets, purchases, and sponsorships, ensuring the team has sufficient resources and finances to succeed. They also explore ways to turn our project into real-world solutions, exploring entrepreneurial pathways.",
     "colourVar": "red",
     "imgs": []
   },
-  {
+  "design-wiki": {
     "name": "Design-Wiki",
     "description": "The Design-Wiki subteam ensures public accessibility and clarity of our work, primarily through developing the wiki, which details our project, results, and processes for judges, teams, and the public. Collaborating across subteams, we integrate diverse documentation (3D models, lab notebooks, experiment recordings) into the wiki.",
     "colourVar": "blue",
@@ -47,4 +47,4 @@
       {"img": "alexi-cooking.jpg", "caption": "Designing assets for the 2025 wiki."}
     ]
   }
-]
+}
