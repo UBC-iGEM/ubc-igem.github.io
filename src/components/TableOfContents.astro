@@ -6,7 +6,7 @@ interface Props {
   }[];
 }
 
-const { entries } = Astro.props
+const { entries } = Astro.props;
 ---
 
 <div class="table-of-contents collapsed">
@@ -56,12 +56,13 @@ const { entries } = Astro.props
     position: fixed;
     top: 50%;
     right: 10px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--open-sans);
     font-size: 0.9rem;
     transform: translateY(-50%);
     transition: all 0.3s ease-in-out;
 
     &.collapsed {
+      padding-block: 1rem;
       padding-left: 1rem;
       gap: 1rem;
       align-items: flex-end;
@@ -72,11 +73,11 @@ const { entries } = Astro.props
       height: auto;
       padding: 1rem;
       background-color: var(--background-color);
-      border: var(--border-width) solid rgba(0, 0, 0, 0.1);
+      border: var(--border-width) rgba(0, 0, 0, 0.1);
       border-radius: var(--border-radius-md);
       box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
       align-items: flex-start;
-      transform: translate(50%, -50%);
+      transform: translate(100%, -50%);
       opacity: 0;
     }
 

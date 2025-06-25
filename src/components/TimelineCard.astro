@@ -1,0 +1,105 @@
+---
+export interface Props {
+  year: string;
+}
+
+const { year } = Astro.props;
+---
+
+<div class="timeline-card">
+  <div class="line">
+    <p class="year">{year}</p>
+    <div class="marker" />
+  </div>
+  <div class="card">
+    <slot />
+  </div>
+</div>
+
+<style>
+  :root {
+    --timeline-card-margin-top: 5rem;
+    --marker-size: 15px;
+    --marker-inset: -9px;
+  }
+
+  .timeline-card {
+    display: flex;
+
+    &:last-of-type .card {
+      margin-bottom: 5rem;
+    }
+  }
+
+  .line {
+    display: flex;
+    position: relative;
+    width: 15%;
+    border-right: var(--black-border);
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .year {
+    margin-block: var(--timeline-card-margin-top) 0;
+    margin-right: 2rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+
+  .marker {
+    position: absolute;
+    width: var(--marker-size);
+    height: var(--marker-size);
+    top: calc(50% + calc(var(--timeline-card-margin-top) / 2) - calc(var(--marker-size) / 2));
+    right: var(--marker-inset);
+    background: var(--color-primary-black);
+    border-radius: 50%;
+  }
+
+  .card {
+    position: relative;
+    width: 85%;
+    min-width: 340px;
+    min-height: 160px;
+    padding: 3rem;
+    margin-top: var(--timeline-card-margin-top);
+    margin-left: 4rem;
+    background: var(--color-primary-yellow);
+    border: var(--black-border);
+    border-radius: var(--border-radius-md);
+    box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 3px;
+  }
+
+  @media (max-width: 1000px) {
+    .timeline-card {
+      flex-wrap: wrap;
+
+      &:last-of-type .card {
+        margin-bottom: 0;
+      }
+    }
+
+    .line {
+      width: auto;
+      margin-left: 5rem;
+      border-left: var(--black-border);
+      border-right: none;
+    }
+
+    .year {
+      margin-left: 2.5rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+
+    .marker {
+      left: var(--marker-inset);
+    }
+
+    .card {
+      margin-top: 0;
+      margin-left: 0;
+    }
+  }
+</style>

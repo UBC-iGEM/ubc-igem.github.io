@@ -7,12 +7,11 @@ interface Props {
   colorToken: string;
 }
 
-const { name, role, major, image, colorToken } = Astro.props
+const { name, role, major, image, colorToken } = Astro.props;
 ---
 
 <div class="member-card" style=`background-color: var(${colorToken})`>
-  <img src={`/team-photos/${image}`} alt={name} draggable="false" />
-  <hr />
+  <img src={`team-photos/${image}`} alt={name} draggable="false" />
   <div class="info">
     <p class="name">{name}</p>
     <p class="role">{role}</p>
@@ -28,7 +27,7 @@ const { name, role, major, image, colorToken } = Astro.props
     height: 280px;
     margin: 0.5rem;
     background-color: var(--card-color);
-    border: var(--border-width) solid black;
+    border: var(--black-border);
     border-radius: var(--border-radius-sm);
   }
 
@@ -39,14 +38,9 @@ const { name, role, major, image, colorToken } = Astro.props
     border-radius: calc(var(--border-radius-sm) * 0.5) calc(var(--border-radius-sm) * 0.5) 0 0;
   }
 
-  hr {
-    margin: 0;
-    border: 1px solid black;
-  }
-
   p {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--open-sans);
     color: var(--secondary-text-color);
     font-size: 0.85rem;
     line-height: 1.4;
@@ -54,6 +48,7 @@ const { name, role, major, image, colorToken } = Astro.props
 
   .info {
     padding: 0.25rem 0.35rem;
+    border-top: var(--black-border);
   }
 
   .name {

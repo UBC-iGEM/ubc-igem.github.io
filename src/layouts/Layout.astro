@@ -6,7 +6,7 @@ interface Props {
 	title: string;
 }
 
-const { title } = Astro.props
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -32,20 +32,18 @@ const { title } = Astro.props
 <style is:global>
 	:root {
 		--color-primary-black: #042a2b;
+		--color-primary-yellow: #fbf8dd;
 		--color-primary-green: #afdbbf;
 		--color-primary-orange: #ffdab9;
 		--color-primary-purple: #babcd5;
-		--color-primary-yellow: #fbf8dd;
-		--color-primary-peach: #f7dfca;
     --color-primary-red: #fbe1dd;
     --color-primary-blue: #c9d8ef;
 
 		--color-secondary-black: #373f57;
+		--color-secondary-yellow: #fffef3;
 		--color-secondary-green: #d8f0e2;
 		--color-secondary-orange: #fff0e2;
 		--color-secondary-purple: #e4e6fc;
-		--color-secondary-yellow: #fffef3;
-		--color-secondary-peach: #fdf2e9;
     --color-secondary-red: #fff6f5;
     --color-secondary-blue: #ebf3fe;
 
@@ -54,13 +52,14 @@ const { title } = Astro.props
 		--background-color: #ffffff;
 		--text-color-primary: var(--color-primary-black);
 		--text-color-secondary: var(--color-secondary-black);
-		--border-color: var(--color-primary-black);
 
-		--max-width: 1440px;
-		--page-horizontal-padding: min(7rem, 15vw);
+		--open-sans: 'Open Sans', sans-serif;
+
+		--page-inset: 10%;
 		--border-width: 2px;
 		--border-radius-sm: 5px;
 		--border-radius-md: 10px;
+		--black-border: var(--border-width) solid var(--color-primary-black);
 	}
 
 	* {
@@ -70,12 +69,12 @@ const { title } = Astro.props
 
 	body {
 		display: flex;
+		flex-direction: column;
 		padding: 0;
 		margin: 0;
 		font-family: 'Poppins', sans-serif;
 		color: var(--text-color-primary);
 		justify-content: center;
-		flex-direction:column;
 	}
 
 	a {
@@ -85,21 +84,64 @@ const { title } = Astro.props
 		align-items: center;
 	}
 
-	.title {
-		font-size: 4.5rem;
+	.page-title {
+		font-size: clamp(3rem, 15vw, 4.5rem);
 		font-weight: bold;
-		margin-top: 5rem;
+		margin-block: 5rem 2rem;
+		margin-inline: var(--page-inset);
 	}
 
-	.subtitle {
-		font-size: 2rem;
+	.page-subtitle {
+		font-size: clamp(1rem, 6.5vw, 2rem);
 		line-height: 1.2;
-		margin-bottom: 3rem;
+		margin-block: 0 3rem;
+		margin-inline: var(--page-inset);
 	}
 
-	@media (max-width: 800px) {
-		body {
-			justify-content: start;
+	.page-color-section {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 5rem;
+
+		&.top-border {
+			border-top: var(--black-border);
+		}
+
+		&.bottom-border {
+			border-bottom: var(--black-border);
+		}
+
+		&.green {
+			background-color: var(--color-primary-green);
+		}
+
+		&.purple {
+			background-color: var(--color-primary-purple);
+		}
+	}
+
+	.timeline {
+		padding-right: var(--page-inset);
+		border-top: var(--black-border);
+	}
+
+	.timeline-spacer {
+		display: none;
+		width: auto;
+		height: 8rem;
+		margin-left: 5rem;
+		border-left: var(--black-border);
+	}
+
+	@media (max-width: 1000px) {
+		.timeline {
+			padding-left: var(--page-inset);
+			padding-right: 0;
+		}
+
+		.timeline-spacer {
+			display: block;
+			margin-left: calc(var(--page-inset) + 5rem);
 		}
 	}
 </style>

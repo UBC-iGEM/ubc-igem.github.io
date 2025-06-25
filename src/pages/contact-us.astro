@@ -1,105 +1,76 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { Content as FaqContent } from "../content/faq.md";
-
-const pageTitle = "Contact Us - UBC iGEM";
+import Layout from '../layouts/Layout.astro'
+import { Content as FaqContent } from '../data/faq.md'
 ---
 
-<Layout title={pageTitle}>
-  <section class="contact-section">
-    <h1>Contact us</h1>
-
-    <div class="contact-row">
-      <img src="/email.svg" alt="Email Icon" />
+<Layout title="Contact Us">
+  <section class="page-color-section green bottom-border">
+    <h1 class="page-title">Contact Us</h1>
+    <div class="socials">
       <a href="mailto:contact@ubcigem.com">
+        <img src="email-green.svg" alt="UBC iGEM Email" />
         <h2>contact@ubcigem.com</h2>
       </a>
-    </div>
-    <div class="contact-row">
-      <img src="/instagram.svg" alt="Instagram Icon" />
       <a href="https://www.instagram.com/ubcigem/?hl=en" target="_blank" rel="noopener noreferrer">
+        <img src="instagram-green.svg" alt="UBC iGEM Instagram" />
         <h2>@ubcigem</h2>
       </a>
-    </div>
-    <div class="contact-row">
-      <img src="/linkedin.svg" alt="LinkedIn Icon" />
       <a href="https://www.linkedin.com/company/ubcvigem/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
+        <img src="linkedin-green.svg" alt="UBC iGEM LinkedIn" />
         <h2>UBC iGEM</h2>
       </a>
     </div>
   </section>
-  <section class="faq-section">
-    <h1 class="faq-heading">FAQ</h1>
+  <section class="faq">
+    <h1 class="page-title">FAQ</h1>
     <FaqContent />
   </section>
+</Layout>
 
-  <style>
-    h1 {
-      font-size: 4.5em;
-      font-weight: 900;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
+<style>
+  .socials {
+    padding-inline: var(--page-inset);
+
+    a {
+      width: fit-content;
+
+      &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: var(--border-width);
+        text-underline-offset: 4px;
+      }
     }
 
-    h2 {
-      font-size: 2em;
-      font-weight: 400;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-    }
-
-    p {
-      font-size: 1.3em;
-      margin-top: 0.5em;
-      margin-bottom: 0.25em;
-      font-weight: 700;
-    }
-
-    .contact-section {
-      background-color: var(--color-primary-green);
-      padding-block: 5%;
-      padding-inline: 10%;
-      text-align: left;
-      border-bottom: solid var(--border-width) var(--border-color);
-      outline: var(--border-color);
-      max-width: 100%;
-    }
-
-    .contact-row {
-      display: flex;
-      align-items: center;
-    }
-
-    .contact-row img {
-      width: 48px;
-      height: 48px;
+    img {
+      width: 60px;
+      height: 60px;
       flex-shrink: 0;
       margin-right: 12px;
     }
 
-    .contact-row a {
-      text-decoration: none;
-      color: inherit;
+    h2 {
+      font-family: var(--open-sans);
+      font-size: 2rem;
+      font-weight: normal;
+      margin-block: 1rem;
+    }
+  }
+
+  .faq {
+    padding-block: 0 5rem;
+
+    h2 {
+      font-size: 2.25rem;
+      font-weight: bold;
+      padding-inline: var(--page-inset);
+      margin: 0;
     }
 
-    .faq-section {
-      padding-inline: 10%;
-      border-bottom: solid var(--border-width) var(--border-color);
-      text-align: left;
-      max-width: 100%;
-
-      h2 {
-        font-size: 2.25em;
-        font-weight: 900;
-        margin-bottom: 0.1em;
-        margin-top: 0.1em;
-      }
-
-      p {
-        font-size: 1.3em;
-        margin-bottom: 1em;
-        margin-top: 0.5em;
-      } 
+    p {
+      font-family: var(--open-sans);
+      font-size: 1.4rem;
+      padding-inline: var(--page-inset);
+      margin-block: 0 2rem;
     }
-  </style>
-</Layout>
+  }
+</style>

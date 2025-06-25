@@ -1,19 +1,17 @@
-<nav class="navigation">
-  <div class="navigation-container">
-    <a href="/" class="logo">
-      <img src="/igem-logo.svg" alt="UBC iGEM Logo" draggable="false" />
-    </a>
-    <div id="navigation-menu">
-      <a href="/">Home</a>
-      <a href="/how-we-work">How We Work</a>
-      <a href="/our-team">Our Team</a>
-      <a href="/sponsors">Sponsors</a>
-      <a href="/past-projects">Past Projects</a>
-      <a href="/gallery">Gallery</a>
-      <a href="/contact-us">Contact Us</a>
-    </div>
-    <button id="navigation-menu-button" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+<nav>
+  <a href="/" class="logo">
+    <img src="igem-logo.svg" alt="UBC iGEM Logo" draggable="false" />
+  </a>
+  <div id="navigation-menu">
+    <a href="/">Home</a>
+    <a href="/how-we-work">How We Work</a>
+    <a href="/our-team">Our Team</a>
+    <a href="/sponsors">Sponsors</a>
+    <a href="/past-projects">Past Projects</a>
+    <a href="/gallery">Gallery</a>
+    <a href="/contact-us">Contact Us</a>
   </div>
+  <button id="navigation-menu-button" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
 </nav>
 
 <script>
@@ -41,46 +39,38 @@
     padding-top: var(--navigation-height);
   }
 
-  .navigation {
+  nav {
     display: flex;
     position: fixed;
     width: 100%;
     height: var(--navigation-height);
     top: 0;
+    padding-inline: calc(var(--page-inset) / 2);
     background-color: var(--background-color);
-    border-bottom: var(--border-width) solid var(--border-color);
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-  }
-
-  .navigation-container {
-    display: flex;
-    width: var(--max-width);
-    height: 100%;
-    padding: 0 min(3rem, 1.5vw) 0 min(2rem, 1vw);
+    border-bottom: var(--black-border);
     align-items: center;
     justify-content: space-between;
+    z-index: 100;
   }
 
   .logo {
     width: auto;
     height: 80%;
-  }
 
-  .logo img {
-    width: auto;
-    height: 100%;
+    img {
+      width: auto;
+      height: 100%;
+    }
   }
 
   #navigation-menu {
     display: flex;
-    gap: min(3rem, 2vw);
+    gap: clamp(2rem, 2vw, 3rem);
     font-weight: 500;
-  }
-  
-  #navigation-menu a:hover {
-    color: var(--color-tertiary-green);
+
+    a:hover {
+      color: var(--color-tertiary-green);
+    }
   }
 
   #navigation-menu-button {
@@ -88,22 +78,18 @@
     user-select: none;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     html body {
       padding-top: 0;
       padding-bottom: var(--navigation-height);
     }
 
-    .navigation {
+    nav {
       top: initial;
       bottom: 0;
       background-color: var(--background-color);
-      border-top: var(--border-width) solid var(--border-color);
+      border-top: var(--black-border);
       border-bottom: none;
-    }
-
-    .navigation-container {
-      padding: 0 3rem 0 2rem;
     }
 
     #navigation-menu {
@@ -115,19 +101,19 @@
       gap: 1rem;
       padding: 1rem 2rem;
       background-color: var(--background-color);
-      border-left: var(--border-width) solid var(--border-color);
+      border-left: var(--black-border);
       align-items: flex-end;
       justify-content: flex-end;
       transition: transform 0.3s ease-in-out;
       transform: translateX(100%);
-    }
 
-    #navigation-menu.open {
-      transform: translateX(0);
-    }
+      &.open {
+        transform: translateX(0);
+      }
 
-    #navigation-menu a {
-      padding: 0.5rem 0;
+      a {
+        padding: 0.5rem 0;
+      }
     }
 
     #navigation-menu-button {
@@ -140,12 +126,12 @@
       font-family: inherit;
       font-size: 4rem;
       cursor: pointer;
-    }
 
-    #navigation-menu-button.open {
-      width: auto;
-      height: auto;
-      margin-right: 0.5rem;
+      &.open {
+        width: auto;
+        height: auto;
+        margin-right: 0.5rem;
+      }
     }
   }
 </style>
