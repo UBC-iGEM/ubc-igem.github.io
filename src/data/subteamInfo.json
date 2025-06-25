@@ -15,7 +15,7 @@
     "description": "The Dry Lab subteam complements and supports work done by Wet Lab through the development of cutting-edge hardware, advanced models, and novel software tools. We also use computational techniques to model, study, and optimize biological processes in silico, covering fields such as mathematical modelling, protein modelling, and bioinformatics. ",
     "colourVar": "orange",
     "imgs": [
-      {"img": "nucloud-mk-4-bioreactor.png", "caption": "Mk.4 Bioreactor from with potential add-ons included."},
+      {"img": "nucloud-mk-4-bioreactor.png", "caption": "Mk.4 Bioreactor with potential add-ons included."},
       {"img": "nucloud-microfluidics-sim.png", "caption": "Solidworks simulation of fluid flow through a microfluidic mixing chip."},
       {"img": "guy-w-saw.jpg", "caption": "Training in the SBME Makerspace."}
     ]
