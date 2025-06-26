@@ -35,7 +35,11 @@
     "name": "Administration",
     "description": "The Administration subteam handles budgets, purchases, and sponsorships, ensuring the team has sufficient resources and finances to succeed. They also explore ways to turn our project into real-world solutions, exploring entrepreneurial pathways.",
     "colourVar": "red",
-    "imgs": []
+    "imgs": [
+        {"img": "mcells-1.jpg", "caption": "UBC iGEM representatives at the MCELLS (Microbial Cell Systems for Sustainable Living) gathering."},
+        {"img": "mcells-2.jpg", "caption": "UBC iGEM representatives at the MCELLS (Microbial Cell Systems for Sustainable Living) gathering."},
+        {"img": "mcells-3.jpg", "caption": "UBC iGEM representatives at the MCELLS (Microbial Cell Systems for Sustainable Living) gathering."}
+    ]
   },
   "design-wiki": {
     "name": "Design-Wiki",

@@ -39,7 +39,7 @@ const subteams = subteamInfo as unknown as Record<string, SubteamInfo>
           <p>{subteam.description}</p>
         </div>
         {subteam.imgs.length !== 0 && (
-          <Carousel imgs={subteam.imgs} imgPrefix={"static/subteam-pics/"} />
+          <Carousel imgs={subteam.imgs} imgPrefix={"/static/subteam-pics/"}/>
         )}
       </section>
     ))

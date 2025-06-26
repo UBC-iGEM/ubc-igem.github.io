@@ -3,6 +3,7 @@ name: GitHub Pages [Publish]
 on:
   push:
     branches: ["gatsby"]
+  workflow_dispatch:
 
 jobs:
   build:
