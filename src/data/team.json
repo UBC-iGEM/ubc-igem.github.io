@@ -1,85 +1,91 @@
 {
-  "directors-&-leads": {
+  "directors-leads": {
     "title": "Directors & Leads",
     "colorToken": "--color-primary-yellow",
     "members": [
       {
+        "name": "Ada Jiang",
+        "role": "Director",
+        "major": "Microbiology and Immunology",
+        "image": "ada-jiang.jpg"
+      },
+      {
         "name": "Narjis Alhusseini",
         "role": "Director",
         "major": "Microbiology and Immunology",
-        "image": "narjis-alhusseini.png"
+        "image": "narjis-alhusseini.jpg"
       },
       {
         "name": "Piyush Awasthi",
         "role": "Director",
         "major": "Biomedical Engineering",
-        "image": "piyush-awasthi.png"
+        "image": "piyush-awasthi.jpg"
       },
       {
-        "name": "Aden Chan",
-        "role": "Administration Lead",
-        "major": "Biomedical Engineering",
-        "image": ""
-      },
-      {
-        "name": "Ada Jiang",
+        "name": "Jessie Luo",
         "role": "Wet Lab Lead",
         "major": "Microbiology and Immunology",
-        "image": ""
+        "image": "jessie-luo.jpg"
       },
       {
-        "name": "Burak Ozkan",
+        "name": "Matthew Chan",
         "role": "Wet Lab Lead",
-        "major": "Biology × Microbiology and Immunology",
-        "image": ""
+        "major": "Microbiology and Immunology",
+        "image": "matthew-chan.jpg"
       },
       {
         "name": "Pattarin Blanchard",
         "role": "Wet Lab Lead",
         "major": "Chemical and Biological Engineering",
-        "image": ""
+        "image": "pattarin-blanchard.jpg"
       },
       {
         "name": "Jessica Xin",
         "role": "Dry Lab Lead",
         "major": "Biomedical Engineering",
-        "image": ""
+        "image": "jessica-xin.jpg"
       },
       {
         "name": "Matthias Wong",
         "role": "Dry Lab Lead",
         "major": "Biomedical Engineering",
-        "image": ""
+        "image": "matthias-wong.jpg"
       },
       {
         "name": "Sebastian Hyland",
         "role": "Dry Lab Lead",
         "major": "Biomedical Engineering",
-        "image": ""
+        "image": "sebastian-hyland.jpg"
       },
       {
         "name": "Catherine Jiang",
-        "role": "HP Lead",
+        "role": "Human Practices Lead",
         "major": "Integrated Sciences",
-        "image": ""
+        "image": "no-image.jpg"
       },
       {
-        "name": "Riya Alluri",
-        "role": "HP Lead",
-        "major": "Biology × Computer Science",
-        "image": ""
+        "name": "Vеrоnіkа Bսmbսlоvіc",
+        "role": "Human Practices Lead",
+        "major": "Microbiology and Immunology",
+        "image": "vеrоnіkа-bսmbսlоvіc.jpg"
+      },
+      {
+        "name": "Aden Chan",
+        "role": "Administration Lead",
+        "major": "Biomedical Engineering",
+        "image": "aden-chan.jpg"
       },
       {
         "name": "Aoniya Colynn",
         "role": "Design-Wiki Lead",
         "major": "Microbiology × Oceanography",
-        "image": ""
+        "image": "aoniya-colynn.jpg"
       },
       {
         "name": "Nathan Yeung",
         "role": "Design-Wiki Lead + Dry Lab",
         "major": "Computer Science",
-        "image": ""
+        "image": "nathan-yeung.jpg"
       }
     ]
   },
@@ -91,73 +97,61 @@
         "name": "Alya Kaynak",
         "role": "Wet Lab",
         "major": "Pharmaceutical Sciences",
-        "image": ""
+        "image": "alya-kaynak.jpg"
       },
       {
         "name": "Arda Sayla",
         "role": "Wet Lab",
         "major": "Biochemistry",
-        "image": ""
+        "image": "arda-sayla.jpg"
       },
       {
         "name": "Evan Wong",
         "role": "Wet Lab",
         "major": "Biochemistry",
-        "image": ""
-      },
-      {
-        "name": "Jessie Luo",
-        "role": "Wet Lab",
-        "major": "Microbiology and Immunology",
-        "image": ""
+        "image": "evan-wong.jpg"
       },
       {
         "name": "Marina Chen",
         "role": "Wet Lab",
         "major": "Biomedical Engineering",
-        "image": ""
-      },
-      {
-        "name": "Matthew Chan",
-        "role": "Wet Lab",
-        "major": "Microbiology and Immunology",
-        "image": ""
+        "image": "marina-chen.jpg"
       },
       {
         "name": "Sarah Duan",
         "role": "Wet Lab",
-        "major": "Science One",
-        "image": ""
+        "major": "Biochemistry",
+        "image": "no-image.jpg"
       },
       {
         "name": "Sean Fox",
         "role": "Wet Lab",
         "major": "Integrated Sciences",
-        "image": ""
+        "image": "sean-fox.jpg"
       },
       {
         "name": "Talha Zubair",
         "role": "Wet Lab",
-        "major": "Science One",
-        "image": ""
+        "major": "Biology",
+        "image": "talha-zubair.jpg"
       },
       {
         "name": "Wendy Wu",
         "role": "Wet Lab",
         "major": "Biomedical Engineering",
-        "image": ""
+        "image": "no-image.jpg"
       },
       {
         "name": "Yuki Guan",
         "role": "Wet Lab",
-        "major": "Engineering",
-        "image": ""
+        "major": "Integrated Engineering",
+        "image": "yuki-guan.jpg"
       },
       {
         "name": "ZiQi Chen",
         "role": "Wet Lab",
         "major": "Biomedical Engineering",
-        "image": ""
+        "image": "ziqi-chen.jpg"
       }
     ]
   },
@@ -166,52 +160,124 @@
     "colorToken": "--color-primary-orange",
     "members": [
       {
+        "name": "Angela Xu",
+        "role": "Dry Lab",
+        "major": "Computer Science × Microbiology and Immunology",
+        "image": "angela-xu.jpg"
+      },
+      {
+        "name": "Carrie Xu",
+        "role": "Dry Lab",
+        "major": "Pharmacology",
+        "image": "carrie-xu.jpg"
+      },
+      {
+        "name": "Claudia Chen",
+        "role": "Dry Lab",
+        "major": "Microbiology and Immunology",
+        "image": "no-image.jpg"
+      },
+      {
+        "name": "Connor Mora",
+        "role": "Dry Lab",
+        "major": "Biomedical Engineering",
+        "image": "connor-mora.jpg"
+      },
+      {
+        "name": "Danielle Keith",
+        "role": "Dry Lab",
+        "major": "Biomedical Engineering",
+        "image": "danielle-keith.jpg"
+      },
+      {
         "name": "Ethan Yip",
         "role": "Dry Lab",
         "major": "Biomedical Engineering",
-        "image": ""
+        "image": "ethan-yip.jpg"
       },
       {
         "name": "Felix Chan",
         "role": "Dry Lab",
         "major": "Biochemistry",
-        "image": ""
+        "image": "no-image.jpg"
+      },
+      {
+        "name": "Hanna Khan",
+        "role": "Dry Lab",
+        "major": "Biomedical Engineering",
+        "image": "hanna-khan.jpg"
+      },
+      {
+        "name": "Jaclyn Armstrong",
+        "role": "Dry Lab",
+        "major": "Microbiology and Immunology",
+        "image": "jaclyn-armstrong.jpg"
+      },
+      {
+        "name": "Kaylie Chen",
+        "role": "Dry Lab",
+        "major": "Biomedical Engineering",
+        "image": "kaylie-chen.jpg"
       },
       {
         "name": "Maximilien Filion",
         "role": "Dry Lab",
         "major": "Biomedical Engineering",
-        "image": ""
+        "image": "maximilien-filion.jpg"
       },
       {
-        "name": "Monica Mihailescu",
+        "name": "Nichita Bulbuc",
         "role": "Dry Lab",
-        "major": "Biomedical Engineering",
-        "image": ""
+        "major": "Biochemistry",
+        "image": "nichita-bulbuc.jpg"
       },
       {
         "name": "Robben Liu",
         "role": "Dry Lab",
         "major": "Biomedical Engineering",
-        "image": ""
+        "image": "no-image.jpg"
       },
       {
         "name": "Saige Mann",
         "role": "Dry Lab",
         "major": "Biomedical Engineering",
-        "image": ""
+        "image": "no-image.jpg"
       },
       {
         "name": "Sam Salitra",
         "role": "Dry Lab",
         "major": "Microbiology and Immunology",
-        "image": ""
+        "image": "no-image.jpg"
       },
       {
         "name": "Satvika Suresha",
         "role": "Dry Lab",
-        "major": "Combined Major in Chemical Biology",
-        "image": ""
+        "major": "Medical Laboratory Science",
+        "image": "satvika-suresha.jpg"
+      },
+      {
+        "name": "Tiffany Feng",
+        "role": "Dry Lab",
+        "major": "Biomedical Engineering",
+        "image": "tiffany-feng.jpg"
+      },
+      {
+        "name": "Tom Xie",
+        "role": "Dry Lab",
+        "major": "Computer Science",
+        "image": "tom-xie.jpg"
+      },
+      {
+        "name": "Victoria Chong",
+        "role": "Dry Lab",
+        "major": "Biomedical Engineering",
+        "image": "no-image.jpg"
+      },
+      {
+        "name": "Xu Yuan (Dylan) Zhang",
+        "role": "Dry Lab",
+        "major": "Computer Science",
+        "image": "no-image.jpg"
       }
     ]
   },
@@ -220,106 +286,142 @@
     "colorToken": "--color-primary-purple",
     "members": [
       {
+        "name": "Cindy Fu",
+        "role": "Human Practices",
+        "major": "Chemical and Biological Engineering",
+        "image": "cindy-fu.jpg"
+      },
+      {
         "name": "Kelly He",
         "role": "Human Practices",
         "major": "Microbiology and Immunology",
-        "image": ""
+        "image": "kelly-he.jpg"
       },
       {
         "name": "Libby Lee",
         "role": "Human Practices",
         "major": "Biochemistry",
-        "image": ""
+        "image": "libby-lee.jpg"
       },
       {
         "name": "Lillian Pan",
         "role": "Human Practices",
-        "major": "Science",
-        "image": ""
+        "major": "Statistics",
+        "image": "no-image.jpg"
+      },
+      {
+        "name": "Nethkini Liyanage",
+        "role": "Human Practices",
+        "major": "Microbiology and Immunology",
+        "image": "nethkini-liyanage.jpg"
       },
       {
         "name": "Pearl Dhingra",
         "role": "Human Practices",
         "major": "Biomedical Engineering",
-        "image": ""
+        "image": "pearl-dhingra.jpg"
       },
       {
         "name": "Zahra Savoji",
         "role": "Human Practices",
-        "major": "Science",
-        "image": ""
+        "major": "Neuroscience",
+        "image": "zahra-savoji.jpg"
       }
     ]
   },
   "administration": {
     "title": "Administration",
-    "colorToken": "--color-primary-yellow",
+    "colorToken": "--color-primary-red",
     "members": [
+      {
+        "name": "Gabriella Marie Gubantes",
+        "role": "Administration",
+        "major": "Biomedical Engineering",
+        "image": "no-image.jpg"
+      },
+      {
+        "name": "Gurnek Sandhu",
+        "role": "Administration",
+        "major": "Computer Science",
+        "image": "no-image.jpg"
+      },
       {
         "name": "Izaak Yip",
         "role": "Administration",
         "major": "Microbiology and Immunology",
-        "image": ""
+        "image": "no-image.jpg"
       },
       {
         "name": "Jewell Alexo",
         "role": "Administration",
         "major": "Biomedical Engineering",
-        "image": ""
+        "image": "no-image.jpg"
       },
       {
         "name": "Kaitlyn Liu",
         "role": "Administration",
         "major": "Microbiology and Immunology",
-        "image": ""
+        "image": "no-image.jpg"
       },
       {
-        "name": "Ye (Stacy) Liu",
+        "name": "Min Mon",
         "role": "Administration",
-        "major": "Finance",
-        "image": ""
+        "major": "Chemical and Biological Engineering",
+        "image": "no-image.jpg"
+      },
+      {
+        "name": "Rayzell Tjandra",
+        "role": "Administration",
+        "major": "Computer Science",
+        "image": "no-image.jpg"
       }
     ]
   },
   "design-wiki": {
     "title": "Design-Wiki",
-    "colorToken": "--color-primary-peach",
+    "colorToken": "--color-primary-blue",
     "members": [
       {
         "name": "Alan Wu",
         "role": "Design-Wiki",
         "major": "Computer Science",
-        "image": ""
+        "image": "alan-wu.jpg"
       },
       {
         "name": "Alexi Manning",
         "role": "Design-Wiki",
         "major": "Cognitive Systems (Computer Science)",
-        "image": ""
+        "image": "alexi-manning.jpg"
       },
       {
         "name": "Billy Wang",
         "role": "Design-Wiki",
         "major": "Computer Science × Statistics",
-        "image": ""
+        "image": "billy-wang.jpg"
+      },
+      {
+        "name": "Bruce Chen",
+        "role": "Design-Wiki + Administration",
+        "major": "Marketing",
+        "image": "bruce-chen.jpg"
       },
       {
         "name": "Ceres Zhou",
         "role": "Design-Wiki",
         "major": "Neuroscience",
-        "image": ""
+        "image": "ceres-zhou.jpg"
       },
       {
         "name": "Heral Kumar",
         "role": "Design-Wiki",
         "major": "Mathematics",
-        "image": ""
+        "image": "heral-kumar.jpg"
       },
       {
-        "name": "Zhenyu Zhong",
+        "name": "Zhenyu (Jacky) Zhong",
         "role": "Design-Wiki",
         "major": "Statistics",
-        "image": ""
+        "image": "no-image.jpg"
       }
     ]
   },
@@ -330,26 +432,8 @@
       {
         "name": "Antonio Wong",
         "role": "Instructor",
-        "major": "Interdisciplinary Oncology",
-        "image": ""
-      }
-    ]
-  },
-  "principal-investigators": {
-    "title": "Principal Investigators",
-    "colorToken": "--color-primary-yellow",
-    "members": [
-      {
-        "name": "Steven Hallam",
-        "role": "Principal Investigator",
-        "major": "Microbiology and Immunology",
-        "image": ""
-      },
-      {
-        "name": "Jenna Usprech",
-        "role": "Principal Investigator",
-        "major": "Biomedical Engineering",
-        "image": ""
+        "major": "Radiology",
+        "image": "antonio-wong.jpg"
       }
     ]
   },
@@ -358,10 +442,34 @@
     "colorToken": "--color-primary-yellow",
     "members": [
       {
-        "name": "",
-        "role": "",
-        "major": "",
-        "image": ""
+        "name": "Burak Özkan",
+        "role": "Administration Advisor",
+        "major": "Biology × Microbiology and Immunology",
+        "image": "burak-ozkan.jpg"
+      },
+      {
+        "name": "Riya Alluri",
+        "role": "Human Practices Advisor",
+        "major": "Biology × Computer Science",
+        "image": "no-image.jpg"
+      }
+    ]
+  },
+  "principal-investigators": {
+    "title": "Principal Investigators",
+    "colorToken": "--color-primary-yellow",
+    "members": [
+      {
+        "name": "Dr. Steven Hallam",
+        "role": "Principal Investigator",
+        "major": "Microbiology and Immunology",
+        "image": "steven-hallam.jpg"
+      },
+      {
+        "name": "Dr. Jenna Usprech",
+        "role": "Principal Investigator",
+        "major": "Biomedical Engineering",
+        "image": "jenna-usprech.jpg"
       }
     ]
   }
