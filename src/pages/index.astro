@@ -7,15 +7,15 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
 
 <Layout title="UBC iGEM">
   <div class="section-box hero-box">
-    <h1 class="title">UBC iGEM</h1>
+    <h1 class="page-title">UBC iGEM</h1>
     <div role="doc-subtitle">Building a better future through synthetic biology</div>
     <div>
       <img
-        src="team-photos/2024-team-photo.png"
+        src="/team-photos/2024-team-photo.png"
         alt="The UBC iGEM team in 2024."
       />
       <img
-        src="team-photos/2024-jamboree-photo.jpg"
+        src="/team-photos/2024-jamboree-photo.jpg"
         alt="UBC iGEM team members at the 2024 Jamboree."
       />
       <div class="light-box">
@@ -54,19 +54,19 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
     </div>
     <div>
       <img
-        src="2024-igem-jamboree-awards.png"
+        src="/2024-igem-jamboree-awards.png"
         alt="Awards won by the team at the 2024 iGEM Jamboree."
       />
       <img
-        src="2024-igem-jamboree-audience.png"
+        src="/2024-igem-jamboree-audience.png"
         alt="Teams at the 2024 iGEM Jamboree."
       />
       <img
-        src="2024-igem-jamboree-screen-banner.png"
+        src="/2024-igem-jamboree-screen-banner.png"
         alt="A banner at the 2024 iGEM Jamboree."
       />
       <img
-        src="2024-igem-jamboree-directors.jpg" 
+        src="/2024-igem-jamboree-directors.jpg" 
         alt="Our 2024 team directors at the iGEM Jamboree!"
       />
     </div>
@@ -87,16 +87,16 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
   }
 
   .section-box {
-    padding: 3rem var(--page-horizontal-padding);
+    padding: 3rem var(--page-inset);
 
     img {
-      border: var(--border-width) solid var(--border-color);
+      border: var(--black-border);
       border-radius: var(--border-radius-md);
     }
   }
 
   .light-box {
-    border: var(--border-width) solid var(--border-color);
+    border: var(--black-border);
     border-radius: var(--border-radius-md);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
@@ -113,7 +113,7 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
   .hero-box {
     display: grid;
     background-color: var(--color-primary-green);
-    border-bottom: var(--border-width) solid var(--border-color);
+    border-bottom: var(--black-border);
     justify-content: center;
 
     h2 {
@@ -127,7 +127,7 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
       padding: 0.5rem 1rem;
       width: 70%;
       height: 90%;
-      border: var(--border-width) solid var(--border-color);
+      border: var(--black-border);
       border-radius: var(--border-radius-sm);
       background-color: var(--color-primary-yellow);
       box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.3);
@@ -183,16 +183,16 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
   .about-competition-box {
     display: grid;
     justify-content: center;
-    background-color: var(--color-primary-peach);
-    border-top: var(--border-width) solid var(--border-color);
-    border-bottom: var(--border-width) solid var(--border-color);
+    background-color: var(--color-primary-orange);
+    border-top: var(--black-border);
+    border-bottom: var(--black-border);
 
     div {
       max-width: var(--max-width);
     }
 
     div:first-child {
-      background-color: var(--color-secondary-peach);
+      background-color: var(--color-secondary-orange);
       padding: 30px 24px;
       margin-bottom: 2rem;
     }
@@ -224,7 +224,7 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
     a {
       font-size: 1.5rem;
       padding: 0.5rem 4rem;
-      border: var(--border-width) solid var(--border-color);
+      border: var(--black-border);
       border-radius: var(--border-radius-sm);
       background-color: #ffefbb;
       box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.3);
