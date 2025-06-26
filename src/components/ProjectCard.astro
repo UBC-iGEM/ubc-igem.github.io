@@ -1,0 +1,148 @@
+---
+import TimelineCard from './TimelineCard.astro'
+import Award, { type AwardProps } from './Award.astro'
+
+export interface Props {
+  title: string;
+  description: string;
+  icon: string;
+  link: string;
+  awards: AwardProps[];
+  year: string;
+}
+
+const { title, description, icon, link, awards = [], year } = Astro.props;
+---
+
+<TimelineCard year={year}>
+  <a href={link} target="_blank" class={`project-card ${link ? '' : 'no-link'}`}>
+    {
+      link && (
+        <img
+          src="/static/icons/direct_arrow.svg"
+          alt="direct arrow"
+          class="direct-arrow"
+        />
+      )
+    }
+    <div class="info-container">
+      <div class="title-container">
+        <img src={icon} alt={icon} class="title-icon" />
+        <h1 class="title">{title}</h1>
+      </div>
+      <p class="description">{description}</p>
+      <div class="award-container">
+        {
+          awards.map((award: AwardProps) => (
+            <Award
+              icon={`static/award-icons/${award.icon}`}
+              description={award.description}
+            />
+          ))
+        }
+      </div>
+    </div>
+    <div class="icon-container">
+      <img src={icon} alt={icon} />
+    </div>
+  </a>
+</TimelineCard>
+
+<style>
+  :root {
+    --icon-container-max-width: 250px;
+  }
+
+  .project-card {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  .no-link {
+    pointer-events: none;
+  }
+
+  .direct-arrow {
+    position: absolute;
+    width: 2.2rem;
+    height: 2.2rem;
+    top: 1.25rem;
+    right: 1.25rem;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+  }
+
+  .title-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+
+  .title-icon {
+    display: none;
+    max-width: var(--icon-container-max-width);
+    height: 4rem;
+  }
+
+  .title {
+    margin-block: 0;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .description {
+    margin-block: 0 0.6rem;
+    font-family: var(--open-sans);
+    font-size: 1.25rem;
+  }
+
+  .award-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 120px;
+    justify-content: center;
+  }
+
+  .icon-container {
+    display: flex;
+    flex: 1 1 100px;
+    width: 35%;
+    max-width: var(--icon-container-max-width);
+    margin-right: 2rem;
+    align-items: center;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .info-container {
+      width: 100%;
+    }
+
+    .title-icon {
+      display: block;
+    }
+
+    .title {
+      font-size: 2.5rem;
+    }
+
+    .icon-container {
+      display: none;
+    }
+  }
+</style>

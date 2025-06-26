@@ -1,0 +1,25 @@
+---
+import TimelineCard from './TimelineCard.astro'
+import SponsorCategory, { type SponsorCategoryProps } from './SponsorCategory.astro'
+
+export interface Props {
+  year: string;
+  categories: SponsorCategoryProps[];
+}
+
+const { year, categories } = Astro.props;
+---
+
+<TimelineCard year={year}>
+  <div class="sponsor-card">
+    {
+      categories.map(category => (
+        <SponsorCategory
+          tier={category.tier}
+          icons={category.icons}
+          path="static/sponsor-icons/"
+        />
+      ))
+    }
+  </div>
+</TimelineCard>

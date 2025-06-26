@@ -1,5 +1,5 @@
 ## How do I join the team?
-Follow our instagram for hiring updates! We typically hire at the beginning of each competition season, mid-end of September.
+Follow our Instagram for hiring updates! We typically hire at the beginning of each competition season, mid-end of September.
 
 ## Do you accept students from any year level?
 Yes! Some of our most valued members have been on the team since their first year. As long as you are an undergraduate student eager to learn and work well in a team context for a common goal, come join us!

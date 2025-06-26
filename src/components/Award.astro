@@ -1,0 +1,46 @@
+---
+export interface AwardProps {
+  icon: string;
+  description: string;
+}
+
+const { icon, description } = Astro.props;
+---
+
+<div class="award">
+  <img src={icon} alt={icon} />
+  <p>{description}</p>
+</div>
+
+<style>
+  .award {
+    display: flex;
+    padding: 0.2rem;
+    align-items: center;
+  }
+
+  img {
+    width: 54px;
+    height: 54px;
+    margin-right: 1rem;
+  }
+
+  p {
+    margin: 0;
+    color: var(--text-color-secondary);
+    font-family: var(--open-sans);
+    font-size: 1.125rem;
+    font-weight: lighter;
+  }
+
+  @media (max-width: 1000px) {
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+</style>
