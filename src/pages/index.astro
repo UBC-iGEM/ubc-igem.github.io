@@ -147,7 +147,9 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
 
     > img {
       grid-column: 1;
-      height: 100%;
+      display: flex;
+      align-self: stretch;
+      /* height: 100%; */
       width: 100%;
       object-fit: cover;
     }
@@ -205,7 +207,8 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
 
       > img {
         grid-column: span 3;
-        height: 100%;
+        display: flex;
+        align-self: stretch;
         width: 100%;
         object-fit: cover;
       }
@@ -281,6 +284,7 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
 
     .about-competition-box > div:last-child {
       grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, auto);
       column-gap: 0;
     }
   }
