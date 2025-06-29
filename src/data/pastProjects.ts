@@ -6,7 +6,7 @@ export const pastProjects = [
         awards: [
           { icon: "goldMedal.png", description: "GOLD MEDAL" },
           { icon: "bestHardware.png", description: "BEST HARDWARE" },
-          { icon: "bestSusDev.png", description: "BEST SUSTAINABLE DEVELOPEMENT IMPACT" },
+          { icon: "bestSusDev.png", description: "BEST SUSTAINABLE DEVELOPMENT IMPACT" },
           { icon: "nominee_bestBioManufacture.svg", description: "BEST BIOMANUFACTURING PROJECT NOMINEE" }
         ],
         link: "https://2024.igem.wiki/ubc-vancouver/",
