@@ -244,12 +244,6 @@
         "image": "no-image.jpg"
       },
       {
-        "name": "Sam Salitra",
-        "role": "Dry Lab",
-        "major": "Microbiology and Immunology",
-        "image": "no-image.jpg"
-      },
-      {
         "name": "Satvika Suresha",
         "role": "Dry Lab",
         "major": "Medical Laboratory Science",
@@ -266,18 +260,6 @@
         "role": "Dry Lab",
         "major": "Computer Science",
         "image": "tom-xie.jpg"
-      },
-      {
-        "name": "Victoria Chong",
-        "role": "Dry Lab",
-        "major": "Biomedical Engineering",
-        "image": "no-image.jpg"
-      },
-      {
-        "name": "Xu Yuan (Dylan) Zhang",
-        "role": "Dry Lab",
-        "major": "Computer Science",
-        "image": "no-image.jpg"
       }
     ]
   },
