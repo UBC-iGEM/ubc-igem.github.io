@@ -54,6 +54,9 @@ const { title } = Astro.props
 		--text-color-secondary: var(--color-secondary-black);
 		--border-color: var(--color-primary-black);
 
+		--font-family-poppins: 'Poppins', sans-serif;
+		--font-family-open-sans: 'Open Sans', sans-serif;
+
 		--max-width: 1440px;
 		--page-horizontal-padding: min(7rem, 15vw);
 		--border-width: 2px;
@@ -70,7 +73,7 @@ const { title } = Astro.props
 		display: flex;
 		padding: 0;
 		margin: 0;
-		font-family: 'Poppins', sans-serif;
+		font-family: var(--font-family-poppins);
 		color: var(--text-color-primary);
 		justify-content: center;
 		flex-direction:column;
