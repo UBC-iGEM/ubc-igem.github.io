@@ -72,7 +72,6 @@ const props = Astro.props;
   :root {
     --carousel-img-height: 400px;
     --carousel-img-vertical-margin: 30px;
-    --carousel-border: var(--border-width) solid var(--border-color);
     --carousel-side-margin: 12vw;
 
     --carousel-button-size: 48px;
@@ -108,8 +107,8 @@ const props = Astro.props;
     grid-template-rows: var(--carousel-img-height) 2px 1fr;
     overflow-x: auto;
     scrollbar-color: gray transparent;
-    border-top: var(--carousel-border);
-    border-bottom: var(--carousel-border);
+    border-top: var(--black-border);
+    border-bottom: var(--black-border);
 
     margin: 56px var(--carousel-side-margin);
   }
@@ -117,7 +116,7 @@ const props = Astro.props;
   .carousel > img {
     grid-row: 1;
     height: calc(var(--carousel-img-height) - var(--carousel-img-vertical-margin) * 2);
-    border: var(--carousel-border);
+    border: var(--black-border);
     border-radius: var(--border-radius-sm);
     margin: var(--carousel-img-vertical-margin) 20px;
   }
@@ -158,7 +157,7 @@ const props = Astro.props;
     button {
       height: var(--carousel-button-size);
       width: var(--carousel-button-size);
-      border: var(--carousel-border);
+      border: var(--black-border);
       border-radius: var(--border-radius-sm);
       background-color: transparent;
     }
@@ -171,6 +170,6 @@ const props = Astro.props;
      * implicit grid: https://stackoverflow.com/a/44053668/17879981
      */
     grid-column: 1 / 99;
-    border-top: var(--carousel-border);
+    border-top: var(--black-border);
   }
 </style>
