@@ -28,7 +28,7 @@ const { name, role, major, image, colorToken } = Astro.props
     height: 290px;
     margin: 0.5rem;
     background-color: var(--card-color);
-    border: var(--border-width) solid black;
+    border: var(--black-border);
     border-radius: var(--border-radius-sm);
   }
 
@@ -41,7 +41,7 @@ const { name, role, major, image, colorToken } = Astro.props
 
   hr {
     margin: 0;
-    border: 1px solid black;
+    border: calc(var(--border-width) / 2) solid var(--border-color);
   }
 
   p {
