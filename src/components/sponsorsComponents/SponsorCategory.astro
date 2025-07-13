@@ -1,0 +1,56 @@
+---
+export interface SponsorCategoryProps {
+    tier: string | null,
+    icons: string[]
+}
+
+const {tier, icons} = Astro.props as SponsorCategoryProps;
+const {path} = Astro.props;
+---
+
+<div class="category-container">
+    {tier ? <p class="category-name">{tier}</p> : <></>}
+    {
+        icons.map((icon) => (
+            <img src={`${path}${icon}`} alt={icon} />
+        ))
+    }
+</div>
+
+
+<style>
+    * {
+        --icon-height:5rem;
+    }
+
+    .category-container {
+        display:flex;
+        gap: 2rem;
+        flex-wrap:wrap;
+        margin:1rem;
+    }
+
+    .category-name {
+        font-size:1.49rem;
+        font-weight:lighter;
+        color: var(--color-secondary-black);
+        align-self: center;
+        width:5rem;
+    }
+
+    img {
+        height:6rem;
+    }
+
+    @media (max-width: 880px) {
+        img {
+            max-width:100%;
+        }
+
+        .category-container {
+            gap:1rem;
+        }
+    }
+</style>
+
+

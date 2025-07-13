@@ -1,0 +1,77 @@
+---
+type Props = {
+  icon: string;
+  mainContent: string;
+  subtitle: string;
+}
+
+const props = Astro.props;
+---
+
+<div class="stats-box">
+  <img
+    src={`static/icons/${props.icon}.svg`}
+  />
+  <p>{props.mainContent}</p>
+  <p>{props.subtitle}</p>
+</div>
+
+<style>
+  .stats-box {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 0px;
+    column-gap: 1rem;
+    align-items: center;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+
+    * {
+      margin: 0;
+    }
+
+    > img {
+      grid-row: span 2;
+      justify-self: center;
+      width: 100%;
+      max-width: 65px;
+    }
+
+    p:first-of-type {
+      font-size: 1.5rem;
+    }
+
+    p:last-of-type {
+      opacity: 0%;
+    }
+  }
+
+  .stats-box:hover {
+    grid-template-rows: 1fr 1fr;
+
+    p:first-of-type {
+      align-self: end;
+    }
+
+    p:last-of-type {
+      align-self: start;
+      opacity: 100%;
+    }
+  }
+
+  @media (max-width: 824px) {
+    .stats-box {
+      min-height: 12rem;
+    }
+  }
+
+  @media (max-width: 440px) {
+    .stats-box {
+      p:first-of-type {
+        font-size: 1.2rem;
+      }
+    }
+  }
+</style>

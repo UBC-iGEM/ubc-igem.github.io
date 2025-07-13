@@ -1,0 +1,119 @@
+<footer class="footer">
+  <div class="footer-container">
+    <p class="acknowledgement">
+      We respectfully acknowledge that our team is based at the UBC Point Grey
+      (Vancouver) campus, which is located on the traditional, ancestral,
+      unceded territory of the xʷməθkʷəy̓əm (Musqueam) First Nation.
+    </p>
+    <div class="links">
+      <div class="mini-navigation">
+        <a href="/">
+          <img src="/igem-logo.svg" alt="UBC iGEM Logo" draggable="false" />
+        </a>
+        <div class="mini-navigation-menu">
+          <a href="/">Home</a>
+          <a href="/how-we-work">How We Work</a>
+          <a href="/our-team">Our Team</a>
+          <a href="/sponsors">Sponsors</a>
+          <a href="/past-projects">Past Projects</a>
+          <!-- <a href="/gallery">Gallery</a> -->
+          <a href="/contact-us">Contact Us</a>
+        </div>
+      </div>
+      <div class="socials">
+        <a href="mailto:contact@ubcigem.com">
+          <img src="/email-grey.svg" alt="UBC iGEM Email" draggable="false" />
+        </a>
+        <a href="https://www.instagram.com/ubcigem" target="_blank">
+          <img src="/instagram-grey.svg" alt="UBC iGEM Instagram" draggable="false" />
+        </a>
+        <a href="https://ca.linkedin.com/company/ubcvigem" target="_blank">
+          <img src="/linkedin-grey.svg" alt="UBC iGEM LinkedIn" draggable="false" />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  :root {
+    --footer-height: 27rem;
+  }
+
+  .footer {
+    display: flex;
+    width: 100%;
+    height: var(--footer-height);
+    bottom: 0;
+    background-color: var(--background-color);
+    border-top: var(--border-width) solid var(--border-color);
+    color: var(--text-color-secondary);
+    justify-content: center;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--max-width);
+    height: 100%;
+    padding: 2rem min(9rem, 9vw) 5rem min(9rem, 9vw);
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .acknowledgement {
+    width: 100%;
+    height: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .links {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .mini-navigation {
+    display: flex;
+    transform: translateX(-1.5rem);
+  }
+
+  .mini-navigation-menu a:hover {
+    color: var(--color-tertiary-green);
+  }
+
+  .mini-navigation img {
+    width: 120px;
+    margin-right: 1rem;
+  }
+
+  .socials {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .socials img:hover {
+    filter: brightness(0) saturate(100%) invert(61%) sepia(6%) saturate(679%) hue-rotate(208deg) brightness(91%) contrast(90%);
+  }
+
+  @media (max-width: 800px) {
+    .acknowledgement {
+      font-size: 1rem;
+    }
+
+    .links {
+      align-items: center;
+    }
+
+    .mini-navigation img {
+      width: 80px;
+    }
+
+    .socials {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>

@@ -1,0 +1,109 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Carousel, { type CarouselImg } from "../components/Carousel.astro"
+import subteamInfo from "../data/subteamInfo.json"
+
+type SubteamInfo = {
+  name: string;
+  description: string;
+  colourVar: string;
+  imgs: CarouselImg[];
+}
+
+const subteams = subteamInfo as unknown as Record<string, SubteamInfo>
+---
+
+<Layout title="How We Work">
+  <div class="page-content">
+    <h1 class="title">How We Work</h1>
+    <div class="subteam-links">
+      {Object.entries(subteams).map(([id, subteam]) => (
+        <div class="subteam-links-bar">
+          <a href={`#${id}`}>
+            {subteam.name}
+          </a>
+        </div>
+      ))}
+    </div>
+    {Object.entries(subteams).map(([id, subteam]) => (
+      <div
+        class="subteam"
+        id={id}
+        style={`background-color: var(--color-primary-${subteam.colourVar})`}
+      >
+        <div
+          class="subteam-info-box"
+          style={`background-color: var(--color-secondary-${subteam.colourVar})`}
+        >
+          <h2>{subteam.name}</h2>
+          <p>{subteam.description}</p>
+        </div>
+        {subteam.imgs.length !== 0 && (
+          <Carousel imgs={subteam.imgs} imgPrefix={"/static/subteam-pics/"}/>
+        )}
+      </div>
+    ))}
+  </div>
+</Layout>
+
+<style>
+  :root {
+    --default-border: var(--border-width) solid var(--border-color)
+  }
+
+  h1 {
+    padding: 0px var(--page-horizontal-padding);
+  }
+
+  h2 {
+    font-size: 3.6rem;
+    word-wrap: break-word;
+  }
+
+  .subteam-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 20px;
+  }
+
+  .subteam-links-bar {
+    flex: 1;
+    height: 70px;
+    min-width: 195px;
+    padding: 10px;
+    align-content: center;
+    border: solid var(--border-color);
+    border-width: var(--border-width) calc(var(--border-width) / 2);
+    background-color: var(--color-primary-yellow);
+
+    a {
+      justify-content: center;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-decoration-thickness: var(--border-width);
+      text-underline-offset: 4px;
+    }
+  }
+
+  .subteam {
+    padding: 41px 0px;
+    margin: 32px 0px;
+    border-top: var(--default-border);
+    border-bottom: var(--default-border);
+  }
+
+  .subteam-info-box {
+    margin: 0px calc(var(--page-horizontal-padding) - 34px);
+    padding: 14px 34px;
+    border: var(--default-border);
+    border-radius: var(--border-radius-md);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    * {
+      margin: 0;
+    }
+  }
+</style>

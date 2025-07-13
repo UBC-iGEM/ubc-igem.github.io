@@ -1,0 +1,121 @@
+---
+interface Props {
+  entries: {
+    title: string;
+    fragment: string;
+  }[];
+}
+
+const { entries } = Astro.props
+---
+
+<div class="table-of-contents collapsed">
+  {
+    entries.map(entry => (
+      <div class="indicator" data-entry={entry.fragment} />
+    ))
+  }
+</div>
+<div class="table-of-contents expanded">
+  {
+    entries.map(entry => (
+      <a href={`#${entry.fragment}`} class="entry" data-entry={entry.fragment}>
+        <p>{entry.title}</p>
+      </a>
+    ))
+  }
+</div>
+
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', () => {
+    const pageEntries = document.querySelectorAll('section[id]')
+    const tocEntries = document.querySelectorAll('[data-entry]')
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocEntries.forEach(tocEntry => tocEntry.classList.toggle('selected', tocEntry.dataset.entry === entry.target.id))
+        }
+      })
+    }, observerOptions)
+
+    pageEntries.forEach(pageEntry => observer.observe(pageEntry))
+  })
+</script>
+
+<style>
+  .table-of-contents {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+
+    &.collapsed {
+      padding-left: 1rem;
+      gap: 1rem;
+      align-items: flex-end;
+    }
+
+    &.expanded {
+      width: 220px;
+      height: auto;
+      padding: 1rem;
+      background-color: var(--background-color);
+      border: var(--border-width) solid rgba(0, 0, 0, 0.1);
+      border-radius: var(--border-radius-md);
+      box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+      align-items: flex-start;
+      transform: translate(50%, -50%);
+      opacity: 0;
+    }
+
+    &.collapsed:hover ~ &.expanded,
+    &.expanded:hover {
+      transform: translate(0, -50%);
+      opacity: 100%;
+    }
+  }
+
+  .indicator {
+    width: 16px;
+    height: 2px;
+    background-color: var(--color-secondary-green);
+    border-radius: 2px;
+
+    &.selected {
+      width: 20px;
+      background-color: var(--color-tertiary-green);
+    }
+  }
+
+  .entry {
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+    border-radius: var(--border-radius-sm);
+
+    &:hover {
+      background-color: var(--color-secondary-green);
+    }
+
+    &.selected {
+      color: var(--color-tertiary-green);
+      font-weight: bold;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+</style>

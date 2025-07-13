@@ -1,7 +1,291 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import StatsCard from '../components/StatsCard.astro'
+import { Content as HeroContent } from '../content/we-are-ubc-igem.md'
+import { Content as AboutCompetitionContent } from '../content/about-the-competition.md'
 ---
 
 <Layout title="UBC iGEM">
-
+  <div class="section-box hero-box">
+    <h1 class="title">UBC iGEM</h1>
+    <div role="doc-subtitle">Building a better future through synthetic biology</div>
+    <div>
+      <img
+        src="team-photos/2024-team-photo.png"
+        alt="The UBC iGEM team in 2024."
+      />
+      <img
+        src="team-photos/2024-jamboree-photo.jpg"
+        alt="UBC iGEM team members at the 2024 Jamboree."
+      />
+      <div class="light-box">
+        <HeroContent />
+        <a href="/past-projects">View our latest project</a>
+      </div>
+    </div>
+  </div>
+  <div class="stats-section">
+    <div class="stats">
+      <StatsCard
+        icon="cake"
+        mainContent="15 Years of Competing"
+        subtitle="2009-2019, 2021-2025"
+      />
+      <StatsCard
+        icon="prize"
+        mainContent="7 Special Prize Nominations"
+        subtitle="Biomanufacturing, Diagnostics, and more!!"
+      />
+      <StatsCard
+        icon="medal"
+        mainContent="10 Gold Medals"
+        subtitle="2024, 2022, 2021, 2019, 2016, 2015, 2013, 2012, 2011, 2010"
+      />
+      <StatsCard
+        icon="trophy"
+        mainContent="3 Special Prize Wins"
+        subtitle="Best Hardware (2024), Sustainable Dev Impact (2024), Model (2013)"
+      />
+    </div>
+  </div>
+  <div class="section-box about-competition-box">
+    <div class="light-box">
+      <AboutCompetitionContent />
+    </div>
+    <div>
+      <img
+        src="2024-igem-jamboree-awards.png"
+        alt="Awards won by the team at the 2024 iGEM Jamboree."
+      />
+      <img
+        src="2024-igem-jamboree-audience.png"
+        alt="Teams at the 2024 iGEM Jamboree."
+      />
+      <img
+        src="2024-igem-jamboree-screen-banner.png"
+        alt="A banner at the 2024 iGEM Jamboree."
+      />
+      <img
+        src="2024-igem-jamboree-directors.jpg" 
+        alt="Our 2024 team directors at the iGEM Jamboree!"
+      />
+    </div>
+  </div>
+  <div class="contact-box">
+    <a href="/contact-us">Contact Us</a>
+  </div>
 </Layout>
+
+<style>
+  h1 {
+    margin: 0;
+  }
+
+  [role="doc-subtitle"] {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .section-box {
+    padding: 3rem var(--page-horizontal-padding);
+
+    img {
+      border: var(--border-width) solid var(--border-color);
+      border-radius: var(--border-radius-md);
+    }
+  }
+
+  .light-box {
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    h2 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    p {
+      font-family: 'Open Sans';
+    }
+  }
+
+  .hero-box {
+    display: grid;
+    background-color: var(--color-primary-green);
+    border-bottom: var(--border-width) solid var(--border-color);
+    justify-content: center;
+
+    h2 {
+      font-weight: 500;
+    }
+
+    a {
+      justify-content: center;
+      justify-self: center;
+      align-self: center;
+      padding: 0.5rem 1rem;
+      width: 70%;
+      height: 90%;
+      border: var(--border-width) solid var(--border-color);
+      border-radius: var(--border-radius-sm);
+      background-color: var(--color-primary-yellow);
+      box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.3);
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+
+  .hero-box > div:last-child {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 2fr 3fr;
+    gap: 35px;
+    justify-self: center;
+    margin-top: 3rem;
+    max-width: 1080px;
+
+    > img {
+      grid-column: 1;
+      display: flex;
+      align-self: stretch;
+      /* height: 100%; */
+      width: 100%;
+      object-fit: cover;
+    }
+
+    img:first-of-type {
+      object-position: 30%;
+    }
+
+    > div {
+      grid-column: 2;
+      grid-row: 1 / -1;
+      display: grid;
+      justify-content: space-evenly;
+      padding: 34px 47px;
+      background-color: var(--color-secondary-green);
+    }
+  }
+
+  .stats-section {
+    display: grid;
+    justify-content: center;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 170px 170px;
+    gap: 1.5rem;
+    max-width: var(--max-width);
+    padding: 3rem;
+  }
+
+  .about-competition-box {
+    display: grid;
+    justify-content: center;
+    background-color: var(--color-primary-peach);
+    border-top: var(--border-width) solid var(--border-color);
+    border-bottom: var(--border-width) solid var(--border-color);
+
+    div {
+      max-width: var(--max-width);
+    }
+
+    div:first-child {
+      background-color: var(--color-secondary-peach);
+      padding: 30px 24px;
+      margin-bottom: 2rem;
+    }
+
+    div:last-child {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+
+      > img {
+        grid-column: span 3;
+        display: flex;
+        align-self: stretch;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      img:first-of-type, img:last-of-type {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  .contact-box {
+    display: grid;
+    justify-content: center;
+    padding: 3rem;
+
+    a {
+      font-size: 1.5rem;
+      padding: 0.5rem 4rem;
+      border: var(--border-width) solid var(--border-color);
+      border-radius: var(--border-radius-sm);
+      background-color: #ffefbb;
+      box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  @media (max-width: 945px) {
+    .hero-box > div:last-child {
+      grid-template-columns: 1fr 1fr;
+
+      > img {
+        grid-column: auto;
+      }
+
+      > div {
+        grid-column: 1 / -1;
+        grid-row: 2;
+      }
+    }
+  }
+
+  @media (max-width: 824px) {
+    .stats {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      padding: 3rem clamp(1rem, 8vw, 10rem);
+    }
+  }
+
+  @media (max-width: 650px) {
+    .section-box {
+      padding: 3rem 2rem;
+    }
+
+    .hero-box > div:last-child {
+      grid-template-columns: 1fr;
+      gap: 15px;
+
+      > img {
+        grid-column: auto;
+      }
+
+      > div {
+        grid-column: auto;
+        grid-row: 3;
+        padding: 34px 24px;
+      }
+
+      a {
+        padding: 16px 20px;
+        width: 95%;
+      }
+    }
+
+    .about-competition-box > div:last-child {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, auto);
+      column-gap: 0;
+    }
+  }
+</style>

@@ -1,0 +1,73 @@
+---
+import ProjectBlock from "../components/projectsComponents/ProjectBlock.astro";
+import { pastProjects } from "../data/pastProjects.ts"
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="UBC iGEM">
+    <div class= "title-container">
+        <h1 id="page-title">Past Projects</h1>
+    </div>
+    <div class= "content">
+        {
+            pastProjects.map((project)=> (
+                <ProjectBlock 
+                    title = {project.title} 
+                    description = {project.description}
+                    icon = {`../../../static/past-project-icons/${project.icon}`}
+                    awards = {project.awards}
+                    link = {project.link}
+                    year = {project.year}
+                />
+            ))
+        }
+        <div class="spacer"></div>
+    </div>
+</Layout>
+
+<style>
+    * {
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+
+        --spacer-height: 8rem;
+        --line-width: 3.5px;
+    }
+    
+    #page-title {
+        font-size: 4.688rem;
+        font-family: "Poppins";
+    }
+
+    .title-container {
+        border-bottom:3px solid black;
+        padding:5rem 2.1rem 2.5rem 7.938rem;
+    }
+
+    .content {
+        width:100%;
+    }
+
+    .spacer {
+        width:calc(17% - 0.7rem);
+        border-right:var(--line-width) solid black;
+        height:var(--spacer-height);
+    }
+
+    @media (max-width: 880px) {
+        .spacer {
+            margin-left:7rem;
+            border-left:var(--line-width) solid black;
+            border-right:0;
+        }
+
+        #page-title {
+            font-size: 3.889rem;
+        }
+
+        .title-container {
+            padding-left: 4rem;
+        }
+    }
+</style>
