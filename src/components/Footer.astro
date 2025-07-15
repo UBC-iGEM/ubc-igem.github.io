@@ -1,5 +1,5 @@
-<footer class="footer">
-  <div class="footer-container">
+<footer>
+  <div class="footer">
     <p class="acknowledgement">
       We respectfully acknowledge that our team is based at the UBC Point Grey
       (Vancouver) campus, which is located on the traditional, ancestral,
@@ -40,33 +40,30 @@
     --footer-height: 27rem;
   }
 
-  .footer {
+  footer {
     display: flex;
     width: 100%;
     height: var(--footer-height);
-    bottom: 0;
     background-color: var(--background-color);
     border-top: var(--black-border);
     color: var(--text-color-secondary);
     justify-content: center;
   }
 
-  .footer-container {
+  .footer {
     display: flex;
     flex-direction: column;
-    max-width: var(--max-width);
-    height: 100%;
-    padding: 2rem min(9rem, 9vw) 5rem min(9rem, 9vw);
-    align-items: stretch;
+    padding-block: 3rem 4rem;
+    padding-inline: calc(var(--page-inline-inset) / 2);
     justify-content: space-between;
   }
 
   .acknowledgement {
-    width: 100%;
-    height: auto;
+    margin: 0;
     font-family: var(--font-family-open-sans);
     font-size: 1.25rem;
     font-weight: 600;
+    text-align: center;
   }
 
   .links {
@@ -77,28 +74,27 @@
 
   .mini-navigation {
     display: flex;
-    transform: translateX(-1.5rem);
+
+    img {
+      width: 120px;
+      margin-right: 1rem;
+    }
   }
 
   .mini-navigation-menu a:hover {
     color: var(--color-tertiary-green);
   }
 
-  .mini-navigation img {
-    width: 120px;
-    margin-right: 1rem;
-  }
-
   .socials {
     display: flex;
     gap: 0.5rem;
+
+    img:hover {
+      filter: brightness(0) saturate(100%) invert(61%) sepia(6%) saturate(679%) hue-rotate(208deg) brightness(91%) contrast(90%);
+    }
   }
 
-  .socials img:hover {
-    filter: brightness(0) saturate(100%) invert(61%) sepia(6%) saturate(679%) hue-rotate(208deg) brightness(91%) contrast(90%);
-  }
-
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     .acknowledgement {
       font-size: 1rem;
     }
@@ -108,12 +104,16 @@
     }
 
     .mini-navigation img {
-      width: 80px;
+      width: 100px;
     }
 
     .socials {
       flex-direction: column;
       align-items: center;
+
+      a img {
+        width: 90%;
+      }
     }
   }
 </style>
