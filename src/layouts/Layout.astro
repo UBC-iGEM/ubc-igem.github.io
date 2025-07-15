@@ -90,16 +90,18 @@ const { title } = Astro.props
 		align-items: center;
 	}
 
-	.title {
-		font-size: 4.5rem;
+	.page-title {
+		font-size: clamp(3rem, 15vw, 4.5rem);
 		font-weight: bold;
-		margin-top: 5rem;
+		margin-block: 5rem 2rem;
+		margin-inline: var(--page-inset);
 	}
 
-	.subtitle {
-		font-size: 2rem;
+	.page-subtitle {
+		font-size: clamp(1rem, 6.5vw, 2rem);
 		line-height: 1.2;
-		margin-bottom: 3rem;
+		margin-block: 0 3rem;
+		margin-inline: var(--page-inset);
 	}
 
 	@media (max-width: 800px) {

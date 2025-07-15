@@ -16,8 +16,8 @@ const subteamKeys = Object.keys(team) as (keyof typeof team)[]
 
 <Layout title="Our Team">
   <div class="our-team">
-    <h1 class="title">Our Team</h1>
-    <p class="subtitle">
+    <h1 class="page-title">Our Team</h1>
+    <p class="page-subtitle">
       Our team of motivated undergraduates collaborate to design innovative
       synthetic biology solutions. Under the guidance of professors and graduate
       student mentors, we conduct meaningful research that not only meets
@@ -71,7 +71,7 @@ const subteamKeys = Object.keys(team) as (keyof typeof team)[]
     margin-bottom: 1rem;
   }
 
-  .subtitle {
+  .page-subtitle {
     padding-right: 3rem;
   }
 
@@ -82,7 +82,7 @@ const subteamKeys = Object.keys(team) as (keyof typeof team)[]
   }
 
   @media (max-width: 800px) {
-    .subtitle {
+    .page-subtitle {
       padding-right: 0;
     }
   }
