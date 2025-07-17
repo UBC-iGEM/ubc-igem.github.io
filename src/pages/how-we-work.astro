@@ -47,10 +47,6 @@ const subteams = subteamInfo as unknown as Record<string, SubteamInfo>
 </Layout>
 
 <style>
-  h1 {
-    padding: 0px var(--page-horizontal-padding);
-  }
-
   h2 {
     font-size: 3.6rem;
     word-wrap: break-word;
@@ -92,7 +88,7 @@ const subteams = subteamInfo as unknown as Record<string, SubteamInfo>
   }
 
   .subteam-info-box {
-    margin: 0px calc(var(--page-horizontal-padding) - 34px);
+    margin: 0px calc(var(--page-inline-inset) - 34px);
     padding: 14px 34px;
     border: var(--black-border);
     border-radius: var(--border-radius-md);

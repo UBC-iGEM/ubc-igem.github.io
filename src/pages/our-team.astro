@@ -57,11 +57,10 @@ const subteamKeys = Object.keys(team) as (keyof typeof team)[]
 <style>
   .our-team {
     max-width: var(--max-width);
-    padding-right: var(--page-horizontal-padding);
-    padding-left: var(--page-horizontal-padding);
 	}
 
   section {
+    padding-inline: var(--page-inline-inset);
     scroll-margin-top: calc(var(--navigation-height) + 1rem);
   }
 
