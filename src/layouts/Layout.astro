@@ -93,15 +93,13 @@ const { title } = Astro.props
 	.page-title {
 		font-size: clamp(3rem, 15vw, 4.5rem);
 		font-weight: bold;
-		margin-block: 5rem 2rem;
-		margin-inline: var(--page-inset);
+		margin: 5rem var(--page-inline-inset) 2rem;
 	}
 
 	.page-subtitle {
 		font-size: clamp(1rem, 6.5vw, 2rem);
 		line-height: 1.2;
-		margin-block: 0 3rem;
-		margin-inline: var(--page-inset);
+		margin: 0 var(--page-inline-inset) 3rem;
 	}
 
 	@media (max-width: 800px) {
