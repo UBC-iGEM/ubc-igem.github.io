@@ -1,8 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import galleryData from "../data/gallery/images.json";
+import galleryImages from "../data/gallery/images.json";
 
 const pageTitle = "Gallery - UBC iGEM";
+
+function distributeImagesIntoColumns(images: any[], numColumns = 4) {
+  const columns = Array.from({ length: numColumns }, (_, index) => ({
+    id: `column-${index + 1}`,
+    images: [] as any[]
+  }));
+  
+  images.forEach((image: any, index: number) => {
+    const columnIndex = index % numColumns;
+    columns[columnIndex].images.push(image);
+  });
+  
+  return { columns };
+}
+
+const galleryData = distributeImagesIntoColumns(galleryImages);
+console.log(galleryData);
 ---
 
 <Layout title={pageTitle}>
@@ -118,6 +135,8 @@ const pageTitle = "Gallery - UBC iGEM";
     
     .gallery-content-section {
       padding: 5% max(1.5%, min(20px, 3vw));
+      left: 0;
+      right: 0;
     }
   }
 </style>
