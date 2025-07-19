@@ -61,7 +61,7 @@
         "name": "Catherine Jiang",
         "role": "Human Practices Lead",
         "major": "Integrated Sciences",
-        "image": "no-image.jpg"
+        "image": "catherine-jiang.jpg"
       },
       {
         "name": "Vеrоnіkа Bսmbսlоvіc",
@@ -121,7 +121,7 @@
         "name": "Sarah Duan",
         "role": "Wet Lab",
         "major": "Biochemistry",
-        "image": "no-image.jpg"
+        "image": "sarah-duan.jpg"
       },
       {
         "name": "Sean Fox",
@@ -139,7 +139,7 @@
         "name": "Wendy Wu",
         "role": "Wet Lab",
         "major": "Biomedical Engineering",
-        "image": "no-image.jpg"
+        "image": "wendy-wu.jpg"
       },
       {
         "name": "Yuki Guan",
@@ -235,13 +235,13 @@
         "name": "Robben Liu",
         "role": "Dry Lab",
         "major": "Biomedical Engineering",
-        "image": "no-image.jpg"
+        "image": "robben-liu.jpg"
       },
       {
         "name": "Saige Mann",
         "role": "Dry Lab",
         "major": "Biomedical Engineering",
-        "image": "no-image.jpg"
+        "image": "saige-mann.jpg"
       },
       {
         "name": "Satvika Suresha",
@@ -428,6 +428,12 @@
         "role": "Administration Advisor",
         "major": "Biology × Microbiology and Immunology",
         "image": "burak-ozkan.jpg"
+      },
+      {
+        "name": "Emily England",
+        "role": "Wet Lab Advisor",
+        "major": "Radiology",
+        "image": "emily-england.jpg"
       },
       {
         "name": "Riya Alluri",
