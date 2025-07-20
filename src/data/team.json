@@ -340,21 +340,9 @@
         "image": "no-image.jpg"
       },
       {
-        "name": "Kaitlyn Liu",
-        "role": "Administration",
-        "major": "Microbiology and Immunology",
-        "image": "no-image.jpg"
-      },
-      {
         "name": "Min Mon",
         "role": "Administration",
         "major": "Chemical and Biological Engineering",
-        "image": "no-image.jpg"
-      },
-      {
-        "name": "Rayzell Tjandra",
-        "role": "Administration",
-        "major": "Computer Science",
         "image": "no-image.jpg"
       }
     ]
@@ -392,18 +380,6 @@
         "role": "Design-Wiki",
         "major": "Neuroscience",
         "image": "ceres-zhou.jpg"
-      },
-      {
-        "name": "Heral Kumar",
-        "role": "Design-Wiki",
-        "major": "Mathematics",
-        "image": "heral-kumar.jpg"
-      },
-      {
-        "name": "Zhenyu (Jacky) Zhong",
-        "role": "Design-Wiki",
-        "major": "Statistics",
-        "image": "no-image.jpg"
       }
     ]
   },
