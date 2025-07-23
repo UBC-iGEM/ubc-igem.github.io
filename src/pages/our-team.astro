@@ -15,57 +15,49 @@ const subteamKeys = Object.keys(team) as (keyof typeof team)[]
 ---
 
 <Layout title="Our Team">
-  <div class="our-team">
-    <h1 class="page-title">Our Team</h1>
-    <p class="page-subtitle">
-      Our team of motivated undergraduates collaborate to design innovative
-      synthetic biology solutions. Under the guidance of professors and graduate
-      student mentors, we conduct meaningful research that not only meets
-      competition requirements but also addresses pressing local and global
-      challenges.
-    </p>
-    {
-      subteamKeys.map(subteamKey => {
-        const subteam = team[subteamKey]
-        const title = subteam.title
-        const colorToken = subteam.colorToken
-        const members = subteam.members
+  <h1 class="page-title">Our Team</h1>
+  <p class="page-subtitle">
+    Our team of motivated undergraduates collaborate to design innovative
+    synthetic biology solutions. Under the guidance of professors and graduate
+    student mentors, we conduct meaningful research that not only meets
+    competition requirements but also addresses pressing local and global
+    challenges.
+  </p>
+  {
+    subteamKeys.map(subteamKey => {
+      const subteam = team[subteamKey]
+      const title = subteam.title
+      const colorToken = subteam.colorToken
+      const members = subteam.members
 
-        return (
-          <section id={subteamKey}>
-            <h2>{title}</h2>
-            <div class="subteam">
-              {members.map((member: Member) =>
-                <MemberCard {...member} colorToken={colorToken} />
-              )}
-            </div>
-          </section>
-        )
-      })
-    }
-    <TableOfContents
-      entries={subteamKeys.map(subteamKey => {
-        return {
-          title: team[subteamKey].title,
-          fragment: subteamKey
-        }
-      })}
-    />
-  </div>
+      return (
+        <section id={subteamKey}>
+          <h2>{title}</h2>
+          <div class="subteam">
+            {members.map((member: Member) =>
+              <MemberCard {...member} colorToken={colorToken} />
+            )}
+          </div>
+        </section>
+      )
+    })
+  }
+  <TableOfContents
+    entries={subteamKeys.map(subteamKey => ({
+      title: team[subteamKey].title,
+      fragment: subteamKey
+    }))}
+  />
 </Layout>
 
 <style>
-  .our-team {
-    max-width: var(--max-width);
-	}
-
   section {
     padding: 0 var(--page-inline-inset);
     scroll-margin-top: calc(var(--navigation-height) + 1rem);
   }
 
   h2 {
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
     font-weight: bold;
     margin-bottom: 1rem;
   }
@@ -78,11 +70,5 @@ const subteamKeys = Object.keys(team) as (keyof typeof team)[]
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 3rem;
-  }
-
-  @media (max-width: 800px) {
-    .page-subtitle {
-      padding-right: 0;
-    }
   }
 </style>
