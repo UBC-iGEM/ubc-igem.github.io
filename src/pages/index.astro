@@ -6,9 +6,9 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
 ---
 
 <Layout title="UBC iGEM">
-  <div class="section-box hero-box">
+  <section class="hero-box">
     <h1 class="page-title">UBC iGEM</h1>
-    <div role="doc-subtitle">Building a better future through synthetic biology</div>
+    <p class="page-subtitle">Building a better future through synthetic biology</p>
     <div>
       <img
         src="team-photos/2024-team-photo.png"
@@ -23,8 +23,8 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
         <a href="/past-projects">View our latest project</a>
       </div>
     </div>
-  </div>
-  <div class="stats-section">
+  </section>
+  <section class="stats-section">
     <div class="stats">
       <StatsCard
         icon="cake"
@@ -47,8 +47,8 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
         subtitle="Best Hardware (2024), Sustainable Dev Impact (2024), Model (2013)"
       />
     </div>
-  </div>
-  <div class="section-box about-competition-box">
+  </section>
+  <section class="about-competition-box">
     <div class="light-box">
       <AboutCompetitionContent />
     </div>
@@ -70,29 +70,20 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
         alt="Our 2024 team directors at the iGEM Jamboree!"
       />
     </div>
-  </div>
-  <div class="contact-box">
+  </section>
+  <section class="contact-box">
     <a href="/contact-us">Contact Us</a>
-  </div>
+  </section>
 </Layout>
 
 <style>
-  h1 {
+  .page-title,
+  .page-subtitle {
     margin: 0;
   }
 
-  [role="doc-subtitle"] {
-    font-size: 30px;
-    font-weight: 500;
-  }
-
-  .section-box {
+  section {
     padding: 3rem var(--page-inline-inset);
-
-    img {
-      border: var(--black-border);
-      border-radius: var(--border-radius-md);
-    }
   }
 
   .light-box {
@@ -107,6 +98,14 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
 
     p {
       font-family: var(--font-family-open-sans);
+    }
+  }
+
+  .hero-box,
+  .about-competition-box {
+    img {
+      border: var(--black-border);
+      border-radius: var(--border-radius-md);
     }
   }
 
@@ -179,7 +178,6 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
     grid-template-rows: 170px 170px;
     gap: 1.5rem;
     max-width: var(--max-width);
-    padding: 3rem;
   }
 
   .about-competition-box {
@@ -222,7 +220,6 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
   .contact-box {
     display: grid;
     justify-content: center;
-    padding: 3rem;
 
     a {
       font-size: 1.5rem;
@@ -258,7 +255,7 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
   }
 
   @media (max-width: 650px) {
-    .section-box {
+    section {
       padding: 3rem 2rem;
     }
 
