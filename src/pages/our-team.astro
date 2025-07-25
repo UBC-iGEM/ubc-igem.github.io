@@ -25,10 +25,7 @@ const subteamKeys = Object.keys(team) as (keyof typeof team)[]
   </p>
   {
     subteamKeys.map(subteamKey => {
-      const subteam = team[subteamKey]
-      const title = subteam.title
-      const colorToken = subteam.colorToken
-      const members = subteam.members
+      const { title, colorToken, members } = team[subteamKey]
 
       return (
         <section id={subteamKey}>
