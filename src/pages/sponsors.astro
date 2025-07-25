@@ -1,12 +1,97 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import CurrentSponsors from '../components/sponsorsComponents/CurrentSponsors.astro';
-import SponsorMaster from '../components/sponsorsComponents/SponsorMaster.astro';
-import WantToSponsorUs from '../components/sponsorsComponents/WantToSponsorUs.astro';
+import Layout from '../layouts/Layout.astro'
+import SponsorCategory from '../components/SponsorCategory.astro'
+import SponsorCard from '../components/SponsorCard.astro'
+import { currentSponsors } from '../data/currentSponsors.ts'
+import { pastSponsors } from '../data/pastSponsors'
 ---
 
 <Layout title="Sponsors">
-    <CurrentSponsors />
-    <SponsorMaster />
-    <WantToSponsorUs />
+  <section class="sponsor-box">
+    <h1 class="page-title">Sponsors</h1>
+    <p class="page-subtitle">
+      We rely on your support to succeed.<br />
+      Thank you to our generous sponsors who make our science happen.
+    </p>
+    <div class="sponsors">
+      {
+        currentSponsors.map(sponsor => (
+          <p class="tier">{sponsor.tier}</p>
+          <SponsorCategory icons={sponsor.icons} path="static/sponsor-icons/" />
+        ))
+      }
+    </div>
+    <a href="#want-to-sponsor-us" class="sponsor-us">Support Us</a>
+  </section>
+  <section>
+    <h1 class="page-title">Past Sponsors</h1>
+    <div class="timeline">
+      {
+        pastSponsors.map(sponsor => (
+          <SponsorCard year={sponsor.year} categories={sponsor.categories} />
+        ))
+      }
+    </div>
+    <div class="timeline-spacer" />
+  </section>
+  <section id="want-to-sponsor-us" class="sponsor-us-box">
+    <h1 class="page-title">Want to sponsor us?</h1>
+    <p class="page-subtitle">Check out our sponsorship package for more information.</p>
+    <iframe src="/UBC_iGEM_2025_Sponsorship_Package.pdf#zoom=FitH" />
+  </section>
 </Layout>
+
+<style>
+  .sponsor-box,
+  .sponsor-us-box {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 5rem;
+	}
+
+  .sponsor-box {
+    background-color: var(--color-primary-green);
+    border-bottom: var(--black-border);
+  }
+
+  .sponsor-us-box {
+    background-color: var(--color-primary-purple);
+    border-top: var(--black-border);
+  }
+
+  section {
+    scroll-margin-top: 5rem;
+  }
+
+  .sponsors {
+    padding: 0 var(--page-inline-inset);
+  }
+
+  .tier {
+    margin-block: 3rem 1.5rem;
+    font-family: var(--font-family-open-sans);
+    font-size: 1.5rem;
+    font-weight: lighter;
+    text-align: center;
+  }
+
+  .sponsor-us {
+    display: flex;
+    width: 16rem;
+    height: 4.5rem;
+    margin: 5rem auto 0 auto;
+    background: var(--color-primary-yellow);
+    border: var(--black-border);
+    border-radius: var(--border-radius-sm);
+    box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 3px;
+    font-size: 1.5rem;
+    justify-content: center;
+  }
+
+  iframe {
+    width: 100%;
+    height: clamp(30rem, 85vh, 100rem);
+    padding: 0 var(--page-inline-inset);
+    border: none;
+  }
+</style>
