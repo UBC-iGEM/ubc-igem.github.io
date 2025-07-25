@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import galleryImages from "../data/gallery/images.json"
 ---
-<Layout title="gallery page">
+<Layout title="Gallery">
     <div class="title-container">
         <h1 id="page-title">Gallery</h1>
     </div>
@@ -50,7 +50,7 @@ import galleryImages from "../data/gallery/images.json"
 
     .item {
         background-color: white;
-        border-radius: 8px;
+        border-radius: var(--border-radius-sm);
         margin-bottom: 1.5rem;
         break-inside: avoid;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -60,21 +60,21 @@ import galleryImages from "../data/gallery/images.json"
 
     .item:hover {
         transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
     }
 
     .item .image-description {
-        display:none;
+        display:block;
         font-size: 1rem;
         color:white;
         position:absolute;
-        right: 1rem;
+        left: 1rem;
         bottom: 1rem;
+        margin-right: 1rem;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
     }
 
     .item:hover .image-description {
-        width: 230px;
         display: block;
     }
 
@@ -83,12 +83,7 @@ import galleryImages from "../data/gallery/images.json"
         width:100%;
         height:auto;
         display:block;
-        opacity: 1;
-        transition: opacity 0.3s ease-in-out;
-    }
-
-    .item:hover img {
-        opacity: 0.9;
+        border: var(--black-border);
     }
 
     @media(max-width:880px) {
