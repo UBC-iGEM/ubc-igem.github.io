@@ -412,10 +412,22 @@
         "image": "emily-england.jpg"
       },
       {
+        "name": "Lucy Hao",
+        "role": "Dry Lab + Wiki Advisor",
+        "major": "Computer Science",
+        "image": "lucy-hao.jpg"
+      },
+      {
         "name": "Riya Alluri",
         "role": "Human Practices Advisor",
         "major": "Biology × Computer Science",
         "image": "no-image.jpg"
+      },
+      {
+        "name": "Trisha Macalintal",
+        "role": "Wet Lab + HP + Administration Advisor",
+        "major": "Biology",
+        "image": "trisha-macalintal.jpg"
       }
     ]
   },

@@ -9,9 +9,9 @@ export const currentSponsors = [
     {
         tier: "SILVER",
         icons: [
-            "new_england_biolabs.jpg",
             "UBC_Science.svg",
-            "UBC_Department_Microbiology_Immunology.svg"
+            "UBC_Department_Microbiology_Immunology.svg",
+            "Avantor.jpg"
         ]
     },
     {
@@ -21,7 +21,7 @@ export const currentSponsors = [
             "UBC_Applied_Science.png",
             "UBC_Life_Sciences.svg",
             "UBC_Zoology.svg",
-            "Avantor.jpg",
+            "new_england_biolabs.jpg",
         ]
     }
 ]
