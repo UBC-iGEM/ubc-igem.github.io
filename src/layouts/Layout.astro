@@ -110,7 +110,7 @@ const { title } = Astro.props
 		display: none;
 		width: auto;
 		height: 8rem;
-		margin: 0 0 0 5rem;
+		margin-left: 5rem;
 		border-left: var(--black-border);
 	}
 
@@ -120,12 +120,12 @@ const { title } = Astro.props
 		}
 
 		.timeline {
-			padding: 0 0 0 var(--page-inline-inset);
+			padding-left: var(--page-inline-inset);
 		}
 
 		.timeline-spacer {
 			display: block;
-			margin: 0 0 0 calc(var(--page-inline-inset) + 5rem);
+			margin-left: calc(var(--page-inline-inset) + 5rem);
 		}
 	}
 </style>
