@@ -35,7 +35,7 @@ const { title, description, icon, link, awards = [], year } = Astro.props;
         {
           awards.map((award: AwardProps) => (
             <Award
-              icon={`static/award-icons/${award.icon}`}
+              icon={`/static/award-icons/${award.icon}`}
               description={award.description}
             />
           ))
