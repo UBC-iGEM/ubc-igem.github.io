@@ -7,7 +7,7 @@ import { pastSponsors } from '../data/pastSponsors'
 ---
 
 <Layout title="Sponsors">
-  <section class="sponsor-box">
+  <section class="sponsors-igem-box">
     <h1 class="page-title">Sponsors</h1>
     <p class="page-subtitle">
       We rely on your support to succeed.<br />
@@ -42,14 +42,15 @@ import { pastSponsors } from '../data/pastSponsors'
 </Layout>
 
 <style>
-  .sponsor-box,
+  /* DO NOT RENAME TO .sponsor-box, ADBLOCKERS LIKE TO NUKE THAT CLASS NAME!! */
+  .sponsors-igem-box,
   .sponsor-us-box {
 		display: flex;
 		flex-direction: column;
 		padding-bottom: 5rem;
 	}
 
-  .sponsor-box {
+  .sponsors-igem-box {
     background-color: var(--color-primary-green);
     border-bottom: var(--black-border);
   }
