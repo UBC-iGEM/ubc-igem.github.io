@@ -1,0 +1,28 @@
+name: ubcigem.com CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  check-lint-fmt:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [24.x]
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install deps
+      run: npm ci
+    - name: Check linting
+      run: npm run lint
+    - name: Check formatting
+      run: npm run fmt
+    - name: Run type check
+      run: npm run check

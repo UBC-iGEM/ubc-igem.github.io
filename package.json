@@ -7,6 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "check": "npx astro check",
     "lint": "npx eslint; npx stylelint \"src/**/*.{css,html,astro}\"",
     "lint-fix": "npm run lint -- --fix",
     "fmt": "npx prettier --check src",
@@ -14,6 +15,7 @@
     "all": "npm run lint; npm run fmt"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.4",
     "astro": "^5.6.0"
   },
   "devDependencies": {
