@@ -8,7 +8,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "npx astro check",
-    "lint": "npx eslint; npx stylelint \"src/**/*.{css,html,astro}\"",
+    "lint": "npx eslint \"src/**/*.{css,html,astro}\"; npx stylelint \"src/**/*.{css,html,astro}\"",
     "lint-fix": "npm run lint -- --fix",
     "fmt": "npx prettier --check src",
     "fmt-fix": "npx prettier --write src",

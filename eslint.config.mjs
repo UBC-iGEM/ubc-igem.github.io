@@ -21,10 +21,14 @@ export default defineConfig([
   ...eslintPluginAstro.configs["jsx-a11y-strict"],
   {
     rules: {
+      "@typescript-eslint/explicit-function-return-type": "warn",
+      "consistent-return": "error",
       "default-case-last": "error",
       eqeqeq: "error",
       "no-await-in-loop": "warn",
+      "no-console": "error",
       "no-duplicate-imports": "error",
+      "no-empty-function": "error",
       "no-implicit-coercion": "error",
       "no-label-var": "error",
       "no-self-compare": "error",
@@ -32,6 +36,8 @@ export default defineConfig([
       "no-unmodified-loop-condition": "error",
       "no-unreachable-loop": "error",
       "no-useless-assignment": "error",
+      "prefer-arrow-callback": "warn",
+      "prefer-const": "warn",
       "prefer-promise-reject-errors": "error",
       yoda: "warn",
     },
