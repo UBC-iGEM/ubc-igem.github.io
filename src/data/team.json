@@ -400,12 +400,6 @@
     "colorToken": "--color-primary-yellow",
     "members": [
       {
-        "name": "Burak Özkan",
-        "role": "Administration Advisor",
-        "major": "Biology × Microbiology and Immunology",
-        "image": "burak-ozkan.jpg"
-      },
-      {
         "name": "Emily England",
         "role": "Wet Lab Advisor",
         "major": "Radiology",
