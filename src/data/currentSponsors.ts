@@ -11,7 +11,7 @@ export const currentSponsors = [
         icons: [
             "UBC_Science.svg",
             "UBC_Department_Microbiology_Immunology.svg",
-            "Avantor.jpg"
+            "Avantor.png",
         ]
     },
     {
@@ -21,7 +21,8 @@ export const currentSponsors = [
             "UBC_Applied_Science.png",
             "UBC_Life_Sciences.svg",
             "UBC_Zoology.svg",
-            "new_england_biolabs.jpg",
+            "new_england_biolabs.png",
+            "u-will-education.png"
         ]
     }
 ]
