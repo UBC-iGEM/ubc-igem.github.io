@@ -36,7 +36,8 @@
   }
 
   html body {
-    padding-top: var(--navigation-height);
+    /* --hiring-banner-height is only set when HiringBanner.astro is in use */
+    padding-top: calc(var(--navigation-height) + var(--hiring-banner-height, 0px));
   }
 
   nav {
@@ -44,7 +45,8 @@
     position: fixed;
     width: 100%;
     height: var(--navigation-height);
-    top: 0;
+    /* --hiring-banner-height is only set when HiringBanner.astro is in use */
+    top: var(--hiring-banner-height, 0);
     padding: 0 calc(var(--page-inline-inset) / 4);
     background-color: var(--background-color);
     border-bottom: var(--black-border);

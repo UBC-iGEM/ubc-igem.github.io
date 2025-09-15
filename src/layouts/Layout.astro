@@ -1,6 +1,7 @@
 ---
 import Navigation from '../components/Navigation.astro'
 import Footer from '../components/Footer.astro'
+import HiringBanner from '../components/HiringBanner.astro'
 
 interface Props {
 	title: string;
@@ -21,6 +22,7 @@ const { title } = Astro.props
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
 	</head>
 	<body>
+    <HiringBanner />
 		<Navigation />
 		<main>
 			<slot />
@@ -45,7 +47,7 @@ const { title } = Astro.props
 		--color-secondary-green: #d8f0e2;
 		--color-secondary-orange: #fff0e2;
 		--color-secondary-purple: #e4e6fc;
-		--color-secondary-red: #fff6f5;
+    --color-secondary-red: #ba4943;
 		--color-secondary-blue: #ebf3fe;
 		--color-secondary-peach: #fdf2e9;
 

@@ -1,0 +1,69 @@
+<div id="hiring-banner">
+  <a href="https://hiring.ubcigem.com/" target="_blank">
+    interested in joining? check out our hiring package!
+  </a>
+  <button>×</button>
+</div>
+
+<script>
+  const closeHiringBanner = () => {
+    document.documentElement.style.setProperty("--hiring-banner-height", "0")
+    document.getElementById("hiring-banner").remove()
+  }
+
+  document
+    .getElementById("hiring-banner")
+    .addEventListener("click", closeHiringBanner)
+</script>
+
+<style>
+  :root {
+    --hiring-banner-height: 2rem;
+  }
+
+  #hiring-banner {
+    display: grid;
+    grid-template-columns: 2rem auto 2rem;
+    position: fixed;
+    top: 0;
+    padding: 0 0.5rem;
+    height: var(--hiring-banner-height);
+    width: 100%;
+    background-color: var(--color-secondary-red);
+  }
+
+  a {
+    grid-column: 2;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
+
+  button {
+    grid-column: 3;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+
+  @media (max-width: 1000px) {
+    #hiring-banner {
+      top: auto;
+      bottom: var(--navigation-height);
+    }
+  }
+
+  @media (max-width: 534px) {
+    :root {
+      --hiring-banner-height: 4rem;
+    }
+  }
+
+  @media (max-width: 322px) {
+    :root {
+      --hiring-banner-height: 5rem;
+    }
+  }
+</style>
