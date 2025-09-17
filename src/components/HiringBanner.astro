@@ -7,7 +7,8 @@
 
 <script>
   const closeHiringBanner = () => {
-    document.documentElement.style.setProperty("--hiring-banner-height", "0")
+    // we have to specify unit here for this value to be valid in calc() calls
+    document.documentElement.style.setProperty("--hiring-banner-height", "0rem")
     document.getElementById("hiring-banner").remove()
   }
 
@@ -29,7 +30,7 @@
     padding: 0 0.5rem;
     height: var(--hiring-banner-height);
     width: 100%;
-    background-color: var(--color-secondary-red);
+    background-color: var(--color-alert-red);
   }
 
   a {
