@@ -145,7 +145,7 @@
         "name": "ZiQi Chen",
         "role": "Wet Lab",
         "major": "Biomedical Engineering",
-        "image": "no-image.jpg"
+        "image": "ziqi-chen.jpg"
       }
     ]
   },
@@ -153,6 +153,12 @@
     "title": "Dry Lab",
     "colorToken": "--color-primary-orange",
     "members": [
+      {
+        "name": "Andrew Li",
+        "role": "Dry Lab",
+        "major": "Biomedical Engineering",
+        "image": "andrew-li.webp"
+      },
       {
         "name": "Angela Xu",
         "role": "Dry Lab",
@@ -180,7 +186,7 @@
       {
         "name": "Danielle Keith",
         "role": "Dry Lab",
-        "major": "Biomedical Engineering",
+        "major": "Microbiology and Immunology",
         "image": "danielle-keith.jpg"
       },
       {
@@ -193,7 +199,7 @@
         "name": "Felix Chan",
         "role": "Dry Lab",
         "major": "Biochemistry",
-        "image": "no-image.jpg"
+        "image": "felix-chan.webp"
       },
       {
         "name": "Hanna Khan",
@@ -214,16 +220,28 @@
         "image": "kaylie-chen.jpg"
       },
       {
+        "name": "Leia Chen",
+        "role": "Dry Lab",
+        "major": "Computer Science",
+        "image": "leia-chen.webp"
+      },
+      {
         "name": "Maximilien Filion",
         "role": "Dry Lab",
         "major": "Biomedical Engineering",
         "image": "maximilien-filion.jpg"
       },
       {
-        "name": "Nichita Bulbuc",
+        "name": "Nikita Bulbuc",
         "role": "Dry Lab",
         "major": "Biochemistry",
-        "image": "nichita-bulbuc.jpg"
+        "image": "nikita-bulbuc.jpg"
+      },
+      {
+        "name": "Rachel Weng",
+        "role": "Dry Lab",
+        "major": "Computer Science × Microbiology and Immunology",
+        "image": "rachel-weng.webp"
       },
       {
         "name": "Robben Liu",
@@ -242,6 +260,12 @@
         "role": "Dry Lab",
         "major": "Medical Laboratory Science",
         "image": "satvika-suresha.jpg"
+      },
+      {
+        "name": "Syafiq Ghazali",
+        "role": "Dry Lab",
+        "major": "Electrical Engineering",
+        "image": "syafiq-ghazali.webp"
       },
       {
         "name": "Tiffany Feng",
@@ -283,7 +307,7 @@
         "name": "Lillian Pan",
         "role": "Human Practices",
         "major": "Statistics",
-        "image": "no-image.jpg"
+        "image": "lillian-pan.webp"
       },
       {
         "name": "Nethkini Liyanage",
@@ -310,16 +334,16 @@
     "colorToken": "--color-primary-red",
     "members": [
       {
+        "name": "Ethan Skjaveland",
+        "role": "Administration",
+        "major": "Biochemistry",
+        "image": "ethan-skjaveland.webp"
+      },
+      {
         "name": "Gabriella Marie Gubantes",
         "role": "Administration",
         "major": "Biomedical Engineering",
-        "image": "no-image.jpg"
-      },
-      {
-        "name": "Gurnek Sandhu",
-        "role": "Administration",
-        "major": "Computer Science",
-        "image": "no-image.jpg"
+        "image": "gabriella-gubantes.webp"
       },
       {
         "name": "Izaak Yip",
@@ -331,13 +355,25 @@
         "name": "Jewell Alexo",
         "role": "Administration",
         "major": "Biomedical Engineering",
-        "image": "no-image.jpg"
+        "image": "jewell-alexo.webp"
       },
       {
         "name": "Min Mon",
         "role": "Administration",
         "major": "Chemical and Biological Engineering",
+        "image": "min-mon.webp"
+      },
+      {
+        "name": "Nissan Roy Chowdhury",
+        "role": "Administration",
+        "major": "Physics",
         "image": "no-image.jpg"
+      },
+      {
+        "name": "Yoshier Hu",
+        "role": "Administration",
+        "major": "Microbiology and Immunology",
+        "image": "yoshier-hu.webp"
       }
     ]
   },
@@ -394,10 +430,28 @@
     "colorToken": "--color-primary-yellow",
     "members": [
       {
+        "name": "Chaehyeon Lee",
+        "role": "Dry Lab + HP Advisor",
+        "major": "Biomedical Engineering",
+        "image": "chaehyeon-lee.webp"
+      },
+      {
         "name": "Emily England",
         "role": "Wet Lab Advisor",
         "major": "Radiology",
         "image": "emily-england.jpg"
+      },
+      {
+        "name": "Kalen Dofher",
+        "role": "Wet + Dry Lab Advisor",
+        "major": "Genome Science and Technology",
+        "image": "kalen-dofher.webp"
+      },
+      {
+        "name": "Leah Fulton",
+        "role": "Wet Lab Advisor",
+        "major": "Microbiology and Immunology",
+        "image": "leah-fulton.webp"
       },
       {
         "name": "Lucy Hao",
