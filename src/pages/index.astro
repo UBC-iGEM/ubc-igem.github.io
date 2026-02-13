@@ -1,21 +1,23 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import StatsCard from '../components/StatsCard.astro'
-import { Content as HeroContent } from '../content/we-are-ubc-igem.md'
-import { Content as AboutCompetitionContent } from '../content/about-the-competition.md'
+import Layout from "../layouts/Layout.astro"
+import StatsCard from "../components/StatsCard.astro"
+import { Content as HeroContent } from "../content/we-are-ubc-igem.md"
+import { Content as AboutCompetitionContent } from "../content/about-the-competition.md"
 ---
 
 <Layout title="UBC iGEM">
   <section class="hero-box">
     <h1 class="page-title">UBC iGEM</h1>
-    <p class="page-subtitle">Building a better future through synthetic biology</p>
+    <p class="page-subtitle">
+      Building a better future through synthetic biology
+    </p>
     <div>
       <img
-        src="team-photos/2024-team-photo.png"
+        src="team-photos/2024-team-photo.webp"
         alt="The UBC iGEM team in 2024."
       />
       <img
-        src="team-photos/2024-jamboree-photo.jpg"
+        src="team-photos/2024-jamboree-photo.webp"
         alt="UBC iGEM team members at the 2024 Jamboree."
       />
       <div class="light-box">
@@ -28,18 +30,18 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
     <div class="stats">
       <StatsCard
         icon="cake"
-        mainContent="15 Years of Competing"
-        subtitle="2009-2019, 2021-2025"
+        mainContent="16 Years of Competing"
+        subtitle="2009-2019, 2021-2026"
       />
       <StatsCard
         icon="prize"
-        mainContent="7 Special Prize Nominations"
-        subtitle="Biomanufacturing, Diagnostics, and more!!"
+        mainContent="8 Special Prize Nominations"
+        subtitle="Software Tool, Biomanufacturing, Diagnostics, and more!!"
       />
       <StatsCard
         icon="medal"
-        mainContent="10 Gold Medals"
-        subtitle="2024, 2022, 2021, 2019, 2016, 2015, 2013, 2012, 2011, 2010"
+        mainContent="11 Gold Medals"
+        subtitle="2025, 2024, 2022, 2021, 2019, 2016, 2015, 2013, 2012, 2011, 2010"
       />
       <StatsCard
         icon="trophy"
@@ -54,19 +56,19 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
     </div>
     <div>
       <img
-        src="2024-igem-jamboree-awards.png"
+        src="2024-igem-jamboree-awards.webp"
         alt="Awards won by the team at the 2024 iGEM Jamboree."
       />
       <img
-        src="2024-igem-jamboree-audience.png"
+        src="2024-igem-jamboree-audience.webp"
         alt="Teams at the 2024 iGEM Jamboree."
       />
       <img
-        src="2024-igem-jamboree-screen-banner.png"
+        src="2024-igem-jamboree-screen-banner.webp"
         alt="A banner at the 2024 iGEM Jamboree."
       />
       <img
-        src="2024-igem-jamboree-directors.jpg" 
+        src="2024-igem-jamboree-directors.webp"
         alt="Our 2024 team directors at the iGEM Jamboree!"
       />
     </div>
@@ -211,7 +213,8 @@ import { Content as AboutCompetitionContent } from '../content/about-the-competi
         object-fit: cover;
       }
 
-      img:first-of-type, img:last-of-type {
+      img:first-of-type,
+      img:last-of-type {
         grid-column: span 2;
       }
     }
