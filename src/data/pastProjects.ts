@@ -2,7 +2,7 @@ export const pastProjects = [
   {
     title: "meduCA",
     description:
-      "The 2025 team engineered bacteria to produce carbon-negative building materials. By using surface-displayed enzymes to trigger calcium carbonate precipitation, they transformed atmospheric CO2 into structural biocement for sustainable construction on Earth and Mars.",
+      "The 2025 team engineered bacteria to produce carbon-negative building materials. By using surface-displayed enzymes to trigger calcium carbonate precipitation, they transformed atmospheric CO₂ into structural biocement for sustainable construction on Earth and Mars.",
     icon: "2025_meduCA.svg",
     awards: [
       { icon: "goldMedal.png", description: "GOLD MEDAL" },
