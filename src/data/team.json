@@ -22,12 +22,6 @@
         "image": "sebastian-hyland.webp"
       },
       {
-        "name": "Danielle Keith",
-        "role": "Wet Lab Lead",
-        "major": "Biomedical Engineering",
-        "image": "danielle-keith.webp"
-      },
-      {
         "name": "Jae-Yoon Kim",
         "role": "Wet Lab Lead",
         "major": "Biomedical Engineering",
@@ -40,16 +34,22 @@
         "image": "jessie-luo.webp"
       },
       {
-        "name": "Nichita Bulbuc",
-        "role": "Dry Lab Lead",
-        "major": "Biochemistry",
-        "image": "nikita-bulbuc.webp"
-      },
-      {
         "name": "Jessica Xin",
         "role": "Human Practices Lead",
         "major": "Biomedical Engineering",
         "image": "jessica-xin.webp"
+      },
+      {
+        "name": "Saige Mann",
+        "role": "Hardware Lead",
+        "major": "Biomedical Engineering",
+        "image": "saige-mann.webp"
+      },
+      {
+        "name": "Tracy Lei",
+        "role": "Design Lead",
+        "major": "Psychology & Biology",
+        "image": "no-image.webp"
       },
       {
         "name": "Zahra Savoji",
@@ -76,16 +76,22 @@
         "image": "arda-sayla.webp"
       },
       {
+        "name": "Danielle Keith",
+        "role": "Wet Lab",
+        "major": "BMicrobiology and Immunology",
+        "image": "danielle-keith.webp"
+      },
+      {
+        "name": "Diana Laschewski",
+        "role": "Wet Lab",
+        "major": "Biomedical Engineering",
+        "image": "no-image.webp"
+      },
+      {
         "name": "Evan Wong",
         "role": "Wet Lab",
         "major": "Biochemistry",
         "image": "evan-wong.webp"
-      },
-      {
-        "name": "Felix Chan",
-        "role": "Wet Lab",
-        "major": "Biochemistry",
-        "image": "felix-chan.webp"
       },
       {
         "name": "Marina Chen",
@@ -94,28 +100,10 @@
         "image": "marina-chen.webp"
       },
       {
-        "name": "Sarah Duan",
-        "role": "Wet Lab",
-        "major": "Biochemistry",
-        "image": "sarah-duan.webp"
-      },
-      {
-        "name": "Sean Fox",
-        "role": "Wet Lab",
-        "major": "Integrated Sciences",
-        "image": "sean-fox.webp"
-      },
-      {
         "name": "Talha Zubair",
         "role": "Wet Lab",
         "major": "Biology",
         "image": "talha-zubair.webp"
-      },
-      {
-        "name": "Wendy Wu",
-        "role": "Wet Lab",
-        "major": "Biomedical Engineering",
-        "image": "wendy-wu.webp"
       },
       {
         "name": "ZiQi Chen",
@@ -136,10 +124,10 @@
         "image": "andrew-li.webp"
       },
       {
-        "name": "Carrie Xu",
+        "name": "Cindy Fu",
         "role": "Dry Lab",
-        "major": "Pharmacology",
-        "image": "carrie-xu.webp"
+        "major": "Chemical and Biological Engineering",
+        "image": "cindy-fu.webp"
       },
       {
         "name": "Claudia Chen",
@@ -166,10 +154,10 @@
         "image": "kaylie-chen.webp"
       },
       {
-        "name": "Leia Chen",
+        "name": "Libby Lee",
         "role": "Dry Lab",
-        "major": "Computer Science",
-        "image": "leia-chen.webp"
+        "major": "Biomedical Engineering",
+        "image": "libby-lee.webp"
       },
       {
         "name": "Maximilien Filion",
@@ -178,28 +166,10 @@
         "image": "maximilien-filion.webp"
       },
       {
-        "name": "Rachel Weng",
-        "role": "Dry Lab",
-        "major": "Computer Science × Microbiology and Immunology",
-        "image": "rachel-weng.webp"
-      },
-      {
-        "name": "Saige Mann",
-        "role": "Dry Lab",
-        "major": "Biomedical Engineering",
-        "image": "saige-mann.webp"
-      },
-      {
         "name": "Satvika Suresha",
         "role": "Dry Lab",
         "major": "Medical Laboratory Science",
         "image": "satvika-suresha.webp"
-      },
-      {
-        "name": "Syafiq Ghazali",
-        "role": "Dry Lab",
-        "major": "Electrical Engineering",
-        "image": "syafiq-ghazali.webp"
       },
       {
         "name": "Tiffany Feng",
@@ -215,6 +185,72 @@
       }
     ]
   },
+  "human-practices": {
+    "title": "Human Practices",
+    "colorToken": "--color-primary-purple",
+    "members": [
+      {
+        "name": "Ali Yazdani",
+        "role": "Human Practices",
+        "major": "Neuroscience",
+        "image": "no-image.webp"
+      },
+      {
+        "name": "Daniel Rostin",
+        "role": "Human Practices",
+        "major": "Pharmaceutical Sciences",
+        "image": "no-image.webp"
+      },
+      {
+        "name": "Denzel Hu",
+        "role": "Human Practices",
+        "major": "Microbiology and Immunology",
+        "image": "no-image.webp"
+      },
+      {
+        "name": "Julia Kim",
+        "role": "Human Practices",
+        "major": "Neuroscience",
+        "image": "no-image.webp"
+      },
+      {
+        "name": "Rachael Zhang",
+        "role": "Human Practices",
+        "major": "Microbiology and Immunology",
+        "image": "no-image.webp"
+      }
+    ]
+  },
+  "design-wiki": {
+    "title": "Design/Wiki",
+    "colorToken": "--color-primary-blue",
+    "members": [
+      {
+        "name": "Eris Do",
+        "role": "Design",
+        "major": "Cognitive Systems",
+        "image": "no-image.webp"
+      },
+      {
+        "name": "Lavenia Suherman",
+        "role": "Design",
+        "major": "Materials Engineering",
+        "image": "no-image.webp"
+      },
+      {
+        "name": "Paul Xu",
+        "role": "Wiki",
+        "major": "Computer Science",
+        "image": "no-image.webp"
+      },
+      {
+        "name": "Rachel Weng",
+        "role": "Wiki",
+        "major": "Computer Science × Microbiology and Immunology",
+        "image": "rachel-weng.webp"
+      }
+    ]
+  },
   "administration": {
     "title": "Administration",
     "colorToken": "--color-primary-red",
@@ -224,6 +260,12 @@
         "role": "Administration",
         "major": "Biomedical Engineering",
         "image": "gabriella-gubantes.webp"
+      },
+      {
+        "name": "Gia Rishi",
+        "role": "Administration",
+        "major": "Pharmaceutical Sciences",
+        "image": "no-image.webp"
       },
       {
         "name": "Izaak Yip",
@@ -314,6 +356,12 @@
         "role": "Wet Lab + HP + Administration Advisor",
         "major": "Biology",
         "image": "trisha-macalintal.webp"
+      },
+      {
+        "name": "Wendy Wu",
+        "role": "Wet Lab",
+        "major": "Biomedical Engineering",
+        "image": "wendy-wu.webp"
       }
     ]
   },
