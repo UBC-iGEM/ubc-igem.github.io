@@ -24,7 +24,7 @@ export const pastProjects = [
     awards: [
       {
         icon: "bestSoftware.svg",
-        description: "BEST SOFTWARE NOMINEE",
+        description: "BEST SOFTWARE TOOL NOMINEE",
         nominee: true,
       },
       {

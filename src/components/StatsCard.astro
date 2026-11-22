@@ -3,12 +3,14 @@ type Props = {
   icon: string;
   mainContent: string;
   subtitle: string;
+  width?: "half" | "full";
 }
 
 const props = Astro.props;
+const width = props.width ?? "half";
 ---
 
-<div class="stats-box">
+<div class:list={["stats-box", { full: width === "full" }]}>
   <img src={`/static/icons/${props.icon}.svg`} />
   <p>{props.mainContent}</p>
   <p>{props.subtitle}</p>
@@ -44,6 +46,11 @@ const props = Astro.props;
     p:last-of-type {
       opacity: 0%;
     }
+  }
+
+  .stats-box.full {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 7fr;
   }
 
   .stats-box:hover {
