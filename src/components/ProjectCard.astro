@@ -1,6 +1,7 @@
 ---
 import TimelineCard from './TimelineCard.astro'
 import Award, { type AwardProps } from './Award.astro'
+import { marked } from 'marked'
 
 export interface Props {
   title: string;
@@ -12,6 +13,10 @@ export interface Props {
 }
 
 const { title, description, icon, link, awards = [], year } = Astro.props;
+
+// Title and description support inline Markdown (e.g. _E. coli_)
+const titleHtml = marked.parseInline(title) as string;
+const descriptionHtml = marked.parseInline(description) as string;
 ---
 
 <TimelineCard year={year}>
@@ -28,15 +33,16 @@ const { title, description, icon, link, awards = [], year } = Astro.props;
     <div class="info-container">
       <div class="title-container">
         <img src={icon} alt={icon} class="title-icon" />
-        <h1 class="title">{title}</h1>
+        <h1 class="title" set:html={titleHtml} />
       </div>
-      <p class="description">{description}</p>
+      <p class="description" set:html={descriptionHtml} />
       <div class="award-container">
         {
           awards.map((award: AwardProps) => (
             <Award
               icon={`/static/award-icons/${award.icon}`}
               description={award.description}
+              nominee={award.nominee}
             />
           ))
         }

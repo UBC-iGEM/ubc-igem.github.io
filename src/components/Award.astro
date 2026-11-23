@@ -2,14 +2,15 @@
 export interface AwardProps {
   icon: string;
   description: string;
+  nominee?: boolean;
 }
 
 type Props = AwardProps;
 
-const { icon, description } = Astro.props;
+const { icon, description, nominee = false } = Astro.props;
 ---
 
-<div class="award">
+<div class:list={['award', { nominee }]}>
   <img src={icon} alt={icon} />
   <p>{description}</p>
 </div>
@@ -25,6 +26,10 @@ const { icon, description } = Astro.props;
     width: 54px;
     height: 54px;
     margin-right: 1rem;
+  }
+
+  .nominee img {
+    filter: grayscale(100%);
   }
 
   p {
