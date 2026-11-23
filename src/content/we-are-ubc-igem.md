@@ -1,5 +1,5 @@
 ## We are UBC iGEM.
 
-As a team of undergraduate students representing UBC, we promote interdisciplinary thinking in synthetic biology. Our team creates a platform for students at all educational levels to explore their passion for synthetic biology through competition research, educational outreach, and science communication.
+Since 2009, we have proudly represented UBC at iGEM, the largest synthetic biology competition in the world. Every season, our undergraduate members — hailing from over a dozen disciplines — collaborate to bring a project with real-world impacts from initial concept to working prototype. Along the way, we carefully consider the potential impacts of our work on both our communities and the planet.
 
-Our award-winning team achieved a Gold Medal and won two special prizes (Best Hardware and Best Sustainable Development Impact) at the 2024 iGEM Grand Jamboree held in Paris, France. Additionally, we placed in the Top 5 for the iGEM Village competition in Biomanufacturing, cementing our status as the best-performing undergraduate team in North America.
+Our award-winning team won Best Diagnostics Project at the 2026 iGEM Grand Jamboree in Paris, building on a tradition of success established by winning two special prizes (Best Hardware and Best Sustainable Development Impact) at the 2024 iGEM Grand Jamboree. We have also secured top-five finishes in four other prize categories over the past three seasons. 

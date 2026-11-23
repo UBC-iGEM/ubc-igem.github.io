@@ -14,7 +14,7 @@ export const pastProjects = [
       { icon: "goldMedal.png", description: "GOLD MEDAL" },
     ],
     link: "https://2026.igem.wiki/ubc-vancouver/",
-    year: "2025",
+    year: "2026",
   },
   {
     title: "meduCA",
