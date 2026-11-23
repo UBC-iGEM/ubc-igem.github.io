@@ -6,5 +6,8 @@ export default defineConfig({
   site: 'https://ubcigem.com',
   server: {
     allowedHosts: true
+  },
+  image: {
+    domains: ['static.igem.wiki']
   }
 })

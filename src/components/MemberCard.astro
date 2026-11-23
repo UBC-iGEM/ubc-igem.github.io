@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets'
+
 interface Props {
   name: string;
   role: string;
@@ -11,7 +13,7 @@ const { name, role, major, image, colorToken } = Astro.props
 ---
 
 <div class="member-card" style=`background-color: var(${colorToken})`>
-  <img src={image} alt={name} draggable="false" />
+  <Image src={image} alt={name} width={360} height={360} format="avif" draggable="false" />
   <hr />
   <div class="info">
     <p class="name">{name}</p>
